@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>NZD Deep-Dive Fundamental Report — 2026-07-16</title>
+<style>
+  body { font-family: -apple-system, Segoe UI, Arial, sans-serif; background:#0d1117; color:#e6edf3; margin:0; padding:24px; line-height:1.55; max-width:1150px; margin:0 auto; }
+  h1 { font-size:24px; border-bottom:2px solid #2f81f7; padding-bottom:10px; }
+  h2 { font-size:19px; color:#58a6ff; margin-top:36px; border-left:4px solid #2f81f7; padding-left:10px; }
+  h3 { font-size:16px; color:#79c0ff; margin-top:22px; }
+  h4 { font-size:14px; color:#9ecbff; margin-top:16px; }
+  .badge { display:inline-block; padding:2px 9px; border-radius:12px; font-size:12px; font-weight:700; }
+  .bearish { background:#3d1418; color:#ff7b72; }
+  .bullish { background:#0f3d1f; color:#3fb950; }
+  .neutral { background:#3d3410; color:#e3b341; }
+  table { width:100%; border-collapse:collapse; margin:12px 0 20px 0; font-size:13px; }
+  th, td { border:1px solid #30363d; padding:7px 9px; text-align:left; vertical-align:top; }
+  th { background:#161b22; color:#8b949e; }
+  tr:nth-child(even) { background:#111620; }
+  .note { background:#161b22; border-left:3px solid #e3b341; padding:10px 14px; margin:10px 0; font-size:13px; color:#c9d1d9; }
+  .warn { background:#1a1512; border-left:3px solid #ff7b72; padding:10px 14px; margin:10px 0; font-size:13px; color:#f0c9c4; }
+  .good { background:#0f1a12; border-left:3px solid #3fb950; padding:10px 14px; margin:10px 0; font-size:13px; color:#c9f0d4; }
+  .exec { background:#0f1520; border:1px solid #2f81f7; border-radius:8px; padding:16px 18px; margin:14px 0; }
+  .card { background:#0f1520; border:1px solid #30363d; border-radius:8px; padding:14px 16px; margin:12px 0; }
+  .score { font-size:20px; font-weight:800; }
+  .script { background:#151d2e; border:1px dashed #58a6ff; border-radius:8px; padding:12px 16px; margin:8px 0 20px 0; font-size:13.5px; color:#c9d6e8; }
+  .script b.tag { display:inline-block; background:#2f81f7; color:#fff; font-size:11px; padding:2px 8px; border-radius:10px; margin-bottom:8px; }
+  .discord { background:#2b2d31; border:1px solid #1e1f22; border-radius:8px; padding:16px; font-family: 'Segoe UI', Consolas, monospace; font-size:13.5px; color:#dbdee1; white-space:pre-wrap; }
+  .scenario { border-radius:8px; padding:14px 16px; margin:10px 0; border:1px solid #30363d; }
+  .scen-bull { border-left:4px solid #3fb950; background:#0f1a12; }
+  .scen-base { border-left:4px solid #e3b341; background:#1a1710; }
+  .scen-bear { border-left:4px solid #ff7b72; background:#1a1512; }
+  .prob { font-weight:800; font-size:15px; }
+  .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  @media (max-width:700px){ .grid2{grid-template-columns:1fr;} }
+  .taglist span { display:inline-block; background:#161b22; border:1px solid #30363d; color:#8b949e; font-size:11px; padding:2px 8px; border-radius:10px; margin:2px 4px 2px 0; }
+</style>
+</head>
+<body>
+
+<h1>NZD Deep-Dive Fundamental Report</h1>
+<p><b>As of:</b> 2026-07-16 &nbsp;|&nbsp; <b>Scope:</b> Single-currency deep dive on NZD — RBNZ policy, inflation, growth &amp; labour market, dairy/terms-of-trade, China exposure, fiscal/political risk, positioning, cross-by-cross bias, catalysts &amp; scenario tree &nbsp;|&nbsp; <b>Companion piece to:</b> Daily Global Macro Strategy Report</p>
+
+<div class="exec">
+<p><b>One-line view:</b> NZD is one of the few G10 currencies right now with a <i>genuinely dual-engine</i> rally — a freshly hawkish RBNZ that just delivered its first hike in over three years, layered on top of broad USD softness — but that rally sits directly on top of the currency's oldest structural weak point: New Zealand's economy is unusually exposed to a single commodity (dairy) and a single trading partner (China), and both of those pillars have been softening in real time even as the rate story firms. Add a general election on 7 November 2026 with an unpopular incumbent government, and NZD's setup is more "high-beta and headline-reactive" than "clean trend," despite the encouraging chart.</p>
+</div>
+
+<h2>1. What's Actually Driving NZD Right Now — The Core Tension</h2>
+<div class="card">
+<p>NZD is being pulled by <b>three forces</b> that don't all point the same way, which is one more moving part than most G10 crosses carry right now:</p>
+<ul>
+<li><b>The hawkish force:</b> The RBNZ raised the Official Cash Rate 25bp to 2.50% on 8 July 2026 — its first hike since April 2023 — unanimously, and explicitly flagged that the prior 2.25% setting was still "somewhat below neutral." Governor Anna Breman framed it as continuing to remove monetary stimulus rather than fighting an overheating economy, but committee members also pointed to the Middle East war's inflation impulse and a resumption of growth momentum. <span class="badge bullish">Bullish</span></li>
+<li><b>The dovish/growth-drag force underneath:</b> The hike landed on an economy that is still visibly soft in the places that matter for the RBNZ's medium-term reaction function — unemployment at 5.3%, elevated youth joblessness, weak private-sector wage growth (2% y/y), and a labour market that multiple economists describe as "low turnover" rather than actually tightening. This is a central bank normalizing off emergency-low settings, not hiking into strength. <span class="badge bearish">Bearish undertone</span></li>
+<li><b>The idiosyncratic NZD-specific force — dairy:</b> Unlike EUR or most G10 currencies, NZD has a direct, high-frequency commodity read-through via the fortnightly Global Dairy Trade (GDT) auction. The most recent auction (7-8 July) saw the price index fall 4.9% — the third straight decline and the sharpest single-auction drop in two years — driven by a global milk supply glut running roughly 20% above year-ago volumes. This directly threatens the top end of Fonterra's opening 2026/27 farmgate milk price forecast of NZ$9.75/kgMS (range $8.00–$11.00), which is a real-income and export-revenue variable for the whole economy, not just farmers. <span class="badge bearish">Structural headwind</span></li>
+</ul>
+<p>Net effect: NZD/USD has actually rallied on <b>genuine two-sided support</b> — hawkish RBNZ repricing plus broad USD weakness — trading up to roughly 0.578–0.582, a four-week high, even as the dairy story quietly deteriorates underneath. That combination (real rate-story support, real commodity-story headwind) is different from EUR's setup, where the rally is almost entirely a dollar-side phenomenon. It means NZD's move has somewhat more independent conviction than EUR's — but the dairy divergence is the thing to watch for a reversal signal.</p>
+</div>
+<div class="script"><b class="tag">🎙 SCRIPT</b><br>
+Let's talk about the kiwi, because this one's actually got more going for it on the interest-rate side than most of its peers right now. New Zealand's central bank just hiked rates for the first time in over three years — that's a real, own-currency bullish catalyst, not just a byproduct of dollar weakness like we're seeing elsewhere. But here's the twist that makes New Zealand different from almost every other economy we cover: it's got this direct pipeline into a single commodity, dairy, through a fortnightly global auction. And that auction has now fallen for three auctions running, with the most recent drop being the sharpest in two years, because there's simply too much milk on the world market relative to buyers. That matters enormously for New Zealand's export income and, ultimately, for growth — dairy is still around a fifth of total exports. So you've got a hawkish central bank pulling the currency one way, and a softening terms-of-trade story pulling the underlying economy the other way. And layered on top of both of those, there's a general election in November with a deeply unpopular incumbent government, which is its own slow-burn risk. This is a currency with real, own-merit support right now, but also real, own-merit vulnerabilities — worth tracking both sides closely rather than just riding the rate headline.
+</div>
+
+<h2>2. NZD Multi-Factor Scorecard</h2>
+<table>
+<tr><th>Factor</th><th>Score /100</th><th>Direction</th><th>Weight in current regime</th><th>Comment</th></tr>
+<tr><td><b>Monetary policy (RBNZ stance)</b></td><td class="score">67</td><td><span class="badge bullish">Hawkish</span></td><td><span class="badge bullish">High</span></td><td>First hike since April 2023, unanimous vote, framed as "removing stimulus toward neutral"; more hikes flagged but pace unclear</td></tr>
+<tr><td><b>Inflation trend</b></td><td class="score">45</td><td><span class="badge neutral">Elevated, expected to peak near-term</span></td><td><span class="badge bullish">High</span></td><td>Headline likely peaked near 3.9% in the June quarter on RBNZ's own projection, seen cooling to ~3.3% by September and back to 2% by mid-2027; Q2 print due 21 July is the near-term test</td></tr>
+<tr><td><b>Growth momentum</b></td><td class="score">50</td><td><span class="badge neutral">Mixed — headline strong, underlying soft</span></td><td><span class="badge neutral">Medium</span></td><td>Q1 GDP grew a solid ~0.8% q/q, manufacturing PMI expanding at its fastest pace in nearly five years, services returned to expansion in June — but labour market slack remains wide</td></tr>
+<tr><td><b>Labour market</b></td><td class="score">38</td><td><span class="badge bearish">Soft</span></td><td><span class="badge bullish">High</span></td><td>Unemployment 5.3% (Q1), youth unemployment near 25%, wage growth (2% y/y private sector) well below the inflation rate over the past two years — the RBNZ's key domestic-inflation-risk offset</td></tr>
+<tr><td><b>Terms of trade / dairy exposure</b></td><td class="score">33</td><td><span class="badge bearish">Deteriorating</span></td><td><span class="badge bullish">High</span></td><td>GDT price index down in three straight auctions (most recently -4.9%) on a global milk supply glut; directly threatens Fonterra's 2026/27 farmgate forecast and rural incomes</td></tr>
+<tr><td><b>China demand exposure</b></td><td class="score">40</td><td><span class="badge neutral">Structural dependency, two-sided</span></td><td><span class="badge bullish">High</span></td><td>China takes roughly a fifth to a quarter of NZ exports and is the marginal buyer that can swing dairy prices; Chinese domestic milk output is contracting (-4.6% y/y), which is a slow-burn positive if Chinese import demand returns</td></tr>
+<tr><td><b>Fiscal/political risk</b></td><td class="score">42</td><td><span class="badge bearish">Rising into year-end</span></td><td><span class="badge neutral">Medium, rising</span></td><td>General election scheduled 7 November 2026; incumbent National-led coalition has polled poorly amid a weak growth record, raising the odds of a Labour-led change of government and policy-direction uncertainty into Q4</td></tr>
+<tr><td><b>Relative rate differential vs USD</b></td><td class="score">44</td><td><span class="badge neutral">Narrowing but USD still nominally ahead</span></td><td><span class="badge bullish">High</span></td><td>Fed funds still well above the 2.50% OCR even after the July hike; further RBNZ hikes toward 3.00–3.25% by year-end would narrow, not close, the gap</td></tr>
+<tr><td><b>Composite NZD score</b></td><td class="score" style="color:#e3b341;">45/100</td><td colspan="2"><span class="badge neutral">Net neutral, tactically firmer, structurally two-sided</span></td><td>Consistent with the daily macro report's cross-asset scoring</td></tr>
+</table>
+<div class="note">
+<p>Read this scorecard the same way as the EUR one: a tension map rather than a single verdict. NZD's rate-story tailwind is arguably more "real" than EUR's right now — it's an actual domestic hiking cycle, not just a byproduct of USD weakness — but the currency also carries structural vulnerabilities (single-commodity export concentration, single-partner demand dependency, an approaching election) that most G10 peers don't carry to the same degree. That combination argues for respecting the current firmness while staying alert to the dairy and China data specifically, since those are the two variables most likely to flip the story quickly.</p>
+</div>
+
+<h2>3. RBNZ Policy Deep Dive</h2>
+<div class="grid2">
+<div class="card">
+<h3>Where rates stand</h3>
+<p>Official Cash Rate: <b>2.50%</b> (raised from 2.25% on 8 July 2026 — the first hike since April 2023, when the OCR peaked at 5.50% before a long easing cycle brought it down to 2.25% by early 2026). All six MPC members backed the move; two flagged upside inflation risk while four, including the Governor, called the balance of risks even.</p>
+<h3>Next decision dates</h3>
+<p>The next scheduled Monetary Policy Statement / OCR review is <b>2 September 2026</b>. Markets are currently split on the odds of a follow-up hike then, with estimates ranging from roughly 60% to as high as 80% depending on the source and on how oil/geopolitical headlines evolve between now and the decision. Subsequent reviews are pencilled in for 28 October and 9 December 2026.</p>
+<h3>Market pricing</h3>
+<p>Most major New Zealand banks now see the OCR landing around 3.00% by year-end 2026 (i.e., two more 25bp moves), with some houses (e.g. Capital Economics) arguing the RBNZ hikes roughly every other meeting until the OCR tops out near 3.25%. Some economists put the RBNZ's estimated neutral rate as high as 3.25–3.50%, implying the cycle could still have room to run into 2027 if inflation doesn't cooperate.</p>
+</div>
+<div class="card">
+<h3>The nuance — this was a "line ball call," not a strength signal</h3>
+<p>Several major bank economists (Kiwibank, Salt Funds Management) argued publicly that the RBNZ had scope to wait until September, citing a still-weak labour market and a medium-term inflation outlook they saw as "already tame." BNZ's head of research took the opposite view — that waiting risked letting inflation expectations become unanchored. This genuine split inside the analyst community, mirrored by a non-unanimous internal risk assessment (2 of 6 members flagging upside risk vs. 4 calling it balanced), is the RBNZ's own version of the ECB's Sintra dovish counterweight: a hawkish headline decision with real internal disagreement about how far the cycle needs to go.</p>
+<h3>The oil/Hormuz swing factor</h3>
+<p>The RBNZ's own commentary ties the OCR decision explicitly to Middle East energy prices: a partial May reopening of the Strait of Hormuz took the sharpest edge off the RBNZ's earlier, more aggressive inflation forecasts, and the Bank has since revised its projected September-quarter inflation figure down (reported variously as a revision from 4.3% to 3.3%) on the back of that relief. Since the shipping lane's status has been genuinely volatile through July, this is a live, fast-moving input to the next few CPI prints and to RBNZ rhetoric between meetings.</p>
+<h3>Forward guidance style</h3>
+<p>Governor Breman has framed the hike as continuing to move the OCR "towards neutral," not as an aggressive inflation-fighting cycle — a materially softer framing than the ECB's more urgent "insurance hike" language. This suggests the RBNZ has more flexibility to pause if incoming data disappoints, which argues for treating the "two more hikes by year-end" consensus as a base case rather than a certainty.</p>
+</div>
+</div>
+
+<h2>4. Inflation — Peaking, But the Peak Itself Is Still Being Confirmed</h2>
+<table>
+<tr><th>Period</th><th>Headline CPI y/y</th><th>Notes</th></tr>
+<tr><td>Dec 2025 quarter</td><td>3.1%</td><td>Already above the RBNZ's 1–3% target band midpoint of 2%</td></tr>
+<tr><td>Mar 2026 quarter</td><td>3.1%</td><td>Held broadly steady; pre-dated the full impact of the Middle East oil shock</td></tr>
+<tr><td><b>Jun 2026 quarter (RBNZ projection, not yet confirmed)</b></td><td><b>~3.9% (projected peak)</b></td><td><b>Actual release due 21 July 2026 — the key near-term catalyst</b></td></tr>
+<tr><td>Sep 2026 quarter (RBNZ projection)</td><td>~3.3%</td><td>Projected to ease as the earlier oil-price relief (Hormuz reopening) filters through</td></tr>
+<tr><td>Mid-2027 (RBNZ projection)</td><td>~2.0%</td><td>Return to target midpoint on current RBNZ guidance</td></tr>
+</table>
+<div class="warn">
+<p><b>Caveat on durability, same shape as the EUR report:</b> the RBNZ's cooling projection was built around a partial de-escalation in the Middle East (the Hormuz reopening). Renewed US-Iran strikes and conflicting signals over the Strait's status in mid-July mean the September-quarter cooling the RBNZ is counting on is not yet locked in. If oil re-accelerates through Q3, the 3.3% September projection — and the whole "back to 2% by mid-2027" narrative — is at risk of slipping, which would be a genuinely hawkish surprise for OCR pricing.</p>
+</div>
+<h4>21 July 2026 (this week): Q2 CPI release</h4>
+<p>Stats NZ's June-quarter CPI print lands <b>21 July 2026</b> — the single most important scheduled data point before the next RBNZ decision. A print at or above the RBNZ's ~3.9% projection would cement September-hike pricing near the top of the current 60–80% range; a downside surprise would reopen genuine doubt about a second 2026 hike.</p>
+<div class="good">
+<p><b>A genuine offsetting factor for the RBNZ:</b> the labour market's weakness is, from a pure inflation-targeting standpoint, doing some of the central bank's work for it. Private-sector wage growth of around 2% y/y, well below realized inflation over the past two years, means the "second-round wage-price spiral" risk that most worries central banks is currently muted in New Zealand — comparable to the ECB's Sintra observation on the eurozone, but arguably even more pronounced here given how soft NZ wage growth has been.</p>
+</div>
+
+<h2>5. Growth &amp; Labour Market — A Genuine Two-Speed Economy</h2>
+<div class="card">
+<table>
+<tr><th>Indicator</th><th>Latest reading</th><th>Trend</th></tr>
+<tr><td>NZ Q1 2026 GDP q/q</td><td>~0.8% (RBNZ estimate ~1.0%)</td><td>Solid headline recovery</td></tr>
+<tr><td>Unemployment rate (Q1 2026)</td><td>5.3%</td><td>Down slightly from 5.4% in Q4 2025, but participation also fell — a "soft" improvement</td></tr>
+<tr><td>Youth unemployment (15–19y)</td><td>24.9%</td><td>Near a 13-year high for the cohort</td></tr>
+<tr><td>NEET rate (15–24y)</td><td>14.4%</td><td>Up from 13.3% the prior quarter</td></tr>
+<tr><td>Underutilisation rate</td><td>12.9%</td><td>Broad labour slack remains historically elevated</td></tr>
+<tr><td>Labour Cost Index (private sector, y/y)</td><td>~2.0%</td><td>Below CPI inflation — real wages under pressure</td></tr>
+<tr><td>Manufacturing activity (June)</td><td>Expanding</td><td>Fastest pace of expansion in almost five years</td></tr>
+<tr><td>Services activity (June)</td><td>Returned to expansion</td><td>First expansionary reading since January 2026</td></tr>
+</table>
+<p>The headline growth and activity data has genuinely firmed — Q1 GDP came in well above the RBNZ's own earlier expectations, and both manufacturing and services surveys turned up sharply into mid-year. That's the strongest part of the RBNZ's case for hiking now rather than waiting. But "under the hood," as several NZ economists have put it, the labour market has not really tightened: hiring and job-separation flows both remain unusually low (a "low turnover" market), the improvement in the unemployment rate owes as much to falling participation as to job creation, and the recovery in employment is described by multiple bank economists as a still-emerging, 2027-facing story rather than something already delivered.</p>
+</div>
+<div class="good">
+<p><b>What's actually working for growth:</b> the PMI turn is real and broad-based across both manufacturing and services, business confidence has been recovering, and the Q1 GDP beat gives the RBNZ genuine cover to argue the "recovery is underway" framing behind July's hike. This is a meaningfully better growth picture than the eurozone's near-stall — NZ's headline numbers are the stronger side of this report's tension, unlike EUR's report where growth was the weak leg.</p>
+</div>
+
+<h2>6. Terms of Trade &amp; China Exposure — NZD's Structural Signature</h2>
+<div class="grid2">
+<div class="card">
+<h3>Dairy — the direct, high-frequency channel</h3>
+<p>Dairy remains roughly a fifth of New Zealand's total export value, and the fortnightly GDT auction gives NZD one of the most direct real-time commodity feedback loops of any G10 currency. The most recent full auction (7–8 July 2026) saw the price index fall <b>4.9%</b> to an average of US$3,793/tonne — the third consecutive decline and the sharpest single-auction fall in two years. Whole milk powder, the product most tied to farmgate payouts, fell 4.4% to US$3,425/tonne; skim milk powder fell 7%; butter fell 5%; cheddar fell 12.3%. The driver is a straightforward supply-demand imbalance: WMP and SMP volumes offered were up almost 20% year-on-year as Fonterra front-loaded product for the new 2026/27 season and as output stayed strong across every major exporting region except China.</p>
+<p>Fonterra opened the 2026/27 season with a midpoint farmgate milk price forecast of <b>NZ$9.75/kgMS</b> (range $8.00–$11.00). A run of soft auctions this early in the season is starting to pressure the top of that range; a fourth consecutive decline at the next auction would be read by the market as confirming a trend rather than noise.</p>
+</div>
+<div class="card">
+<h3>China — the demand-side wildcard</h3>
+<p>China is New Zealand's largest single trading partner, absorbing somewhere between a fifth and a quarter of total NZ exports depending on the measure and year, and is the marginal buyer whose presence or absence can swing GDT auction outcomes more than any other single actor. Chinese domestic milk production is currently contracting (around -4.6% y/y), which is a structurally supportive factor for NZ dairy demand if and when Chinese buyers step back into the market — analysts flagged this explicitly as the single biggest lever that could reverse the current soft-auction run.</p>
+<p>New Zealand's current account deficit is expected to sit around -4.7% of GDP in 2026 and -4.4% in 2027, only gradually narrowing; this leaves NZD structurally reliant on continued foreign capital inflows and commodity export receipts, which makes both the dairy cycle and Chinese demand genuinely first-order variables for the currency, not secondary ones.</p>
+</div>
+</div>
+<div class="warn">
+<p><b>The double exposure that makes NZD distinctive:</b> most G10 currencies have either a commodity exposure or a single-dominant-trading-partner exposure, rarely both this concentrated. NZD has both, and they're linked — China is the largest buyer of the exact commodity (dairy) driving the current terms-of-trade softness. That's a tighter, more mechanical transmission channel than EUR's more diffuse energy-import exposure, and it's worth weighting accordingly in any medium-term NZD view.</p>
+</div>
+
+<h2>7. Fiscal &amp; Political Risk — The Approaching Election</h2>
+<div class="card">
+<h3>7 November 2026 general election</h3>
+<p>New Zealand's next general election is scheduled for <b>7 November 2026</b>. The incumbent National-led coalition (under PM Christopher Luxon) has polled at historically low approval levels through the current term, weighed down by a weak growth record, rising unemployment through 2025, and below-inflation wage growth that has squeezed households. Some country-risk analysts now see a real possibility of a change of government to a Labour-led administration under Chris Hipkins. Unlike France's more acute, already-resolved budget crisis in the EUR report, New Zealand's political risk is a slower-building, still-distant event — but it sits almost exactly on top of the RBNZ's own "back to 2% by mid-2027" inflation horizon, meaning any pre-election fiscal signalling (tax changes, spending commitments) from either major party over the coming months has the potential to move medium-term rate-path expectations.</p>
+<h3>US tariff exposure</h3>
+<p>New Zealand exports to the US have faced a tariff (reported at 10–15% on most goods depending on the source and timing of the measure), a smaller hit than many trading partners given NZ's modest contribution to the US trade deficit, but one that still weighs on dairy, meat, and wine exporters specifically — sectors already under separate pressure from the GDT softness described above.</p>
+</div>
+
+<h2>8. NZD Crosses — Detailed Bias &amp; Rationale</h2>
+<table>
+<tr><th>Pair</th><th>Bias</th><th>Confidence</th><th>Core logic</th></tr>
+<tr><td><b>NZDUSD</b></td><td><span class="badge bullish">Tactically firm, genuinely two-sided support</span></td><td>55%</td><td>Combines a real domestic hiking cycle with broad USD softness — more independently supported than most NZD peers' USD legs, but capped by the still-wide nominal rate gap to the Fed and by softening dairy</td></tr>
+<tr><td><b>NZDAUD</b></td><td><span class="badge neutral">Rate-gap narrowing, RBA decision (11 Aug) is the swing factor</span></td><td>45%</td><td>RBNZ has now started hiking while the RBA's own path is the key comparison point; a hawkish RBA surprise would cap NZD/AUD upside, a hold/dovish RBA would extend it</td></tr>
+<tr><td><b>NZDJPY</b></td><td><span class="badge bullish">Bullish, carry-driven</span></td><td>50%</td><td>A genuinely widening NZ-Japan rate differential plus JPY's broad, largely unchecked weakness gives this pair a clearer carry-trade narrative than most NZD crosses right now</td></tr>
+<tr><td><b>NZDEUR</b></td><td><span class="badge neutral">Low conviction</span></td><td>35%</td><td>Both currencies are being supported by their own hawkish central-bank repricing simultaneously, muting the cross's independent signal</td></tr>
+<tr><td><b>NZDGBP</b></td><td><span class="badge neutral">Near coin-flip</span></td><td>35%</td><td>Limited independent catalyst differential currently between the two</td></tr>
+<tr><td><b>NZDCAD</b></td><td><span class="badge neutral">Flat-to-mildly bullish</span></td><td>35%</td><td>NZ's fresh hiking cycle is a marginal edge over the BoC's more cautious current stance, though CAD retains its own oil-price tailwind offset</td></tr>
+<tr><td><b>NZDCHF</b></td><td><span class="badge bearish">Mildly bearish</span></td><td>35%</td><td>CHF's structural safe-haven bid amid ongoing Middle East risk is a persistent drag on this cross regardless of the RBNZ rate story</td></tr>
+</table>
+
+<h2>9. Positioning &amp; Market Structure Notes</h2>
+<div class="card">
+<ul>
+<li><b>Carry-trade appeal is genuinely returning.</b> With the RBNZ now hiking for the first time in over three years, NZD is regaining some of the "yield currency" appeal it lost during the 2024–2025 easing cycle, particularly against low-yielders like JPY and CHF. This is a structurally different setup from three-to-six months ago, when NZD traded more as a pure risk-sentiment proxy.</li>
+<li><b>NZD remains a high-beta risk currency first, commodity currency second, in short-term price action.</b> Middle East war headlines move NZD via the same broad risk-on/risk-off channel as other high-beta currencies, layered on top of — and sometimes overwhelming — the slower-moving dairy and rate-differential stories described above.</li>
+<li><b>The GDT auction calendar is NZD's own version of a scheduled macro release.</b> Every fortnight (next full auctions expected in the second half of July and early August), the GDT print gives a real-time read on the terms-of-trade leg of the NZD story that most other G10 currencies simply don't have an equivalent for — worth treating with the same weight as a CPI or PMI release for NZD-specific positioning.</li>
+<li><b>Rate-repricing whiplash is present here too.</b> September RBNZ-hike odds have been quoted anywhere from ~60% to ~80% across different sources within the same week, reflecting fast-moving oil/Hormuz headlines feeding into the RBNZ's own inflation projections — a similar dynamic to the ECB repricing volatility flagged in the EUR report.</li>
+</ul>
+</div>
+
+<h2>10. Multi-Level Scenario Tree — Next 4-6 Weeks</h2>
+
+<div class="scenario scen-bull">
+<p><span class="prob">🟢 Bull case for NZD — ~30% probability</span></p>
+<p><b>Path:</b> Q2 CPI (21 July) prints at or above the RBNZ's ~3.9% projection, cementing a September hike near-certain → dairy prices stabilize or bounce as Chinese buying returns to the GDT platform → Q2 labour data (4 Aug) shows genuine tightening rather than just a participation-driven improvement → RBNZ delivers the September hike with hawkish forward guidance on a third 2026 move → NZD/USD extends toward 0.60–0.62 as the rate-and-terms-of-trade stories align for the first time in months.</p>
+<p><b>Watch for:</b> a hot Q2 CPI surprise; a GDT auction snapping the three-auction losing streak; Chinese demand headlines; strong Q2 employment growth (not just a lower unemployment rate via falling participation).</p>
+</div>
+
+<div class="scenario scen-base">
+<p><span class="prob">🟡 Base case — ~45% probability</span></p>
+<p><b>Path:</b> Q2 CPI lands close to the RBNZ's projection; the September MPS delivers a widely-expected second 25bp hike to 2.75%, but with cautious, data-dependent forward guidance given ongoing labour-market slack; GDT auctions stabilize after the recent slide but don't strongly rebound; election-related noise starts building gradually into Q4 without yet moving markets meaningfully. NZD/USD continues to trade a broad 0.565–0.595 range, still somewhat more USD-driven than rate-driven on a day-to-day basis despite the genuine RBNZ hiking cycle underneath.</p>
+<p><b>Watch for:</b> in-line CPI and labour prints; GDT auctions oscillating without a clear new trend; incremental Middle East headlines; US data remaining a meaningful co-driver of the pair.</p>
+</div>
+
+<div class="scenario scen-bear">
+<p><span class="prob">🔴 Bear case for NZD — ~25% probability</span></p>
+<p><b>Path:</b> A soft Q2 CPI surprise reopens doubt about a September hike at the same time as a fourth consecutive GDT decline confirms a genuine dairy downturn, pressuring Fonterra's farmgate forecast lower and hitting rural incomes and confidence → Q2 labour data shows the unemployment improvement was purely a participation effect, with actual employment stalling → early election-positioning noise (fiscal promises, policy uncertainty) starts to weigh on business confidence → NZD/USD slides back toward 0.54–0.56 as the terms-of-trade and labour-market legs both turn negative simultaneously, undermining the case for further RBNZ tightening.</p>
+<p><b>Watch for:</b> a cool Q2 CPI print; GDT price index falling a fourth straight auction; a downward revision to Fonterra's farmgate forecast; a soft Q2 HLFS employment (not just unemployment-rate) reading; escalating Middle East risk hitting broad risk sentiment.</p>
+</div>
+
+<h2>11. Catalysts &amp; Calendar — What to Watch, In Order</h2>
+<table>
+<tr><th>Date</th><th>Event</th><th>Why it matters for NZD</th></tr>
+<tr><td><b>21 Jul 2026</b></td><td>Stats NZ Q2 (June quarter) CPI release</td><td>The single most important scheduled catalyst before the September RBNZ decision; confirms or revises the RBNZ's ~3.9% projected peak</td></tr>
+<tr><td>~Mid-to-late Jul / early Aug 2026</td><td>Next full GDT auction(s)</td><td>NZD's own high-frequency terms-of-trade release; a fourth straight decline would confirm a genuine dairy downturn rather than a one-off supply blip</td></tr>
+<tr><td>Ongoing</td><td>Iran/Hormuz war headlines &amp; oil prices</td><td>Directly feeds the RBNZ's own inflation projections and drives broad risk sentiment, which NZD tracks as a high-beta currency</td></tr>
+<tr><td><b>4 Aug 2026</b></td><td>Stats NZ Q2 labour market statistics (HLFS)</td><td>Tests whether the Q1 unemployment-rate improvement reflected real hiring or just falling participation; key input to the RBNZ's wage/second-round-effects assessment</td></tr>
+<tr><td>Ongoing</td><td>Chinese demand / stimulus headlines</td><td>China's own economic policy and dairy-import behaviour is the single biggest lever that could reverse the current soft GDT trend</td></tr>
+<tr><td><b>2 Sep 2026</b></td><td>RBNZ Monetary Policy Statement + OCR decision</td><td>Widely expected second 25bp hike to 2.75% on current pricing; language on the pace of further tightening will move the NZD rate-path curve sharply</td></tr>
+<tr><td>Ongoing / building through Q4</td><td>Lead-up to the 7 Nov 2026 general election</td><td>Low incumbent approval raises the odds of a change of government; fiscal and policy-direction uncertainty typically builds into election campaigns and can weigh on business confidence</td></tr>
+<tr><td>Ongoing</td><td>US data (CPI/PPI/NFP/Fed communications)</td><td>NZD/USD remains partly a USD-side story even with the RBNZ's own hiking cycle underway, so US surprises can move the pair independent of NZ-specific news</td></tr>
+</table>
+
+<h2>12. Key Risks That Could Invalidate This Analysis</h2>
+<div class="warn">
+<ul>
+<li><b>A durable Iran ceasefire</b> would ease the oil-driven inflation premium quickly, potentially pulling forward RBNZ rate-path expectations lower even as improved global risk sentiment helps NZD through a different, risk-on channel — net effect ambiguous, watch the mix, exactly as in the EUR case.</li>
+<li><b>Further war escalation / Hormuz disruption</b> could push oil sharply higher, reaccelerating NZ inflation but also denting global risk appetite — a stagflationary mix that tends to be net negative for a high-beta currency like NZD even with a hawkish central bank attached.</li>
+<li><b>A fourth consecutive GDT decline</b> would be the clearest signal that the current dairy softness is a genuine cyclical downturn rather than a temporary supply-timing effect, with direct implications for Fonterra's farmgate forecast, rural spending, and ultimately GDP.</li>
+<li><b>A soft Q2 CPI print (21 July)</b> would materially cut September-hike odds and could quickly unwind a chunk of NZD's recent rate-driven gains.</li>
+<li><b>A hawkish or dovish surprise at the 2 September RBNZ MPS</b> — anything deviating from the "one more hike, cautious guidance" consensus would move NZD sharply given how much of the current rally already reflects that expectation.</li>
+<li><b>A genuine return of Chinese dairy demand</b> is the single biggest identified upside risk to this analysis — it could reverse the GDT trend faster than most forecasters currently expect, given China's outsized role as the marginal buyer.</li>
+<li><b>Election-related policy signalling</b> — while the 7 November election is still months away, specific tax, spending, or trade-policy commitments from either major party could move medium-term NZD sentiment well before the vote itself.</li>
+<li><b>US-side surprises dominating the pair</b> — because NZD/USD still carries a meaningful USD-driven component alongside its own rate story, a reversal in US data softness (e.g., a hot US CPI print) could hit NZD/USD independent of anything happening domestically in New Zealand.</li>
+</ul>
+</div>
+
+<h2>Overall Presumption</h2>
+<div class="exec">
+<p>NZD today is best understood as a currency with a genuinely fresh, own-merit hawkish catalyst — the RBNZ's first hike in over three years — sitting on top of an economy whose headline growth numbers have firmed even as its labour market remains soft and its single biggest export commodity has just posted its worst run of auctions in two years. That combination gives NZD more independent conviction than currencies whose recent gains are purely a dollar-weakness story, but it also means the currency has more distinct ways to disappoint: a soft CPI print, a fourth weak dairy auction, or a labour-market reading that reveals the unemployment improvement was illusory could each individually undercut the bullish case. The next real test arrives fast: Q2 CPI in five days (21 July), the next GDT auction shortly after, Q2 labour data on 4 August, and the RBNZ's next full policy statement on 2 September. Until those land, NZD is a genuinely two-sided, headline-and-data-reactive currency — firmer on the charts than the underlying picture fully justifies just yet.</p>
+</div>
+
+<h2>13. Refresh Cadence — When to Re-Run This Analysis</h2>
+<div class="card">
+<p><b>Baseline cadence:</b> every <b>Saturday/Sunday</b>, as prep for the coming week. This catches whatever happened over the prior week and resets the scorecard, scenario weights, and catalyst calendar before Monday's open.</p>
+<p><b>Event-triggered refresh (in addition to the weekend baseline):</b> re-run within ~24 hours of any of the following, since each is capable of moving more than one section of this report at once rather than just a single data point:</p>
+<table>
+<tr><th>Trigger type</th><th>Examples from this report</th><th>Why it can't wait for the weekend</th></tr>
+<tr><td>Scheduled high-impact data</td><td>NZ CPI, RBNZ OCR/MPS decisions, HLFS labour data, GDT auctions</td><td>These are the inputs the whole scorecard (inflation, policy, terms-of-trade rows) is built on — a surprise here changes the scenario-tree probabilities directly</td></tr>
+<tr><td>Central bank surprises</td><td>An off-cycle RBNZ statement, a hawkish/dovish surprise vs. consensus at 2 Sep MPS</td><td>Rate-path repricing typically happens within hours, not days</td></tr>
+<tr><td>Geopolitical shocks</td><td>Iran/Hormuz escalation or de-escalation, oil price spikes/drops</td><td>Feeds simultaneously into the inflation outlook, RBNZ reaction function, and broad risk sentiment — a three-channel move</td></tr>
+<tr><td>China demand headlines</td><td>Stimulus announcements, a sharp GDT auction reversal, trade data surprises</td><td>China is the identified single biggest swing factor for the dairy/terms-of-trade leg of this report</td></tr>
+<tr><td>Election-related shocks</td><td>A major poll shift, a specific policy announcement from either major party</td><td>Political risk in this report is currently "slow-building" — a shock would re-rate it to "acute" and change Section 7's weighting</td></tr>
+</table>
+<p>If none of the above occur in a given week, the weekend baseline refresh alone is sufficient — no need to over-refresh on quiet weeks.</p>
+</div>
+<div class="exec">
+<p><b>🔄 Next recommended refresh:</b> <span style="font-size:16px; font-weight:800; color:#58a6ff;">Tuesday, 21 July 2026</span> — triggered by the Q2 CPI release that day (the single highest-impact scheduled catalyst before the next RBNZ decision). This overrides the ordinary weekend cadence since the print lands mid-week and directly resets the inflation and scenario-tree sections.</p>
+<p>After that, the schedule reverts to baseline weekend refreshes (<b>25–26 July</b>, <b>1–2 Aug</b>) unless a trigger event lands first — watch in particular for the <b>4 Aug</b> labour data and any GDT auction dates announced for late July, both of which would warrant an out-of-cycle refresh in their own right, and the <b>2 Sep RBNZ MPS</b>, which is the next unmissable one on the calendar regardless.</p>
+</div>
+
+<h2>📋 Discord Summary — Copy/Paste Ready</h2>
+<div class="discord">
+**🥝 NZD DEEP-DIVE — July 16, 2026**
+
+The kiwi's got something most G10 currencies don't right now: a genuinely own-merit hawkish catalyst. The RBNZ hiked for the first time since April 2023 on July 8 (OCR now 2.50%), unanimously, framed as moving off "still-stimulatory" settings rather than fighting an overheating economy. Markets see one, maybe two more hikes by year-end, taking the OCR toward 3.00-3.25%. NZD/USD is trading near a 4-week high around 0.578-0.582 on the combo of that hike plus broad USD softness.
+
+**📊 The catch — dairy:** NZ's fortnightly Global Dairy Trade auction has now fallen three straight times, most recently -4.9% (sharpest drop in 2 years) on a global milk supply glut. That's a direct threat to Fonterra's 2026/27 farmgate forecast (midpoint $9.75/kgMS) and to rural incomes — dairy is still ~20% of total NZ exports, and China (the marginal buyer) has its own contracting domestic milk output, which is the wildcard that could flip this back the other way.
+
+**👷 Labour market:** Unemployment eased slightly to 5.3% in Q1, but under the hood it's a "low turnover" market — the improvement owes as much to falling participation as real hiring, and private wage growth (~2%) is still running below inflation. That labour-market softness is actually helping keep second-round inflation risk contained.
+
+**🗳️ Political risk building slowly:** General election on Nov 7, 2026, with the incumbent National-led coalition polling weakly after a rough couple of years for growth — a slower-burn risk than France's in the EUR report, but one that will build through H2.
+
+**🎯 Next catalysts:** Q2 CPI on July 21 (the big one before the next RBNZ decision), the next GDT auction shortly after, Q2 labour data Aug 4, and the RBNZ's full Monetary Policy Statement on Sept 2.
+
+**🔄 Next refresh:** Tue July 21 (post-CPI), then back to weekend cadence (25-26 Jul, 1-2 Aug) unless another trigger lands first.
+
+*Fundamental view only, not advice — pair it with your own technical read before doing anything.*
+</div>
+
+</body>
+</html>
