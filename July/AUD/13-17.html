@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AUD Deep-Dive Fundamental Report — 2026-07-16</title>
+<style>
+  body { font-family: -apple-system, Segoe UI, Arial, sans-serif; background:#0d1117; color:#e6edf3; margin:0; padding:24px; line-height:1.55; max-width:1150px; margin:0 auto; }
+  h1 { font-size:24px; border-bottom:2px solid #2fb783; padding-bottom:10px; }
+  h2 { font-size:19px; color:#4dd0a7; margin-top:36px; border-left:4px solid #2fb783; padding-left:10px; }
+  h3 { font-size:16px; color:#79e0c0; margin-top:22px; }
+  h4 { font-size:14px; color:#9eecd6; margin-top:16px; }
+  .badge { display:inline-block; padding:2px 9px; border-radius:12px; font-size:12px; font-weight:700; }
+  .bearish { background:#3d1418; color:#ff7b72; }
+  .bullish { background:#0f3d1f; color:#3fb950; }
+  .neutral { background:#3d3410; color:#e3b341; }
+  table { width:100%; border-collapse:collapse; margin:12px 0 20px 0; font-size:13px; }
+  th, td { border:1px solid #30363d; padding:7px 9px; text-align:left; vertical-align:top; }
+  th { background:#161b22; color:#8b949e; }
+  tr:nth-child(even) { background:#111620; }
+  .note { background:#161b22; border-left:3px solid #e3b341; padding:10px 14px; margin:10px 0; font-size:13px; color:#c9d1d9; }
+  .warn { background:#1a1512; border-left:3px solid #ff7b72; padding:10px 14px; margin:10px 0; font-size:13px; color:#f0c9c4; }
+  .good { background:#0f1a12; border-left:3px solid #3fb950; padding:10px 14px; margin:10px 0; font-size:13px; color:#c9f0d4; }
+  .exec { background:#0f1a17; border:1px solid #2fb783; border-radius:8px; padding:16px 18px; margin:14px 0; }
+  .card { background:#0f1a17; border:1px solid #30363d; border-radius:8px; padding:14px 16px; margin:12px 0; }
+  .score { font-size:20px; font-weight:800; }
+  .script { background:#0f1f1c; border:1px dashed #4dd0a7; border-radius:8px; padding:12px 16px; margin:8px 0 20px 0; font-size:13.5px; color:#c9e8dc; }
+  .script b.tag { display:inline-block; background:#2fb783; color:#052015; font-size:11px; padding:2px 8px; border-radius:10px; margin-bottom:8px; }
+  .discord { background:#2b2d31; border:1px solid #1e1f22; border-radius:8px; padding:16px; font-family: 'Segoe UI', Consolas, monospace; font-size:13.5px; color:#dbdee1; white-space:pre-wrap; }
+  .scenario { border-radius:8px; padding:14px 16px; margin:10px 0; border:1px solid #30363d; }
+  .scen-bull { border-left:4px solid #3fb950; background:#0f1a12; }
+  .scen-base { border-left:4px solid #e3b341; background:#1a1710; }
+  .scen-bear { border-left:4px solid #ff7b72; background:#1a1512; }
+  .prob { font-weight:800; font-size:15px; }
+  .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  @media (max-width:700px){ .grid2{grid-template-columns:1fr;} }
+  .taglist span { display:inline-block; background:#161b22; border:1px solid #30363d; color:#8b949e; font-size:11px; padding:2px 8px; border-radius:10px; margin:2px 4px 2px 0; }
+</style>
+</head>
+<body>
+
+<h1>AUD Deep-Dive Fundamental Report</h1>
+<p><b>As of:</b> 2026-07-16 &nbsp;|&nbsp; <b>Scope:</b> Single-currency deep dive on AUD — RBA policy, inflation, labour market, growth, the China/commodity transmission channel, fiscal backdrop, positioning, cross-by-cross bias, catalysts &amp; multi-level scenario tree &nbsp;|&nbsp; <b>Companion piece to:</b> Daily Global Macro Strategy Report</p>
+
+<div class="exec">
+<p><b>One-line view:</b> AUD is a high-beta, twice-levered currency right now — levered to the same war-driven inflation shock hitting every economy, and separately levered to China's industrial demand through iron ore. The RBA has already hiked three times in 2026 to 4.35% and is holding at a genuinely hawkish pause, but underneath the headline the story is messier than it looks: headline inflation is falling (helped mechanically by a fuel-excise cut) while the RBA's own preferred underlying measure, trimmed mean, is still rising. Layer on a labour market that is cooling in the official data and cooling much faster in private survey data, a China growth pulse that is soft, and a fresh Australia-specific trade friction (China restricting certain Fortescue iron ore grades), and you get a currency where the rates story and the growth story are actively working against each other — arguably more so than for any other G10 currency right now.</p>
+</div>
+
+<h2>1. What's Actually Driving AUD Right Now — The Core Tension</h2>
+<div class="card">
+<p>AUD is being pulled by <b>three forces</b>, not the usual two, which is what makes it a harder currency to have high conviction on than EUR or GBP at the moment:</p>
+<ul>
+<li><b>The hawkish/domestic-inflation force:</b> The RBA hiked three times in 2026 (February, an escalation move around March, and 5 May) taking the cash rate from 3.60% to 4.35%, explicitly because underlying domestic demand pressures were already too strong before the Iran war began, and the war's oil shock then piled on top. Governor Bullock has been unusually blunt that the conflict has "complicated things immensely" and worsened the RBA's growth/inflation trade-off. The Board held at 4.35% in June — its first pause of 2026 — but retains an explicit tightening bias.</li>
+<li><b>The domestic growth/labour-market force:</b> GDP growth slowed to just 0.3% q/q in Q1 2026 (2.5% y/y), the softest quarterly print since mid-2024, with almost all of the growth coming from a data-centre investment boom rather than broad-based demand. Westpac and others flag a real chance of an outright quarterly GDP contraction in Q2 2026 — which would be the first non-COVID, non-GFC quarterly decline in decades — as the oil shock and cumulative rate hikes bite more fully. Official unemployment has drifted up to a multi-year high before easing slightly to 4.4% in May; a separate private survey (Roy Morgan) shows a much sharper deterioration, with employment falling for four straight months into June.</li>
+<li><b>The China/commodity force — AUD's unique third lever:</b> Unlike EUR, AUD's fate is tied almost as much to Chinese industrial demand as to its own domestic cycle. Iron ore — Australia's largest single export — sits around US$98–99/tonne, roughly flat over the past year but soft over the past month on weak Chinese steel margins and rising port inventories. On top of that, a genuinely AUD-specific risk has emerged: China's state-backed iron ore buyer has restricted purchases of certain lower-grade Fortescue products, and China has separately stood up a new state mining-investment vehicle aimed at reducing reliance on Australian supply over time. This is a structural, idiosyncratic negative that has no EUR or GBP equivalent.</li>
+</ul>
+<p>The net effect: AUD/USD has actually risen about 7% over the past 12 months and sits near $0.70, but much of the very recent price action — a pullback from 3-week highs in mid-July — has been about swings in Chinese sentiment and US rate repricing rather than Australia's own data. That makes AUD one of the more headline-reactive, two-way G10 currencies right now, similar in spirit to EUR but driven by a different, China-centric transmission mechanism.</p>
+</div>
+<div class="script"><b class="tag">🎙 SCRIPT</b><br>
+Let's unpack the Aussie dollar, because on the surface it looks like a simple hawkish-central-bank story, but it's actually got a second engine that most other G10 currencies don't have. Yes, the Reserve Bank of Australia has hiked rates three times this year to 4.35%, and yes, that's a genuinely hawkish central bank fighting inflation that was already too hot before the war even started. But look under the hood and there's a real contradiction: headline inflation has actually been falling, mostly because of a fuel tax cut mechanically dragging the number down — but the Reserve Bank's own preferred measure of underlying inflation, trimmed mean, is still going up. That's the opposite of what you'd want to see if you're trying to call this a clean disinflation story. And then there's the China piece, which is genuinely unique to Australia. This is a currency that trades almost like a leveraged bet on Chinese industrial demand, because iron ore is Australia's single biggest export. So on top of the war and the rate story, you've now also got a live trade dispute where China's state iron ore buyer is restricting purchases from one of Australia's biggest miners. Put all three of those together — a hawkish-but-messy central bank, a slowing domestic economy, and a wobbly China leg — and you get a currency that can be pulled in three different directions in the same week.
+</div>
+
+<h2>2. AUD Multi-Factor Scorecard</h2>
+<table>
+<tr><th>Factor</th><th>Score /100</th><th>Direction</th><th>Weight in current regime</th><th>Comment</th></tr>
+<tr><td><b>Monetary policy (RBA stance)</b></td><td class="score">58</td><td><span class="badge bullish">Hawkish hold</span></td><td><span class="badge bullish">High</span></td><td>Three hikes to 4.35% in 2026, explicit tightening bias retained; but market pricing for a further hike has fallen sharply (~20% for August), with major banks split between one more hike and cuts starting in 2027</td></tr>
+<tr><td><b>Headline inflation trend</b></td><td class="score">55</td><td><span class="badge neutral">Falling, but partly mechanical</span></td><td><span class="badge neutral">Medium</span></td><td>Headline CPI eased to 4.0% y/y in May from 4.2%, helped by the April fuel-excise cut rolling through — a base-effect improvement, not necessarily a genuine turn</td></tr>
+<tr><td><b>Underlying/core inflation trend</b></td><td class="score">35</td><td><span class="badge bearish">Still rising — the key red flag</span></td><td><span class="badge bullish">High</span></td><td>Trimmed mean rose to 3.6% y/y in May from 3.4% — the highest since September 2024 — even as headline fell; this divergence is exactly what the RBA watches most closely and is currently unresolved</td></tr>
+<tr><td><b>Growth momentum</b></td><td class="score">33</td><td><span class="badge bearish">Weak and slowing further</span></td><td><span class="badge neutral">Medium</span></td><td>Q1 GDP +0.3% q/q, weakest since mid-2024, driven almost entirely by data-centre capex; real risk of a Q2 contraction as rate hikes and the oil shock bite more fully</td></tr>
+<tr><td><b>Labour market</b></td><td class="score">42</td><td><span class="badge neutral">Softening, data quality in flux</span></td><td><span class="badge bullish">High</span></td><td>Official unemployment 4.4% (May), down from a multi-year high of 4.5% in April; but ABS survey is mid-transition to a new methodology, and a private survey shows a much sharper 4-month decline in employment through June — treat with caution both ways</td></tr>
+<tr><td><b>China/commodity terms of trade</b></td><td class="score">44</td><td><span class="badge neutral">Two-sided, AUD's unique swing factor</span></td><td><span class="badge bullish">High</span></td><td>Iron ore ~US$98-99/t, roughly flat y/y but soft on the month; China import volumes actually rose in June on Hormuz-related shipping caution, but a fresh Australia-specific trade friction (Fortescue restrictions) is a genuine new negative</td></tr>
+<tr><td><b>Fiscal policy</b></td><td class="score">45</td><td><span class="badge neutral">Mildly expansionary — unhelpful for the RBA</span></td><td><span class="badge neutral">Low-Medium</span></td><td>May budget deficit of A$31.5bn (~1.0% of GDP) for 2026-27, judged by bank economists as neutral-to-mildly-expansionary — not disruptive for AUD directly, but it complicates the RBA's inflation fight and is a very minor structural drag on the currency versus fiscally tighter peers</td></tr>
+<tr><td><b>Political risk</b></td><td class="score">70</td><td><span class="badge bullish">Low — a genuine AUD advantage</span></td><td><span class="badge neutral">Low</span></td><td>Majority Albanese government, no confidence-vote drama, no RBA leadership uncertainty (Bullock's term runs to 2028) — a real point of contrast with EUR's French/ECB overhangs</td></tr>
+<tr><td><b>Relative rate differential vs USD</b></td><td class="score">48</td><td><span class="badge neutral">Roughly balanced, narrowing</span></td><td><span class="badge bullish">High</span></td><td>Cash rate 4.35% vs Fed funds still nominally higher; the gap has narrowed through 2026 as the RBA hiked while the Fed held, which is part of why AUD/USD has trended higher over 12 months</td></tr>
+<tr><td><b>Composite AUD score</b></td><td class="score" style="color:#e3b341;">47/100</td><td colspan="2"><span class="badge neutral">Net neutral, two-sided, headline-reactive</span></td><td>Consistent with the daily macro report's cross-asset scoring</td></tr>
+</table>
+<div class="note">
+<p>Read this scorecard the same way as the EUR one: it's a tension map, not a directional call. AUD has real hawkish-policy support and a genuine "low political risk" edge over most G10 peers, but a still-rising core inflation gauge sitting on top of a visibly slowing economy, plus a live China-specific trade friction, are all pulling the other way. Conviction should stay moderate-to-low even when the chart looks like it's trending — this is a three-way tug-of-war by construction.</p>
+</div>
+
+<h2>3. RBA Policy Deep Dive</h2>
+<div class="grid2">
+<div class="card">
+<h3>Where rates stand</h3>
+<p>Cash rate target: <b>4.35%</b> (raised in three 25bp moves through 2026 — February, an intra-cycle escalation, and 5 May — up from 3.60% at the start of the year). The Board left the rate unchanged at its June meeting, the first hold of 2026, judging that the effect of the three hikes plus the oil shock needed time to be assessed.</p>
+<h3>Next decision date</h3>
+<p>The next scheduled Monetary Policy Board meeting is a two-day meeting on <b>10-11 August 2026</b>, with the decision published at 2.30pm AEST on 11 August, followed by Governor Bullock's press conference. A Statement on Monetary Policy follows on 12 August. This is genuinely live: some economists still see meaningful odds of a fourth hike this cycle.</p>
+<h3>Market and bank pricing — a real split</h3>
+<p>As of mid-July, markets price only around a 20% chance of a hike at the August meeting, with odds rising to roughly 50-60% for some further move by December — down sharply from earlier in the year. Bank forecasts diverge more than is typical: Westpac still expects two more 25bp hikes taking the cash rate to a peak of 4.85%, while CBA, NAB and ANZ all expect a hold through the rest of 2026, with NAB and CBA pencilling in the first rate cuts as early as mid-2027. This spread of views is itself a signal — the data over the next few weeks (Q2 CPI on 29 July, June labour force data on 23 July) will do a lot of the work in resolving it.</p>
+</div>
+<div class="card">
+<h3>The headline-vs-core divergence — the key nuance</h3>
+<p>The single most important technical detail right now: headline CPI has been falling (4.0% in May, down from 4.2% in April) largely because the government's fuel excise cut on 1 April mechanically lowered transport costs. But trimmed mean — the RBA's preferred underlying gauge — actually rose to 3.6% in May from 3.4%, its highest reading since September 2024. A central bank cannot comfortably declare victory, or credibly signal cuts, while its own core measure is moving the wrong way. The RBA's baseline does not expect trimmed mean back inside the 2-3% target band until the second half of 2027.</p>
+<h3>Bullock's own framing</h3>
+<p>Governor Bullock has been explicit that the Middle East conflict has "complicated things immensely," worsening the trade-off between inflation and growth — for any given inflation outcome, she has said, the war now means lower growth and higher unemployment than before. She has also flagged the RBA is watching closely for "second-round effects" — wages and prices chasing each other — which, if they emerge, would force more tightening. As of her most recent public remarks, the RBA judges this risk as present but not yet confirmed in the data, similar in spirit to the ECB's own second-round-effects watch.</p>
+<h3>Forward guidance style</h3>
+<p>The RBA is running a genuinely data-dependent, meeting-by-meeting approach and has avoided pre-committing to a path either way — Board communication in June and July has stressed "every meeting is live." This raises the weight of each incoming print, especially the 29 July Q2 CPI release, which lands 13 days before the August decision.</p>
+</div>
+</div>
+
+<h2>4. Inflation — Headline Cooling, Core Still Climbing</h2>
+<table>
+<tr><th>Month</th><th>Headline CPI y/y</th><th>Trimmed mean y/y</th><th>Notes</th></tr>
+<tr><td>Feb 2026</td><td>3.7%</td><td>~3.1%</td><td>Pre-war baseline, already above target</td></tr>
+<tr><td>Mar 2026</td><td>4.6%</td><td>3.3%</td><td>Sharp jump as fuel/transport surged with early oil-price spike</td></tr>
+<tr><td>Apr 2026</td><td>4.2%</td><td>3.4%</td><td>Fuel excise cut (52.6c/L → 20.6c/L) starts easing headline transport costs</td></tr>
+<tr><td><b>May 2026</b></td><td><b>4.0%</b></td><td><b>3.6%</b></td><td><b>Headline eased again; trimmed mean rose to its highest since Sept 2024 — the key divergence</b></td></tr>
+<tr><td>Jun 2026 (Q2 quarterly, due 29 Jul)</td><td>—</td><td>—</td><td>Pending — the critical print ahead of the 11 August RBA decision</td></tr>
+</table>
+<div class="note">
+<p>The composition matters as much as the headline: annual housing inflation is running at 6.5%, driven by a 21%+ jump in electricity costs now that pandemic-era government rebates have rolled off, plus ongoing new-dwelling and rent pressure. Food and non-alcoholic beverages inflation has been picking up (3.3% in May, up from 2.8%), and services inflation firmed to 3.7% from 3.5%. None of that composition looks like a clean, broad-based disinflation — it looks like one large, favourable base effect (fuel) masking stickiness everywhere else.</p>
+</div>
+<div class="warn">
+<p><b>Why the June-quarter print matters so much:</b> the RBA's own baseline forecast has headline inflation peaking around 4.8% in the June quarter 2026 before easing through the second half of the year, with trimmed mean staying above 3% until mid-2027. Under an adverse scenario tied to a more prolonged or severe energy shock, headline could push toward 5.2%, with trimmed mean running roughly 0.4 percentage points hotter than baseline into 2027. Given the Strait of Hormuz disruption has continued into July — after this baseline was set — there is a real risk the June quarter print comes in at or above the hot end of these ranges, which would sharply reprice both RBA expectations and AUD.</p>
+</div>
+<h4>Key upcoming inflation catalysts</h4>
+<p><b>29 July 2026:</b> Q2 (June quarter) CPI — this is the full quarterly release under the pre-October-2025 collection methodology and is the release the RBA weights most heavily for its trimmed mean read, landing less than two weeks before the August decision.</p>
+
+<h2>5. Growth &amp; Labour Market — Genuine Weak Spot, With a Data-Quality Wrinkle</h2>
+<div class="card">
+<table>
+<tr><th>Indicator</th><th>Latest reading</th><th>Trend</th></tr>
+<tr><td>GDP q/q (Q1 2026)</td><td>+0.3% (vs +0.8% in Q4 2025)</td><td>Sharp slowdown; weakest quarterly growth since mid-2024</td></tr>
+<tr><td>GDP y/y (Q1 2026)</td><td>+2.5%</td><td>Still positive but decelerating</td></tr>
+<tr><td>Net trade contribution (Q1)</td><td>-0.8 percentage points</td><td>Exports fell 1.1% (lower coal/iron ore shipments); imports rose 2.1%</td></tr>
+<tr><td>Unemployment rate (ABS, May 2026)</td><td>4.4% (seasonally adjusted)</td><td>Down 0.1ppt from April's 4-year high of 4.5%</td></tr>
+<tr><td>Participation rate (May 2026)</td><td>66.7%</td><td>Off a 5-month low</td></tr>
+<tr><td>Roy Morgan "real unemployment" (private survey, June 2026)</td><td>11.7% of workforce</td><td>Up 1ppt on the month; employment down for a 4th straight month</td></tr>
+</table>
+<p>The composition of Q1 GDP is a genuine warning sign for anyone reading the headline number as reassuring: business investment surged largely on the back of an AI-driven data-centre construction boom, which Westpac estimates single-handedly drove essentially all of the quarter's growth. Strip that out and the underlying economy was closer to stalling. Public consumption fell for the first time since Q3 2022 as federal energy-rebate support expired, and household discretionary spending stayed weak as higher rates and fuel costs weighed on confidence.</p>
+</div>
+<div class="warn">
+<p><b>Labour market data-quality caveat:</b> the ABS Labour Force Survey is currently mid-transition to a new, modernised collection system, and a systems error briefly corrupted underemployment/underutilisation figures in the May release (since corrected). This means month-to-month readings carry more noise than usual right now. The private Roy Morgan survey is telling a materially more negative story (real unemployment near 11.7%, employment falling for four straight months) than the official ABS series (4.4%, broadly stable). The two data sources are not measuring the same thing methodologically, but the size of the gap is unusual and worth tracking — if the official 23 July release shows a genuine deterioration, that would reinforce the private-survey signal and be a clear dovish catalyst for AUD.</p>
+</div>
+<div class="good">
+<p><b>What's still working:</b> full-time employment has generally held up better than part-time in the official data, business investment (ex data centres too) has been resilient, and the household savings ratio is at a multi-year high (6.9%), which is a real buffer — households are earning more than they're spending, which leaves room for consumption to hold up if confidence stabilises, even if it also means current spending is soft.</p>
+</div>
+<h4>Key upcoming growth/labour catalysts</h4>
+<p><b>23 July 2026:</b> Labour Force, Australia (June) — first clean post-transition read, and the last labour print before the RBA's August decision.<br>
+<b>~Early September 2026:</b> Q2 (June quarter) National Accounts / GDP — the print that will confirm or deny the "possible Q2 contraction" risk flagged by bank economists.</p>
+
+<h2>6. The China &amp; Commodity Channel — AUD's Distinguishing Feature</h2>
+<div class="card">
+<h3>Iron ore: the single biggest swing factor for AUD that has no EUR/GBP equivalent</h3>
+<p>Iron ore trades around US$98-99/tonne, essentially flat versus a year ago but down roughly 3% over the past month. The correlation between AUD/USD and iron ore prices has historically run around 0.76 — one of the tightest single-commodity linkages of any G10 currency. Iron ore is Australia's single largest export by value, and China is overwhelmingly its largest buyer, which is why iron ore is often treated by traders as a live proxy for Chinese industrial and construction demand.</p>
+<h3>Two-sided China signals right now</h3>
+<p>China's June iron ore imports actually rose about 15% month-on-month to roughly 112.7 million tonnes, partly reflecting stockpiling caution linked to Hormuz-related shipping-cost increases — a modestly supportive signal. But steelmaker profitability has been squeezed by elevated coking-coal costs and weak finished-steel prices, port inventories have been building, and broader Chinese manufacturing/fiscal-stimulus data has disappointed, which is the more structurally bearish read for medium-term demand.</p>
+<h3>A genuinely new, AUD-specific risk: the Fortescue restriction</h3>
+<p>China's state-backed buyer, China Mineral Resources Group, has restricted some steel mills from taking delivery of certain lower-grade Fortescue iron ore products, and China has separately launched a new state mining-investment vehicle aimed at increasing its control over overseas mineral resources — widely read as part of a longer-run push to reduce dependence on Australian supply. This is not a China-wide macro shock; it is a targeted, Australia-specific trade friction, and it is new enough that markets have not fully digested how far it could extend to other miners or grades. Separately, an eight-hour strike by workers at BHP's Port Hedland terminal (the world's largest iron ore export hub) on 16 July adds a near-term supply-disruption risk that could push prices the other way.</p>
+<h3>The asymmetric energy angle — a genuine AUD advantage over EUR</h3>
+<p>Unlike the eurozone, Australia is a large net energy exporter (LNG and thermal/coking coal), not an importer. That means the same war-driven spike in global energy prices that is a pure negative terms-of-trade shock for EUR is, for Australia, at least partially offset by higher export earnings on LNG and coal — even as it still pushes up the domestic fuel/transport cost side of CPI. This asymmetry is one reason AUD's reaction function to Middle East headlines is genuinely different from EUR's, not just smaller.</p>
+</div>
+
+<h2>7. Fiscal &amp; Political Backdrop</h2>
+<div class="card">
+<h3>The May budget — a manageable, not alarming, fiscal picture</h3>
+<p>Treasurer Jim Chalmers handed down the 2026-27 budget on 12 May, forecasting an underlying cash deficit of A$31.5bn (about 1.0% of GDP) for 2026-27, rising modestly to a peak near A$34.4bn in 2028-29 before narrowing. Gross federal debt is set to cross A$1 trillion for the first time in 2026-27. The budget included capital gains tax and negative gearing reform, a major NDIS savings package (targeting roughly A$150bn in cumulative savings over a decade), and increased defence spending toward 3% of GDP by 2033, alongside cost-of-living relief. Bank economists judge the fiscal stance as broadly neutral-to-mildly-expansionary for 2026-27 — not disruptive, but not helpful for the RBA's inflation fight either, since near-term deficits are stable rather than shrinking.</p>
+<h3>Political risk: a genuine point of relative AUD strength</h3>
+<p>Unlike the eurozone's French confidence-vote drama or ECB-succession chatter, Australia currently has none of that overhang: the Albanese government holds a workable majority, the budget passed without the kind of crisis seen in France, and RBA Governor Bullock's term runs to September 2028 with no succession uncertainty currently in play. This is a real structural positive for AUD relative to EUR on the political-risk dimension specifically, even though AUD carries more domestic-cyclical and China-linked risk in exchange.</p>
+</div>
+
+<h2>8. AUD Crosses — Detailed Bias &amp; Rationale</h2>
+<table>
+<tr><th>Pair</th><th>Bias</th><th>Confidence</th><th>Core logic</th></tr>
+<tr><td><b>AUDUSD</b></td><td><span class="badge neutral">Range-bound, headline-reactive</span></td><td>40%</td><td>Sits near $0.70; driven as much by swings in Chinese sentiment and US rate repricing as by Australia's own data; RBA rate-path uncertainty (hold vs one more hike) adds a second layer of two-way risk</td></tr>
+<tr><td><b>AUDEUR</b></td><td><span class="badge bearish">Mildly bearish</span></td><td>40%</td><td>Both central banks are in a hawkish-but-cautious pause; EUR's recent gains have been more USD-driven while AUD carries the added drag of a wobbly China leg, giving EUR a modest relative edge</td></tr>
+<tr><td><b>AUDGBP</b></td><td><span class="badge neutral">Low conviction</span></td><td>30%</td><td>Both currencies are trading more on broad USD moves than domestic conviction currently</td></tr>
+<tr><td><b>AUDJPY</b></td><td><span class="badge bullish">Bullish, carry-and-momentum driven</span></td><td>50%</td><td>AUD's still-positive cash rate differential over JPY, combined with the BoJ/MoF's continued reluctance to intervene despite yen weakness near multi-decade lows, keeps this the cleaner directional AUD cross</td></tr>
+<tr><td><b>AUDCHF</b></td><td><span class="badge bearish">Bearish</span></td><td>35%</td><td>CHF retains its classic safe-haven bid on war headlines, which AUD — as a risk-and-China proxy — does not enjoy</td></tr>
+<tr><td><b>AUDNZD</b></td><td><span class="badge neutral">Near flat, RBNZ-dependent</span></td><td>35%</td><td>Both are commodity-linked antipodean currencies; relative central bank pacing (RBA hold vs RBNZ's own cycle) is the main swing factor rather than a structural AUD or NZD edge</td></tr>
+<tr><td><b>AUDCAD</b></td><td><span class="badge bearish">Mildly bearish</span></td><td>35%</td><td>CAD's own oil-exporter tailwind from elevated crude prices offsets AUD's LNG/coal-exporter benefit, but CAD is more directly and immediately levered to the oil price spike than AUD is</td></tr>
+</table>
+
+<h2>9. Positioning &amp; Market Structure Notes</h2>
+<div class="card">
+<ul>
+<li><b>Rate-path uncertainty is unusually wide for a G10 central bank right now:</b> the spread between Westpac (two more hikes to 4.85%) and NAB/CBA (hold, cuts from mid-2027) is large by historical standards, meaning AUD-rate-sensitive flows are likely to whipsaw hard around the 29 July CPI and 23 July labour data as the market converges toward one camp or the other ahead of 11 August.</li>
+<li><b>AUD is a genuine China/risk proxy, not a war-haven currency.</b> Its reaction function to Middle East headlines is more ambiguous than for USD, CHF, or JPY: an escalation can hurt AUD via risk-off flows and a weaker global growth/China-demand outlook, while simultaneously helping it via Australia's own LNG/coal export windfall and a hawkish RBA repricing. That two-directional pull is structurally similar to EUR's ambiguity, but wired through a different channel (China/commodities rather than direct energy-import cost).</li>
+<li><b>Iron ore price action is the cleanest real-time gauge of the "AUD-specific" story,</b> distinct from the broad-USD story — watch it alongside AUD/USD to separate genuine Australia-and-China-driven moves from moves that are really just dollar strength or weakness in disguise, the same distinction that matters for reading EUR/USD right now.</li>
+<li><b>The Fortescue/China Mineral Resources Group dispute is worth watching for scope creep.</b> If restrictions extend to other miners or a broader set of grades, this could evolve from a company-specific irritant into a genuine, AUD-negative trade-policy story; if it stays contained and gets resolved, it's a non-event.</li>
+</ul>
+</div>
+
+<h2>10. Multi-Level Scenario Tree — Next 4-6 Weeks</h2>
+
+<div class="scenario scen-bull">
+<p><span class="prob">🟢 Bull case for AUD — ~25% probability</span></p>
+<p><b>Path:</b> 29 July Q2 CPI surprises hot on trimmed mean (confirming the core-inflation-still-rising story) → 23 July labour data holds up, easing fears of a sharper downturn → RBA delivers a genuine hawkish surprise at the 11 August meeting (hike or explicit hawkish hold with hiking bias reaffirmed) → simultaneously China data stabilises and the Fortescue dispute is resolved or contained → iron ore holds above $100/t → AUD/USD pushes toward $0.72-0.74 as the rate story and the China story align for once.</p>
+<p><b>Watch for:</b> trimmed mean printing above 3.6% on 29 July; a strong June labour force report; iron ore sustaining a bid; de-escalation signals in the Fortescue/China Mineral Resources Group dispute.</p>
+</div>
+
+<div class="scenario scen-base">
+<p><span class="prob">🟡 Base case — ~45% probability</span></p>
+<p><b>Path:</b> Q2 CPI comes in broadly in line with the RBA's baseline (headline easing, trimmed mean still elevated but not accelerating further); labour market data is mixed-to-soft but not alarming; RBA holds at 4.35% on 11 August with continued data-dependent, non-committal language; China data stays sluggish but doesn't deteriorate sharply; iron ore trades a broad $92-104/t range. AUD/USD continues to trade a $0.67-0.71 range, whipsawing on US data and Middle East headlines more than on Australia's own releases.</p>
+<p><b>Watch for:</b> in-line CPI and labour prints; incremental, non-escalatory war and China-trade headlines; US data remaining the dominant swing factor for the pair, similar to the EUR/USD dynamic right now.</p>
+</div>
+
+<div class="scenario scen-bear">
+<p><span class="prob">🔴 Bear case for AUD — ~30% probability</span></p>
+<p><b>Path:</b> Q2 GDP (due September, but foreshadowed by weak partial data through August) confirms an outright quarterly contraction → 23 July labour data shows a genuine deterioration, converging toward the weaker private-survey signal → RBA is forced to pivot from "hawkish hold" to explicit easing-bias language, even if headline inflation is still above target → simultaneously the Fortescue/China dispute widens to other miners or grades, and/or Chinese steel demand data disappoints further, pushing iron ore below $90/t → AUD/USD slides back toward $0.64-0.66 as the growth-and-China legs dominate over the fading rate story.</p>
+<p><b>Watch for:</b> a soft or negative Q2 GDP nowcast; a clear uptick in the official ABS unemployment rate; iron ore breaking below $90/t; escalation or widening of Chinese restrictions on Australian iron ore exporters.</p>
+</div>
+
+<h2>11. Catalysts &amp; Calendar — What to Watch, In Order</h2>
+<table>
+<tr><th>Date</th><th>Event</th><th>Why it matters for AUD</th></tr>
+<tr><td><b>23 Jul 2026</b></td><td>ABS Labour Force, Australia (June)</td><td>First clean post-transition labour read and the last before the RBA's August decision; also the print that will confirm or refute the sharper deterioration flagged by the private Roy Morgan survey</td></tr>
+<tr><td><b>29 Jul 2026</b></td><td>ABS Consumer Price Index (June quarter, full/quarterly release)</td><td>The single most important near-term catalyst — will show whether trimmed mean keeps climbing (hawkish) or finally turns over (dovish), directly ahead of the RBA's August decision</td></tr>
+<tr><td>Ongoing</td><td>Iran/Hormuz war headlines</td><td>Drives global oil and shipping costs, feeding into Australia's import-side inflation while also boosting Australia's own LNG/coal export earnings — a genuinely two-directional channel unique to AUD among G10s</td></tr>
+<tr><td>Ongoing</td><td>China trade/industrial data, and the Fortescue/China Mineral Resources Group dispute</td><td>Iron ore is AUD's single tightest commodity correlation (~0.76); any escalation or resolution of the Fortescue-specific restrictions is a genuinely AUD-idiosyncratic catalyst with no EUR/GBP equivalent</td></tr>
+<tr><td><b>10-11 Aug 2026</b></td><td>RBA Monetary Policy Board decision + Governor Bullock press conference (2.30pm AEST)</td><td>Markets price only ~20% odds of a hike; a surprise either way (hike, or explicit dovish pivot) would move AUD sharply; Statement on Monetary Policy follows 12 August with updated forecasts</td></tr>
+<tr><td>Early Sep 2026</td><td>Q2 2026 National Accounts (GDP)</td><td>Tests the real risk, flagged by bank economists, of an outright quarterly contraction as the oil shock and cumulative rate hikes fully bite</td></tr>
+<tr><td>Ongoing</td><td>US data (CPI/PPI/NFP/Fed communications)</td><td>Given AUD/USD has recently traded as much on US-dollar moves as on Australia-specific news, US surprises can move the pair independent of anything happening domestically — the same dynamic flagged for EUR/USD</td></tr>
+<tr><td>Ongoing</td><td>BHP Port Hedland industrial action / other supply disruptions</td><td>Short-term iron ore supply risk (bullish for price) that sits alongside the longer-run China-demand and Fortescue-restriction risks (bearish) — watch the net effect on the spot price rather than either headline in isolation</td></tr>
+</table>
+
+<h2>12. Key Risks That Could Invalidate This Analysis</h2>
+<div class="warn">
+<ul>
+<li><b>A durable Iran ceasefire</b> would ease the oil-driven inflation impulse and shipping-cost pressure, likely pulling forward RBA rate-cut expectations even as it removes some of AUD's LNG/coal export tailwind — net effect ambiguous, watch the mix of growth-relief versus terms-of-trade loss.</li>
+<li><b>Further war escalation / a sustained Hormuz shipping disruption</b> could reaccelerate headline inflation via fuel costs while also hitting global growth and Chinese demand harder — a stagflationary combination that is bad for AUD on net, similar to the EUR read but transmitted partly via China rather than direct energy imports.</li>
+<li><b>A hawkish or dovish surprise at the 11 August RBA meeting</b> — given how split bank economists currently are (Westpac's two more hikes versus NAB/CBA's holds-then-cuts), either outcome would move AUD sharply, more so than for most G10 central banks right now.</li>
+<li><b>An escalation of the Fortescue/China Mineral Resources Group dispute</b>, or evidence China is accelerating efforts to diversify iron ore supply away from Australia, would be a genuine structural AUD negative distinct from any cyclical story.</li>
+<li><b>A sharper-than-expected labour market deterioration</b> — if the 23 July official data starts to converge toward the weaker private-survey signal, that would materially raise the odds of an early RBA pivot to an easing bias, even with core inflation still above target.</li>
+<li><b>China stimulus surprises</b> — a larger-than-expected fiscal/property stimulus package from Beijing would be a clean, direct AUD positive via the iron ore/steel-demand channel; continued fiscal restraint would reinforce the current soft-demand backdrop.</li>
+<li><b>US-side surprises dominating the pair</b> — because a meaningful share of AUD/USD's recent moves have been dollar-driven rather than Australia-driven, a reversal in US data (e.g. a hot US CPI print, hawkish Fed repricing) could hit AUD/USD independent of anything happening domestically.</li>
+</ul>
+</div>
+
+<h2>Overall Presumption</h2>
+<div class="exec">
+<p>AUD today is best understood as a currency doing double duty: it's fighting the same war-driven inflation shock every other currency is fighting, while separately carrying a live, distinct China-demand and China-trade-policy risk that has no real equivalent in EUR or GBP. The RBA is hawkish on paper (three hikes to 4.35%, explicit tightening bias) but the details are genuinely mixed — headline inflation easing largely on a fuel-tax base effect while the RBA's own preferred core gauge keeps climbing, and a labour market that looks stable in the official data but notably weaker in private survey data. Political and fiscal risk, by contrast, is unusually low for AUD relative to its G10 peers right now, which is a real point in its favour. The next three weeks are genuinely decisive: labour data on 23 July, the critical Q2 CPI print on 29 July, and the RBA decision on 11 August will very likely resolve whether AUD trends or continues to chop in its recent range. Until then, treat AUD as a headline-and-data-reactive currency, not a clean trend, and watch iron ore alongside AUD/USD to separate the genuinely Australia/China-specific moves from moves that are really just the US dollar in disguise.</p>
+</div>
+
+<h2>13. Recommended Refresh Schedule</h2>
+<div class="card">
+<p>This report has a short shelf-life on a few specific data points (trimmed mean, labour market, RBA pricing) and a long shelf-life on everything structural (China/iron-ore linkage, fiscal picture, political risk). A hybrid cadence works better than a fixed weekly-only schedule:</p>
+<ul>
+<li><b>Routine baseline:</b> refresh every Saturday/Sunday as prep for the new trading week — catches positioning drift, commodity moves, and incremental war/China headlines even when no single "big" release occurred.</li>
+<li><b>Event-triggered refresh (overrides the weekly cadence):</b> refresh within 24 hours of any Tier-1 catalyst below, rather than waiting for the weekend. A stale core-inflation read or stale RBA pricing is the main way this report goes wrong.</li>
+</ul>
+<table>
+<tr><th>Trigger</th><th>Date</th><th>Priority</th><th>Why it forces an early refresh</th></tr>
+<tr><td>ABS Labour Force (June)</td><td>Thu 23 Jul 2026</td><td><span class="badge neutral">Medium</span></td><td>Tests whether official data starts converging toward the weaker private-survey signal — changes the labour-market row and the RBA-pricing section</td></tr>
+<tr><td>Q2 CPI (trimmed mean)</td><td>Wed 29 Jul 2026</td><td><span class="badge bearish">HIGH — mandatory</span></td><td>The report's central open question (headline down / core up) gets resolved here; this print alone can flip the scorecard and the scenario-tree probabilities</td></tr>
+<tr><td>RBA decision + presser</td><td>Tue 11 Aug 2026</td><td><span class="badge bearish">HIGH — mandatory</span></td><td>Directly resolves the hold-vs-hike-vs-cut-bias question that Section 3 flags as unusually split among bank economists</td></tr>
+<tr><td>Statement on Monetary Policy</td><td>Wed 12 Aug 2026</td><td><span class="badge neutral">Medium</span></td><td>Updated RBA forecasts/scenarios — refresh the inflation and growth trajectory context even if the 11 Aug refresh already covered the decision itself</td></tr>
+<tr><td>Iran/Hormuz escalation or ceasefire</td><td>Ongoing / unscheduled</td><td><span class="badge bearish">HIGH — event-driven</span></td><td>A sharp oil/shipping move reprices both the inflation and the LNG/coal-export-benefit sides of the report simultaneously</td></tr>
+<tr><td>Fortescue/China Mineral Resources Group dispute — any escalation or resolution</td><td>Ongoing / unscheduled</td><td><span class="badge neutral">Medium-High</span></td><td>This is the report's one genuinely AUD-idiosyncratic risk; a widening to other miners/grades would need its own updated section, not just a data refresh</td></tr>
+<tr><td>China stimulus surprise (fiscal/property) or a sharp iron ore break above $104 or below $90</td><td>Ongoing / unscheduled</td><td><span class="badge neutral">Medium</span></td><td>Moves the scenario-tree probabilities directly via the China/commodity channel</td></tr>
+</table>
+<div class="note">
+<p><b>📅 Next recommended refresh: Thursday 23 July 2026</b> (light refresh, post-labour data), with a <b>mandatory full refresh on/around Wednesday 29 July 2026</b> once the Q2 CPI print lands — that release is likely to move this report more than any single event between now and the 11 August RBA decision. A further mandatory refresh follows the RBA decision itself on 11-12 August. Absent any Tier-1 trigger, revert to the standard weekly Saturday/Sunday cadence starting the weekend of 18-19 July.</p>
+</div>
+</div>
+
+<h2>📋 Discord Summary — Copy/Paste Ready</h2>
+<div class="discord">
+**🇦🇺 AUD DEEP-DIVE — July 16, 2026**
+
+The Aussie is running on two engines at once — a hawkish RBA fighting a war-driven inflation shock, AND a live China/iron-ore story that's specific to Australia. RBA hiked three times in 2026 to 4.35% (from 3.60%), held in June, and is genuinely split going into the 11 August meeting — Westpac still sees two more hikes to 4.85%, while CBA/NAB/ANZ expect a hold and eventual cuts from 2027. Markets price only ~20% odds of an August hike.
+
+**📊 Inflation — the real nuance:** headline CPI eased to 4.0% in May from 4.2%, but that's mostly a fuel-excise-cut base effect. The RBA's preferred trimmed mean core gauge actually ROSE to 3.6% — its highest since Sept 2024. That divergence (headline down, core up) is the single thing to watch, and the 29 July Q2 CPI print will be the tell.
+
+**📉 Growth & labour:** GDP grew just 0.3% in Q1 (weakest since mid-2024), almost entirely driven by a data-centre investment boom — strip that out and growth was near zero. Real risk of an outright Q2 contraction. Official unemployment sits at 4.4%, but a private survey (Roy Morgan) shows a much sharper deterioration — employment falling 4 straight months into June. Worth tracking whether the official 23 July data converges toward that weaker signal.
+
+**⛏️ China/iron ore — AUD's unique lever:** Iron ore ~$98-99/t, roughly flat y/y but soft on the month. Fresh AUD-specific risk: China's state iron ore buyer has restricted certain Fortescue grades, and China's stood up a new state mining-investment vehicle aimed at reducing reliance on Australian supply — a structural story with no EUR/GBP equivalent.
+
+**🏛️ Political/fiscal:** genuinely calm relative to EUR — majority government, no confidence-vote drama, no RBA succession risk (Bullock's term runs to 2028). May budget deficit A$31.5bn (~1% GDP), judged mildly expansionary — not disruptive, but doesn't help the RBA's inflation fight either.
+
+**🎯 Next catalysts:** June labour force data 23 July, the critical Q2 CPI print 29 July, and the RBA decision + Bullock presser on 11 August — these three weeks will likely decide whether AUD breaks out of its recent range.
+
+**🔄 Refresh due:** weekly (Sat/Sun) baseline, PLUS mandatory refresh within 24h of 29 Jul CPI and 11 Aug RBA decision — those two prints are likely to move this report more than a normal week would.
+
+*Fundamental view only, not advice — pair it with your own technical read before doing anything.*
+</div>
+
+</body>
+</html>
