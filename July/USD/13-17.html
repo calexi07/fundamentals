@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>USD Deep-Dive Fundamental Report — 2026-07-16</title>
+<style>
+  body { font-family: -apple-system, Segoe UI, Arial, sans-serif; background:#0d1117; color:#e6edf3; margin:0; padding:24px; line-height:1.55; max-width:1150px; margin:0 auto; }
+  h1 { font-size:24px; border-bottom:2px solid #2f81f7; padding-bottom:10px; }
+  h2 { font-size:19px; color:#58a6ff; margin-top:36px; border-left:4px solid #2f81f7; padding-left:10px; }
+  h3 { font-size:16px; color:#79c0ff; margin-top:22px; }
+  h4 { font-size:14px; color:#9ecbff; margin-top:16px; }
+  .badge { display:inline-block; padding:2px 9px; border-radius:12px; font-size:12px; font-weight:700; }
+  .bearish { background:#3d1418; color:#ff7b72; }
+  .bullish { background:#0f3d1f; color:#3fb950; }
+  .neutral { background:#3d3410; color:#e3b341; }
+  table { width:100%; border-collapse:collapse; margin:12px 0 20px 0; font-size:13px; }
+  th, td { border:1px solid #30363d; padding:7px 9px; text-align:left; vertical-align:top; }
+  th { background:#161b22; color:#8b949e; }
+  tr:nth-child(even) { background:#111620; }
+  .note { background:#161b22; border-left:3px solid #e3b341; padding:10px 14px; margin:10px 0; font-size:13px; color:#c9d1d9; }
+  .warn { background:#1a1512; border-left:3px solid #ff7b72; padding:10px 14px; margin:10px 0; font-size:13px; color:#f0c9c4; }
+  .good { background:#0f1a12; border-left:3px solid #3fb950; padding:10px 14px; margin:10px 0; font-size:13px; color:#c9f0d4; }
+  .exec { background:#0f1520; border:1px solid #2f81f7; border-radius:8px; padding:16px 18px; margin:14px 0; }
+  .card { background:#0f1520; border:1px solid #30363d; border-radius:8px; padding:14px 16px; margin:12px 0; }
+  .score { font-size:20px; font-weight:800; }
+  .script { background:#151d2e; border:1px dashed #58a6ff; border-radius:8px; padding:12px 16px; margin:8px 0 20px 0; font-size:13.5px; color:#c9d6e8; }
+  .script b.tag { display:inline-block; background:#2f81f7; color:#fff; font-size:11px; padding:2px 8px; border-radius:10px; margin-bottom:8px; }
+  .discord { background:#2b2d31; border:1px solid #1e1f22; border-radius:8px; padding:16px; font-family: 'Segoe UI', Consolas, monospace; font-size:13.5px; color:#dbdee1; white-space:pre-wrap; }
+  .scenario { border-radius:8px; padding:14px 16px; margin:10px 0; border:1px solid #30363d; }
+  .scen-bull { border-left:4px solid #3fb950; background:#0f1a12; }
+  .scen-base { border-left:4px solid #e3b341; background:#1a1710; }
+  .scen-bear { border-left:4px solid #ff7b72; background:#1a1512; }
+  .prob { font-weight:800; font-size:15px; }
+  .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  @media (max-width:700px){ .grid2{grid-template-columns:1fr;} }
+  .taglist span { display:inline-block; background:#161b22; border:1px solid #30363d; color:#8b949e; font-size:11px; padding:2px 8px; border-radius:10px; margin:2px 4px 2px 0; }
+</style>
+</head>
+<body>
+
+<h1>USD Deep-Dive Fundamental Report</h1>
+<p><b>As of:</b> 2026-07-16 &nbsp;|&nbsp; <b>Scope:</b> Single-currency deep dive on USD — monetary policy, inflation, labor market, growth, fiscal &amp; Fed-independence risk, positioning, cross-by-cross bias, catalysts &amp; scenario tree &nbsp;|&nbsp; <b>Companion piece to:</b> EUR Deep-Dive Fundamental Report / Daily Global Macro Strategy Report</p>
+
+<div class="exec">
+<p><b>One-line view:</b> USD is currently the most "genuinely hawkish" G10 currency on paper — a Fed under new Chair Kevin Warsh that held rates at 3.50–3.75% in June but published a distinctly hawkish dot plot, on top of a labor market that is now visibly cracking underneath a still-resilient headline growth number. Layer on a war-driven energy shock that briefly pushed inflation to a three-year high before a sharp June cooling, a still-unresolved Trump-vs-Fed-independence subplot, and a fiscal position (~$39.2tn gross debt, ~123% debt/GDP) that keeps a structural bid under term premium — and you get a dollar that has rallied hard on rates but is carrying more two-sided risk under the surface than the DXY chart alone suggests.</p>
+</div>
+
+<h2>1. What's Actually Driving USD Right Now — The Core Tension</h2>
+<div class="card">
+<p>The single biggest thing to understand about the dollar today is that it is being pulled by <b>three forces that are only loosely aligned</b>, not one clean narrative:</p>
+<ul>
+<li><b>The hawkish-rates force (bullish):</b> The Fed held its benchmark rate at 3.50–3.75% at Kevin Warsh's first meeting as Chair on 17 June 2026, in a unanimous 12–0 vote — but the accompanying Summary of Economic Projections was clearly hawkish: nine of nineteen officials penciled in a hike later in 2026, and the median dot moved toward higher, not lower, year-end rates. The Committee's statement flatly said <span class="badge bullish">"We will deliver price stability"</span> and explicitly cited the Iran conflict as a source of "elevated uncertainty" feeding into inflation. This is the main reason the DXY pushed to a 13-month high near 101.8 in late June — most analysts describe the 2026 dollar rally as fundamentally <b>a Fed story</b>, not a broad "US exceptionalism" story.</li>
+<li><b>The labor-market force (bearish, and building):</b> The same economy the Fed is holding restrictive policy against just delivered a June jobs report that missed badly — nonfarm payrolls rose only 57,000 versus a 115,000 consensus, April and May were revised down a combined 74,000, and the unemployment rate's dip to 4.2% was driven by workers leaving the labor force (participation fell to 61.5%, the lowest since March 2021) rather than genuine hiring strength. This is a meaningfully different signal than the "still-resilient" Q1 GDP print, and it is the clearest early sign that restrictive policy plus tariff- and energy-cost pressure on business margins are starting to bite employment before they've fully tamed inflation.</li>
+<li><b>The Fed-independence force (two-sided, underpriced):</b> New Chair Warsh has repeatedly and publicly reaffirmed the Fed's independence from the Trump administration's rate-cut pressure campaign — telling Congress on 14–15 July that Fed independence is "sacrosanct" and that he has told the President "repeatedly" he answers to data, not politics. Markets have so far read this as credibility-supportive for USD (an independent, inflation-focused Fed is a stronger-currency Fed than a politically compliant one). But the pressure campaign itself — a well-documented repeat of the first-term Powell playbook — remains an active, unresolved background risk that could resurface sharply around any leadership or governance friction.</li>
+</ul>
+<p>Net effect: the dollar's 2026 strength is real and rate-differential-driven, but it is increasingly a <b>"hawkish Fed vs. softening labor market"</b> trade rather than a clean "strong US economy" trade — which is a more fragile setup than the DXY's 13-month high makes it look.</p>
+</div>
+<div class="script"><b class="tag">🎙 SCRIPT</b><br>
+Let's dig into what's actually moving the dollar, because the surface story — dollar near 13-month highs — is masking a genuine split underneath. The Fed held rates steady at its June meeting, the first one run by new Chair Kevin Warsh, but the real market-mover wasn't the hold itself, it was the dot plot: nearly half the committee penciled in a rate hike later this year. That hawkish signal is what's been carrying the dollar higher, more than anything about the underlying economy actually accelerating. And here's the tension — the very next jobs report, for June, was ugly. Only 57,000 jobs added versus 115,000 expected, and the two prior months got revised down on top of that. So you've got a central bank leaning hawkish on rates at almost exactly the moment the labor market is showing its clearest cracks all year. That's not a stable combination. On top of that, there's a live subplot most people are under-pricing: President Trump has been pushing hard for rate cuts, and the new Fed chair has had to publicly insist, more than once, that he answers to the data and not to the White House. So far markets have taken that independence as dollar-supportive. But it's an unresolved tension, not a settled one.
+</div>
+
+<h2>2. USD Multi-Factor Scorecard</h2>
+<table>
+<tr><th>Factor</th><th>Score /100</th><th>Direction</th><th>Weight in current regime</th><th>Comment</th></tr>
+<tr><td><b>Monetary policy (Fed stance)</b></td><td class="score">68</td><td><span class="badge bullish">Hawkish hold</span></td><td><span class="badge bullish">High</span></td><td>Held 3.50–3.75% on 17 June, but dot plot showed 9/19 officials favoring a 2026 hike; Warsh explicitly framed the mandate as "deliver price stability"</td></tr>
+<tr><td><b>Inflation trend</b></td><td class="score">54</td><td><span class="badge neutral">Sharp cooling from a 3-yr high, but core still &gt; target</span></td><td><span class="badge bullish">High</span></td><td>Headline CPI fell to 3.5% in June from 4.2% in May — biggest monthly drop since 2020 — but that was driven almost entirely by the temporary June ceasefire's effect on energy; June PPI pipeline (steel, aluminum, electronics) still shows tariff/AI-input pressure building</td></tr>
+<tr><td><b>Labor market</b></td><td class="score">38</td><td><span class="badge bearish">Cracking</span></td><td><span class="badge bullish">High</span></td><td>June payrolls +57k vs. 115k expected; April+May revised down a combined 74k; participation rate fell to a 5-year low, flattering the unemployment-rate headline</td></tr>
+<tr><td><b>Growth momentum (GDP)</b></td><td class="score">58</td><td><span class="badge neutral">Resilient headline, softening composition</span></td><td><span class="badge neutral">Medium</span></td><td>Q1 2026 real GDP revised up to +2.1% annualized (from +0.5% in Q4 2025) on investment, exports and consumption; but real disposable income growth and inflation-adjusted retail sales have been losing momentum since</td></tr>
+<tr><td><b>Fiscal / debt trajectory</b></td><td class="score">28</td><td><span class="badge bearish">Structural headwind</span></td><td><span class="badge neutral">Medium</span></td><td>Gross federal debt ~$39.2tn (debt/GDP ~123%), debt limit raised by $5tn to $41.1tn via the July 2025 reconciliation act; FY2026 on track to add ~$4tn — a persistent term-premium and twin-deficit drag on the currency's "quality" case even as it doesn't threaten near-term funding</td></tr>
+<tr><td><b>Fed independence / political risk</b></td><td class="score">45</td><td><span class="badge neutral">Contested but holding</span></td><td><span class="badge neutral">Medium</span></td><td>Trump's pressure campaign for rate cuts is real and ongoing; Warsh has so far publicly and repeatedly defended independence — currently a credibility positive, but a genuine tail risk if that posture is tested harder</td></tr>
+<tr><td><b>Energy / terms-of-trade exposure</b></td><td class="score">58</td><td><span class="badge neutral">Two-sided, less negative than for import-dependent peers</span></td><td><span class="badge neutral">Medium</span></td><td>The US is a much larger domestic energy producer than the eurozone or Japan, so the Iran-war energy shock is a smaller net terms-of-trade hit for the US even though it still shows up directly in headline CPI via gasoline</td></tr>
+<tr><td><b>Safe-haven / reserve-currency status</b></td><td class="score">70</td><td><span class="badge bullish">Still the primary war-haven currency</span></td><td><span class="badge bullish">High</span></td><td>USD remains the default flight-to-quality asset during Middle East escalation headlines; "de-dollarization" narratives persist but have not visibly dented reserve-currency demand this year</td></tr>
+<tr><td><b>Relative rate differential vs. G10</b></td><td class="score">72</td><td><span class="badge bullish">Widest positive gap in the G10</span></td><td><span class="badge bullish">High</span></td><td>Fed funds at 3.50–3.75% sits above the ECB's 2.25% deposit rate (even post-hike), the BoE's 3.75%, and far above the BoJ — this differential is the single biggest structural support for USD crosses broadly</td></tr>
+<tr><td><b>Composite USD score</b></td><td class="score" style="color:#e3b341;">55/100</td><td colspan="2"><span class="badge neutral">Net firmer, but genuinely two-sided beneath the surface</span></td><td>Consistent with the daily macro report's cross-asset scoring</td></tr>
+</table>
+<div class="note">
+<p>Read this scorecard as a tension map, not a single verdict. USD's rate-differential advantage, hawkish Fed posture, and haven status are genuinely strong tailwinds — but they sit directly on top of a labor market that just delivered its weakest print of the year, a structurally deteriorating fiscal position, and a Fed-independence subplot that is resolved for now but not permanently closed. Conviction on USD direction should stay moderate-to-firm on rates, but the labor-market data flow is the variable most likely to flip this scorecard quickly.</p>
+</div>
+
+<h2>3. Federal Reserve Policy Deep Dive</h2>
+<div class="grid2">
+<div class="card">
+<h3>Where rates stand</h3>
+<p>Federal funds target range: <b>3.50%–3.75%</b>, unchanged since December 2025 (following three consecutive 25bp cuts in September, October and December 2025). This was Kevin Warsh's first meeting as Chair (sworn in 22 May 2026, replacing Jerome Powell), and the fourth consecutive meeting at this level. Interest on reserve balances is 3.65%.</p>
+<h3>Next decision dates</h3>
+<p>The next FOMC meeting is <b>28–29 July 2026</b>, with the decision published at 2:00pm ET and Warsh's press conference at 2:30pm ET on the 29th. This meeting does <b>not</b> produce a new Summary of Economic Projections (SEP) — the next SEP-bearing meeting is 15–16 September 2026, followed by 27–28 October and 8–9 December.</p>
+<h3>Market pricing</h3>
+<p>Pricing has been unusually volatile within the past week alone: odds of a September hike spiked to roughly 70% (and July-hike odds briefly to ~51%) after the ceasefire collapsed and oil spiked on renewed Hormuz tensions, then fell back toward ~50–63% after the softer-than-expected June CPI print on 14 July. CME FedWatch showed an ~86% probability of a July hold immediately after that CPI release. Read the 29 July meeting as very likely a hold, with September remaining the more live, still-hotly-repriced hike date.</p>
+</div>
+<div class="card">
+<h3>The June SEP — a genuinely hawkish signal</h3>
+<p>The June 2026 dot plot showed: 2026 real GDP growth of 2.2% (2.3% in 2027, 2.2% in 2028); unemployment at 4.3% across 2026–2027; headline PCE inflation revised sharply higher to <b>3.6% for 2026</b> (up from a prior 2.7% estimate) before falling to 2.3% in 2027; core PCE at 3.3% for 2026. Nine of nineteen officials penciled in at least one more hike in 2026 — a genuinely hawkish shift for a committee that just three cuts ago (Sep–Dec 2025) had been easing.</p>
+<h3>The Warsh doctrine</h3>
+<p>Warsh has been explicit that he opposes providing detailed forward guidance (he did not submit an individual dot for the June SEP) and has set up five internal task forces — covering topics including AI's effect on productivity and inflation — to reshape how the Fed analyzes data. He has also dismissed calls to raise the Fed's 2% inflation target and has called "the conventional wisdom" his "least favorite data point," signaling a willingness to deviate from consensus central-bank groupthink.</p>
+<h3>Fed independence — the live subplot</h3>
+<p>At the Sintra ECB Forum (1 July) and in back-to-back congressional testimony (14–15 July, delivering the semiannual Monetary Policy Report), Warsh repeatedly stated the Fed's independence "would not change regardless of what the president wants," calling it "sacrosanct," and told the Senate Banking Committee that Trump has not tried to interfere and "wouldn't succeed if he attempted such a thing." Trump nonetheless continues a documented pressure campaign for lower rates — a near-replay of his first-term conflict with Powell — that markets are currently treating as a credibility positive for Warsh (and thus USD) but which remains an open, non-trivial tail risk.</p>
+</div>
+</div>
+
+<h2>4. Inflation — Peak-Then-Sharp-Cooling, With a Tariff/AI Undercurrent</h2>
+<table>
+<tr><th>Month</th><th>Headline CPI y/y</th><th>Core CPI y/y</th><th>Energy y/y</th><th>CPI m/m</th></tr>
+<tr><td>Jan 2026</td><td>2.4%</td><td>—</td><td>—</td><td>—</td></tr>
+<tr><td>Mar 2026</td><td>~3.4%</td><td>2.6%</td><td>—</td><td>+0.7% (PPI ref.)</td></tr>
+<tr><td>Apr 2026</td><td>3.8%</td><td>2.8%</td><td>+17.9%</td><td>+0.6%</td></tr>
+<tr><td>May 2026</td><td><b>4.2%</b> (3-yr high)</td><td>2.9%</td><td>+23.5%</td><td>+0.5%</td></tr>
+<tr><td><b>Jun 2026</b></td><td><b>3.5%</b></td><td><b>2.6%</b></td><td>+15.7%</td><td><b>-0.4%</b> (largest drop since 2020)</td></tr>
+</table>
+<div class="note">
+<p>The annual inflation rate fell to 3.5% in June 2026, the first decline in five months, down from 4.2% in May and below the 3.8% consensus — a monthly CPI decline of 0.4%, the largest since April 2020. Energy costs rose 15.7% y/y (down sharply from 23.5% in May) as the mid-June US-Iran ceasefire briefly pushed gasoline prices down about 9.7% on the month and fuel oil down over 9%. Core CPI (ex food & energy) eased to 2.6% y/y from a seven-month high of 2.9%, with core prices flat month-on-month — shelter cooled modestly to 3.3% from 3.4%, and airfares, apparel, and medical care all decelerated.</p>
+<p><b>Why this reading is fragile:</b> the survey window closed before the ceasefire collapsed in early July and the US resumed strikes on Iran and reinstated a Strait of Hormuz blockade, with Iran retaliating against shipping. Brent crude has since jumped back toward a one-month high above $86/barrel, and national average gasoline (~$3.86/gallon) remains well above pre-war levels even after the June pullback. Economists explicitly flagged that "oil and gasoline prices... have started to edge back up on renewed US-Iran tensions, but the CPI won't reflect this for another month" — meaning June's cooling could prove a one-month reprieve, mirroring the same dynamic flagged in the eurozone report.</p>
+</div>
+<div class="warn">
+<p><b>The tariff/AI pipeline risk sitting inside PPI:</b> June producer prices fell 0.3% m/m (first decline since August 2025) and the annual PPI rate eased to 5.5% from 6.0% in May, driven almost entirely by the same energy pullback. But underneath that headline, tariff- and AI-capex-exposed categories kept accelerating: steel mill products +3.6% in June alone, aluminum mill shapes +52% y/y, primary nonferrous metals +66% y/y, and electronic components +27.6% y/y, alongside a 1.1% monthly rise in data-processing services. This is the clearest evidence yet that tariff pass-through and AI-infrastructure demand are building underlying goods-price pressure that is currently being masked by the energy-driven headline cooling — a genuine upside risk to core CPI/PCE over the next 1–2 quarters if it broadens.</p>
+</div>
+<h4>Next print: 12 August 2026 (July CPI)</h4>
+<p>The BLS's July CPI release lands <b>12 August 2026</b> — the first full post-re-escalation read on whether June's cooling holds or reverses. July PPI follows on <b>13 August 2026</b>.</p>
+
+<h2>5. Labor Market — The Real Swing Factor Right Now</h2>
+<div class="card">
+<table>
+<tr><th>Indicator</th><th>Latest reading (June 2026)</th><th>Trend</th></tr>
+<tr><td>Nonfarm payrolls (m/m)</td><td>+57,000 (vs. +115,000 consensus)</td><td>Sharp miss; roughly in line with the weak 12-month average of +36k, well below the 3-month average of +111k</td></tr>
+<tr><td>April / May revisions</td><td>-31,000 / -43,000 (combined -74,000)</td><td>Meaningfully weaker than initially reported</td></tr>
+<tr><td>Unemployment rate</td><td>4.2% (down from 4.3%)</td><td>Improvement driven by a shrinking labor force, not stronger hiring</td></tr>
+<tr><td>Labor force participation rate</td><td>61.5% (-0.3pp)</td><td>Lowest since March 2021</td></tr>
+<tr><td>Household employment</td><td>-507,000</td><td>Sharp one-month decline</td></tr>
+<tr><td>Average hourly earnings</td><td>+0.3% m/m / +3.5% y/y</td><td>Wage growth still running above the pre-pandemic norm, a lingering inflation-sticky signal</td></tr>
+</table>
+<p>Job gains were concentrated in professional & business services (+36k), social assistance (+25k) and health care (+22k), while leisure & hospitality shed 61,000 jobs — a category some analysts had expected a boost to from World Cup-related hospitality demand, which did not materialize as hoped. One labor-market economist summarized June's report as "the small amount of water left standing when both the inflow and the outflow have gone nearly quiet" — a fair description of a labor market that has stopped adding workers briskly but has not yet started shedding them in a recessionary way.</p>
+</div>
+<div class="warn">
+<p><b>Why this matters disproportionately for USD:</b> this is the data series the market reacted to most sharply of anything covered in this report — the 2-year Treasury yield dropped as much as 14bps in a single session on the CPI release, and July-hike pricing collapsed from ~30% pre-payrolls to near-zero immediately after the jobs miss. If the labor market continues cooling at this pace even as inflation stays above target, the Fed faces a genuine stagflation-adjacent policy dilemma — precisely the setup that tends to produce the choppiest, most headline-reactive USD price action.</p>
+</div>
+
+<h2>6. Growth (GDP) — Resilient Headline, Softening Composition</h2>
+<div class="card">
+<p>Real GDP grew at a <b>2.1% annualized rate in Q1 2026</b> (third/final BEA estimate, revised up from a 1.6% preliminary consensus), a sharp rebound from just 0.5% in Q4 2025. The increase was driven by investment, exports, consumer spending and government spending. Nominal GDP reached $31.87 trillion.</p>
+<p>However, forward-looking indicators have softened since: real disposable income growth and inflation-adjusted retail sales have shown increasing signs of fatigue as elevated energy costs and tariff pass-through erode household purchasing power, even as the labor market — until June — had remained comparatively resilient. The next release, <b>Q2 2026 GDP (advance estimate), lands 30 July 2026</b> — the day after the FOMC decision — and will be a critical read on whether growth momentum has genuinely continued or whether the June labor-market miss was an early signal of a broader slowdown.</p>
+</div>
+
+<h2>7. Fiscal Position &amp; Fed-Independence Risk</h2>
+<div class="card">
+<h3>The debt trajectory</h3>
+<p>Gross federal debt stood at roughly <b>$39.16 trillion</b> as of late May 2026, up from $37.64 trillion at the end of FY2025, and is on track to approach $40 trillion by the end of FY2026 — one of the largest non-emergency annual increases in US history. Debt-to-GDP is roughly 123%. The debt limit was raised by $5 trillion to $41.1 trillion via the "One Big Beautiful Bill Act" reconciliation package in July 2025, removing the near-term default/shutdown-style funding cliff that dominated headlines in late 2025 (the FY2026 fiscal year opened with the longest government shutdown in modern history, running 1 October–12 November 2025, now resolved). Net interest payments on federal debt surpassed $1 trillion annually for the first time in FY2025 — a structural, slow-moving drag on the "quality" case for USD even though it poses no imminent funding crisis.</p>
+<h3>Treasury market read-through</h3>
+<p>The 10-year Treasury yield sits around 4.56–4.62% (mid-July 2026), and the 2-year around 4.13–4.21% — both near multi-month highs, reflecting the hawkish Fed repricing more than acute fiscal stress, though persistent deficits and rising term issuance remain a background support for yields (and thus USD) independent of the Fed's policy rate itself.</p>
+<h3>Fed independence (see Section 3 for detail)</h3>
+<p>This is arguably the single most USD-specific political risk factor not present in most other G10 currency stories right now: an administration actively pushing for lower rates, versus a Fed chair publicly and repeatedly staking his credibility on resisting that pressure. So far this has been a net positive for USD (an independent central bank commands a lower risk premium than a captured one), but a credible signal that independence is eroding — via personnel changes, legislative threats to Fed governance, or a genuine break in Warsh's public posture — would be a sharp, fast-moving USD-negative catalyst that is not currently priced.</p>
+</div>
+
+<h2>8. USD Crosses — Detailed Bias &amp; Rationale</h2>
+<table>
+<tr><th>Pair</th><th>USD bias</th><th>Confidence</th><th>Core logic</th></tr>
+<tr><td><b>EURUSD</b></td><td><span class="badge bullish">USD firmer (EUR capped)</span></td><td>55%</td><td>Fed funds (3.50–3.75%) still sits well above the ECB's post-hike 2.25% deposit rate; EUR/USD's recent bounce owes more to episodic US data softness than to independent EUR strength</td></tr>
+<tr><td><b>GBPUSD</b></td><td><span class="badge neutral">Mildly USD firmer</span></td><td>45%</td><td>BoE holds at 3.75% (7–2 vote, two dissents favoring a hike) — a narrower rate gap than vs. EUR, but the Fed's hawkish dot plot still gives USD a modest edge; next BoE decision 30 July</td></tr>
+<tr><td><b>USDJPY</b></td><td><span class="badge bullish">USD firmer, momentum-driven</span></td><td>55%</td><td>The widest policy-rate gap in the G10 by far, with JPY sitting near ~40-year lows and no confirmed BoJ/MoF intervention despite persistent verbal warnings</td></tr>
+<tr><td><b>USDCHF</b></td><td><span class="badge neutral">Two-sided</span></td><td>35%</td><td>Both currencies have offsetting war-linked safe-haven demand; CHF is the "classic" geopolitical haven, competing directly with USD's own haven flows</td></tr>
+<tr><td><b>AUDUSD</b></td><td><span class="badge bearish">USD softer vs. AUD</span></td><td>40%</td><td>RBA's policy rate retains a modest edge over the Fed on a real-rate basis; 11 August RBA decision is the key swing catalyst</td></tr>
+<tr><td><b>NZDUSD</b></td><td><span class="badge bearish">USD softer vs. NZD</span></td><td>45%</td><td>RBNZ has struck a hawkish tone recently, and NZD was one of the few currencies to gain against USD even during the dollar's broad mid-July strength</td></tr>
+<tr><td><b>USDCAD</b></td><td><span class="badge neutral">Flat-to-mildly USD firmer</span></td><td>35%</td><td>CAD's oil-price tailwind from the Iran-war energy shock is a partial offset to USD's rate advantage; BoC policy path is the key swing factor</td></tr>
+</table>
+
+<h2>9. Positioning &amp; Market Structure Notes</h2>
+<div class="card">
+<ul>
+<li><b>Rate-repricing whiplash is extreme right now.</b> September-hike odds swung from ~70% (post-Hormuz-blockade announcement, pre-CPI) to a low-50s/high-40s range within 48 hours after the soft June CPI print — and July-hike odds collapsed from ~30% pre-payrolls to near-zero after the jobs miss, then partially recovered on the Hormuz escalation. This kind of rapid, headline-driven repricing tends to produce choppier, less trending USD price action across the board — consistent with the same dynamic flagged in the EUR companion report.</li>
+<li><b>USD is the primary "war trade" currency</b> — unlike EUR, which sits closer to a risk-and-rates proxy exposed to the energy shock mainly as a cost. USD benefits from both channels simultaneously during escalation: safe-haven inflows <i>and</i> a hawkish-Fed rates story, since war-driven inflation reinforces the case for the Fed staying restrictive (or hiking). This gives USD a cleaner, less ambiguous reaction function to Iran/Hormuz headlines than most other G10 currencies.</li>
+<li><b>The labor-market/inflation divergence is the market's core current debate.</b> A Fed that stays hawkish on inflation optics while payrolls visibly weaken is a genuinely unusual policy setup — closer to a stagflation-lite dynamic than a clean "strong economy, strong currency" story. Positioning around this divergence (long-USD-on-rates vs. short-USD-on-growth) is likely to stay volatile until one signal clearly dominates the other.</li>
+<li><b>DXY valuation:</b> multiple sell-side models (e.g., Morningstar's currency valuation work) estimate the DXY as roughly 15% overvalued versus fundamentals, attributing most of 2026's rally to cyclical rate differentials and risk premium rather than a genuine shift in fair value — a caution flag for chasing further USD strength on rates alone.</li>
+</ul>
+</div>
+
+<h2>10. Multi-Level Scenario Tree — Next 4–6 Weeks</h2>
+
+<div class="scenario scen-bull">
+<p><span class="prob">🟢 Bull case for USD — ~30% probability</span></p>
+<p><b>Path:</b> War escalates further or stays elevated without de-escalating → oil stays high, keeping headline inflation sticky → July jobs report (7 Aug) and July CPI (12 Aug) both surprise firmer than expected → the Fed delivers a September hike as the hawkish dot plot implied → Warsh continues to visibly hold the line on independence, reinforcing credibility → DXY extends toward 103–105, with USD/JPY pushing toward fresh highs and EUR/USD sliding back toward 1.08–1.10.</p>
+<p><b>Watch for:</b> a hot July CPI print; continued Hormuz disruption keeping Brent above $90; any hawkish surprise at the 29 July FOMC; no fresh Fed-independence controversy.</p>
+</div>
+
+<div class="scenario scen-base">
+<p><span class="prob">🟡 Base case — ~45% probability</span></p>
+<p><b>Path:</b> War grinds on with periodic escalation but no full-scale regional spillover; oil stays elevated but doesn't spike further; the Fed holds on 29 July with hawkish-but-data-dependent language; the labor market continues cooling gradually without falling off a cliff; core inflation drifts sideways in the mid-2% range. DXY continues trading a broad 99–103 range, driven by the ongoing tug-of-war between the hawkish-Fed narrative and softening labor data, with September-hike pricing whipsawing between 40–65% depending on each incoming data point.</p>
+<p><b>Watch for:</b> in-line CPI and payrolls prints; incremental (not escalatory) war headlines; continued but unresolved Trump-Fed friction; Q2 GDP (30 July) landing near consensus.</p>
+</div>
+
+<div class="scenario scen-bear">
+<p><span class="prob">🔴 Bear case for USD — ~25% probability</span></p>
+<p><b>Path:</b> The labor-market deterioration seen in June accelerates — July payrolls miss again and/or the unemployment rate rises on genuine job losses rather than a shrinking labor force → growth data (Q2 GDP) disappoints, reviving recession concerns → the Fed is forced to acknowledge a real growth-vs-inflation dilemma and softens its hawkish tone even with inflation still above target → simultaneously, a genuine Fed-independence shock emerges (escalated Trump pressure, a credible threat to Warsh's position, or a visible internal Fed rift) → DXY slides back toward 96–98 as both the rate-support and credibility legs of the USD case weaken together.</p>
+<p><b>Watch for:</b> a sub-40k or negative payrolls print; unemployment rising above 4.5% on genuine job losses; a sharp equity/credit selloff reviving recession pricing; any concrete escalation in the Trump-Fed independence conflict (e.g., legal action, a forced resignation, or credible governance-structure threats).</p>
+</div>
+
+<h2>11. Catalysts &amp; Calendar — What to Watch, In Order</h2>
+<table>
+<tr><th>Date</th><th>Event</th><th>Why it matters for USD</th></tr>
+<tr><td>Ongoing</td><td>Iran/Hormuz war headlines</td><td>Directly drives oil, which feeds both the inflation and safe-haven legs of the USD story simultaneously — and, unlike for EUR, both legs tend to point the same direction (bullish USD) during escalation</td></tr>
+<tr><td><b>28–29 Jul 2026</b></td><td>FOMC decision + Warsh press conference (2:00pm / 2:30pm ET)</td><td>Widely expected hold, no new SEP; language on the labor-market deterioration vs. the war-driven inflation risk will move September-hike pricing sharply</td></tr>
+<tr><td><b>30 Jul 2026</b></td><td>Q2 2026 GDP advance estimate</td><td>Tests whether Q1's resilient 2.1% growth continued or whether the June labor-market weakness is the leading edge of a broader slowdown</td></tr>
+<tr><td>Early Aug 2026</td><td>Quarterly Treasury refunding announcement</td><td>Signals issuance mix and pace against the ~$39.2tn debt stock — a structural driver of term premium and yields independent of Fed policy</td></tr>
+<tr><td><b>7 Aug 2026</b></td><td>July jobs report (nonfarm payrolls)</td><td>The single most important near-term data point — confirms or reverses the June deterioration; markets reacted more sharply to the June miss than to any other release covered here</td></tr>
+<tr><td><b>12 Aug 2026</b></td><td>July CPI</td><td>First full post-re-escalation read on whether June's inflation cooling holds or reverses as the Hormuz disruption feeds through to gasoline prices</td></tr>
+<tr><td><b>13 Aug 2026</b></td><td>July PPI</td><td>Tests whether the tariff/AI-input pipeline pressure seen in June (steel, aluminum, electronics) continues building toward core CPI/PCE</td></tr>
+<tr><td>Ongoing / unscheduled</td><td>Trump-Fed independence developments</td><td>Any escalation beyond the current public sparring (legal threats, governance changes, a visible break in Warsh's posture) is a high-impact, currently underpriced USD-negative tail risk</td></tr>
+<tr><td>Late Aug 2026 (typical)</td><td>Jackson Hole Economic Symposium</td><td>Historically a venue for signaling shifts in Fed framework or forward guidance; Warsh's first appearance as Chair will be closely parsed</td></tr>
+<tr><td><b>15–16 Sep 2026</b></td><td>FOMC decision (with new SEP)</td><td>The meeting markets have been pricing as the more likely hike date since June; will carry updated 2026–2028 dot plot</td></tr>
+</table>
+
+<h2>12. Key Risks That Could Invalidate This Analysis</h2>
+<div class="warn">
+<ul>
+<li><b>A durable Iran ceasefire re-emerging</b> would remove the energy-driven inflation premium quickly, pulling forward Fed rate-cut expectations even as it removes some of USD's safe-haven bid — net effect ambiguous, watch which channel dominates.</li>
+<li><b>Further, sustained labor-market deterioration</b> — if July and August payrolls confirm June's weakness rather than reverse it, the Fed's hawkish dot plot becomes increasingly difficult to deliver on, which would be a genuine USD-negative shift in the core narrative.</li>
+<li><b>A hawkish or dovish surprise at the 29 July FOMC</b> — anything deviating from the "hold now, stay data-dependent into September" consensus would move USD sharply given how volatile rate-hike pricing has already been this month.</li>
+<li><b>Tariff/AI-input pipeline pressure broadening from PPI into core CPI</b> — would reinforce the hawkish case even as growth and labor data soften, sharpening the stagflation-adjacent policy dilemma.</li>
+<li><b>A genuine Fed-independence shock</b> — a credible escalation of the Trump-Warsh conflict beyond public sparring would be a fast-moving, currently underpriced USD-negative catalyst via a higher risk/credibility premium on US assets.</li>
+<li><b>Fiscal/term-premium developments</b> — a larger-than-expected Treasury issuance ramp or a credit-rating action tied to the ~$39–40tn debt stock could push yields (and by extension USD) independent of Fed policy, in either direction depending on how markets read the signal.</li>
+<li><b>Renewed Hormuz shipping disruption intensifying further</b> — could push oil sharply higher, which is USD-supportive via the safe-haven and inflation channels but could also tip growth into a sharper slowdown if sustained, complicating the clean "bullish for USD" read.</li>
+</ul>
+</div>
+
+<h2>Overall Presumption</h2>
+<div class="exec">
+<p>USD today is best understood as a currency riding a genuinely hawkish Fed and the widest positive rate differential in the G10, sitting on top of a labor market that just delivered its clearest warning sign of the year and a fiscal position that keeps a structural, low-urgency drag in the background. The dollar's rally to 13-month highs owes more to the Fed's hawkish dot plot than to broad economic strength, which is the key reason conviction should stay firm on the rates story specifically but moderate on the broader "strong dollar" narrative. The next real test arrives fast: the FOMC decision on 29 July, Q2 GDP the next day, and the July jobs report on 7 August — all landing within a two-week window that will likely determine whether the hawkish-Fed-vs-softening-labor-market tension resolves toward a September hike or toward the Fed backing off its own dot plot. Until then, USD is a rate-repricing-and-headline currency, not a clean trend.</p>
+</div>
+
+<h2>13. Recommended Refresh Schedule</h2>
+<div class="card">
+<p><b>Baseline cadence:</b> refresh every <b>Saturday or Sunday</b> as weekend prep for the coming week — this catches drift in positioning, yields, DXY levels, and scenario-tree probabilities even on weeks with no major release.</p>
+<p><b>Event-triggered refresh:</b> re-run the analysis immediately after any release that can actually move a scorecard row or scenario weight — not after routine commentary. For USD specifically that means: FOMC decisions, NFP/jobs reports, CPI, PPI, GDP prints, a confirmed material Iran/Hormuz escalation or de-escalation, or any <i>concrete</i> Fed-independence development (an action, not just a repeated talking point).</p>
+</div>
+<table>
+<tr><th>Trigger date</th><th>Event</th><th>Refresh priority</th></tr>
+<tr><td><b>Sat 18 – Sun 19 Jul 2026</b></td><td>Weekly baseline refresh</td><td><span class="badge neutral">Routine</span></td></tr>
+<tr><td><b>Wed 29 Jul 2026</b></td><td>FOMC decision + Warsh press conference</td><td><span class="badge bullish">Mandatory — same day</span></td></tr>
+<tr><td><b>Thu 30 Jul 2026</b></td><td>Q2 GDP advance estimate</td><td><span class="badge bullish">Mandatory — same day</span></td></tr>
+<tr><td><b>Sat 1 – Sun 2 Aug 2026</b></td><td>Weekly baseline refresh</td><td><span class="badge neutral">Routine</span></td></tr>
+<tr><td><b>Fri 7 Aug 2026</b></td><td>July jobs report (nonfarm payrolls)</td><td><span class="badge bullish">Mandatory — same day</span></td></tr>
+<tr><td><b>Sat 8 – Sun 9 Aug 2026</b></td><td>Weekly baseline refresh</td><td><span class="badge neutral">Routine</span></td></tr>
+<tr><td><b>Wed 12 Aug 2026</b></td><td>July CPI</td><td><span class="badge bullish">Mandatory — same day</span></td></tr>
+<tr><td><b>Thu 13 Aug 2026</b></td><td>July PPI</td><td><span class="badge bullish">Mandatory — same day</span></td></tr>
+<tr><td>Ongoing</td><td>Confirmed Iran/Hormuz escalation or ceasefire</td><td><span class="badge bearish">Mandatory — as it happens</span></td></tr>
+<tr><td>Ongoing</td><td>Concrete Fed-independence development</td><td><span class="badge bearish">Mandatory — as it happens</span></td></tr>
+</table>
+<div class="good">
+<p><b>➡ Next recommended refresh: Saturday, 18 July 2026</b> (routine weekend prep), with a <b>mandatory interim refresh on Wednesday, 29 July 2026</b> regardless of the weekly schedule, since the FOMC decision that day is the single highest-probability catalyst for invalidating this report's scorecard and scenario weights before the next weekend.</p>
+</div>
+
+<h2>📋 Discord Summary — Copy/Paste Ready</h2>
+<div class="discord">
+**🇺🇸 USD DEEP-DIVE — July 16, 2026**
+
+The dollar's climb to 13-month highs is fundamentally a Fed story, not a broad "US economy is booming" story — worth keeping in mind before over-reading the DXY chart. The Fed held rates at 3.50–3.75% at Kevin Warsh's first meeting as Chair on June 17, but the dot plot turned hawkish (9 of 19 officials penciled in a 2026 hike) and 2026 PCE inflation projections got revised way up to 3.6%. That's the main engine behind the rally.
+
+**📊 Inflation:** Headline CPI cooled sharply to 3.5% in June from a 3-year-high 4.2% in May — biggest monthly drop since 2020 — but it was almost entirely energy-driven off the now-collapsed June ceasefire, and PPI shows tariff/AI-input pressure (steel, aluminum, electronics) still building underneath. July CPI (Aug 12) is the real test of whether the cooling holds.
+
+**💼 Labor market — the wildcard:** June payrolls badly missed (+57k vs. +115k expected), with the prior two months revised down a combined 74k, and the unemployment rate's dip to 4.2% was actually driven by people leaving the labor force, not stronger hiring. This is the clearest crack in the "resilient economy" story all year, and it's happening at the exact moment the Fed is leaning hawkish.
+
+**🏛️ Political risk:** Trump's pressure campaign for rate cuts is ongoing, but new Fed Chair Warsh has repeatedly and publicly defended the Fed's independence as "sacrosanct" in congressional testimony this week — currently a credibility positive for USD, but an unresolved subplot worth tracking.
+
+**🎯 Next catalysts:** FOMC decision July 28–29 (no new SEP, hold expected), Q2 GDP July 30, July jobs report Aug 7, July CPI Aug 12 — all landing in a tight window that should decide whether the hawkish-Fed-vs-weakening-labor tension breaks toward a September hike or a Fed climbdown.
+
+*Fundamental view only, not advice — pair it with your own technical read before doing anything.*
+
+**🔄 Next refresh:** Sat 18 Jul (routine) | mandatory re-run after FOMC on 29 Jul
+</div>
+
+</body>
+</html>
