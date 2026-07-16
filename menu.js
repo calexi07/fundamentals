@@ -179,15 +179,6 @@
       padding: 4px;
     }
     #pair-menu .pm-error { color: #ff7b72; }
-    #pair-menu .pm-warning {
-      width: 100%;
-      color: #e3b341;
-      font-size: 12px;
-      background: #2b2410;
-      border: 1px solid #e3b34155;
-      border-radius: 6px;
-      padding: 6px 10px;
-    }
   `;
   document.head.appendChild(style);
 })();
@@ -217,63 +208,54 @@ async function buildMenu() {
   if (!menu) return;
   menu.innerHTML = `<span class="pm-empty">Loading menu…</span>`;
 
-  const OWNER = "calexi07";
-  const REPO = "fundamentals";
-
+  // Derive the current month from this page's own URL.
+  // e.g. /fundamentals/July/16.07.2026.html -> "July"
   const parts = window.location.pathname.split("/").filter(Boolean);
-  parts.shift(); // drop "fundamentals" (repo name / first path segment)
-  parts.pop();   // drop the filename, e.g. "16.07.2026.html"
-  const MONTH_PATH = parts.join("/"); // -> "July"
-
-  const failedPairs = [];
+  parts.shift(); // drop "fundamentals" (repo/project name)
+  parts.pop();   // drop the filename
+  const MONTH = parts.join("/"); // -> "July"
 
   try {
-    const res = await fetch(
-      `https://api.github.com/repos/${OWNER}/${REPO}/contents/${MONTH_PATH}`
-    );
-    if (!res.ok) throw new Error(`Could not load ${MONTH_PATH} (${res.status})`);
-    const items = await res.json();
-    const pairFolders = items.filter(i => i.type === "dir").sort((a, b) => a.name.localeCompare(b.name));
+    // menu-data.json lives at the site root (same level as this script),
+    // generated at build time by the GitHub Action — no GitHub API calls,
+    // no rate limits.
+    const res = await fetch("/fundamentals/menu-data.json", { cache: "no-store" });
+    if (!res.ok) throw new Error(`Could not load menu-data.json (${res.status})`);
+    const data = await res.json();
 
+    const monthData = data[MONTH];
+    if (!monthData) {
+      menu.innerHTML = `<span class="pm-empty">No data for ${MONTH} yet.</span>`;
+      return;
+    }
+
+    const pairNames = Object.keys(monthData).sort();
     const groups = [];
 
-    for (const folder of pairFolders) {
-      const pairRes = await fetch(
-        `https://api.github.com/repos/${OWNER}/${REPO}/contents/${folder.path}`
-      );
-      if (!pairRes.ok) {
-        console.warn(`menu.js: failed to load ${folder.path} — HTTP ${pairRes.status}`, await pairRes.json().catch(() => null));
-        failedPairs.push(`${folder.name} (${pairRes.status})`);
-        continue;
-      }
-      const files = await pairRes.json();
+    for (const pairName of pairNames) {
+      const files = monthData[pairName]; // already newest-first from the generator
+      if (!files.length) continue;
 
-      const sorted = files
-        .filter(f => f.name.endsWith(".html"))
-        .sort((a, b) => b.name.localeCompare(a.name)); // newest first
-
-      if (!sorted.length) continue;
-
-      const listItems = sorted
-        .map((f, idx) => {
-          const label = f.name.replace(".html", "");
+      const listItems = files
+        .map((filename, idx) => {
+          const label = filename.replace(".html", "");
           const hiddenClass = idx >= PM_PAGE_SIZE ? "pm-hidden" : "";
           const isLatest = idx === 0;
           const tag = isLatest ? `<span class="pm-tag">Latest</span>` : "";
-          return `<li class="${isLatest ? "pm-latest" : ""} ${hiddenClass}"><a href="${folder.name}/${f.name}"><span>${label}</span>${tag}</a></li>`;
+          return `<li class="${isLatest ? "pm-latest" : ""} ${hiddenClass}"><a href="${pairName}/${filename}"><span>${label}</span>${tag}</a></li>`;
         })
         .join("");
 
-      const needsSeeMore = sorted.length > PM_PAGE_SIZE;
+      const needsSeeMore = files.length > PM_PAGE_SIZE;
       const seeMoreBtn = needsSeeMore
-        ? `<button type="button" class="pm-see-more" onclick="pmRevealNext(this)">See more (${sorted.length - PM_PAGE_SIZE})</button>`
+        ? `<button type="button" class="pm-see-more" onclick="pmRevealNext(this)">See more (${files.length - PM_PAGE_SIZE})</button>`
         : "";
 
       groups.push(`
         <div class="pm-group">
           <div class="pm-card">
-            <span class="pm-pair">${folder.name}</span>
-            <span class="pm-count">${sorted.length}</span>
+            <span class="pm-pair">${pairName}</span>
+            <span class="pm-count">${files.length}</span>
             <span class="pm-chevron">&#9660;</span>
           </div>
           <div class="pm-dropdown">
@@ -285,11 +267,7 @@ async function buildMenu() {
       `);
     }
 
-    let html = groups.join("") || `<span class="pm-empty">No pair folders found yet.</span>`;
-    if (failedPairs.length) {
-      html += `<div class="pm-warning">⚠ Couldn't load: ${failedPairs.join(", ")} — likely GitHub API rate limit. Wait a bit and reload (check console for details).</div>`;
-    }
-    menu.innerHTML = html;
+    menu.innerHTML = groups.join("") || `<span class="pm-empty">No pair folders found yet.</span>`;
   } catch (e) {
     console.error(e);
     menu.innerHTML = `<span class="pm-error">Menu failed to load: ${e.message} (see console for details)</span>`;
