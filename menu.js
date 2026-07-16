@@ -30,10 +30,11 @@
       user-select: none;
       transition: border-color 0.15s ease, background 0.15s ease;
     }
-    #pair-menu .pm-group:hover .pm-card,
-    #pair-menu .pm-card.pm-active {
+    #pair-menu .pm-group:hover .pm-card {
       border-color: #58a6ff;
       background: #1c2333;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
     }
     #pair-menu .pm-pair {
       font-size: 12px;
@@ -65,26 +66,25 @@
       transform: rotate(180deg);
     }
 
-    /* Dropdown */
+    /* Dropdown — flush against the card, no dead zone between them */
     #pair-menu .pm-dropdown {
       position: absolute;
-      top: calc(100% + 8px);
+      top: 100%;
       left: 0;
       min-width: 190px;
       background: #161b22;
-      border: 1px solid #30363d;
-      border-radius: 10px;
+      border: 1px solid #58a6ff;
+      border-top: 1px solid #21262d;
+      border-radius: 0 8px 10px 10px;
       padding: 10px;
       box-shadow: 0 12px 28px rgba(0,0,0,0.5);
       opacity: 0;
-      transform: translateY(-6px) scale(0.98);
       pointer-events: none;
-      transition: opacity 0.14s ease, transform 0.14s ease;
+      transition: opacity 0.14s ease;
       z-index: 20;
     }
     #pair-menu .pm-group:hover .pm-dropdown {
       opacity: 1;
-      transform: translateY(0) scale(1);
       pointer-events: auto;
     }
     #pair-menu .pm-dropdown-label {
@@ -179,6 +179,15 @@
       padding: 4px;
     }
     #pair-menu .pm-error { color: #ff7b72; }
+    #pair-menu .pm-warning {
+      width: 100%;
+      color: #e3b341;
+      font-size: 12px;
+      background: #2b2410;
+      border: 1px solid #e3b34155;
+      border-radius: 6px;
+      padding: 6px 10px;
+    }
   `;
   document.head.appendChild(style);
 })();
@@ -216,6 +225,8 @@ async function buildMenu() {
   parts.pop();   // drop the filename, e.g. "16.07.2026.html"
   const MONTH_PATH = parts.join("/"); // -> "July"
 
+  const failedPairs = [];
+
   try {
     const res = await fetch(
       `https://api.github.com/repos/${OWNER}/${REPO}/contents/${MONTH_PATH}`
@@ -230,7 +241,11 @@ async function buildMenu() {
       const pairRes = await fetch(
         `https://api.github.com/repos/${OWNER}/${REPO}/contents/${folder.path}`
       );
-      if (!pairRes.ok) continue;
+      if (!pairRes.ok) {
+        console.warn(`menu.js: failed to load ${folder.path} — HTTP ${pairRes.status}`, await pairRes.json().catch(() => null));
+        failedPairs.push(`${folder.name} (${pairRes.status})`);
+        continue;
+      }
       const files = await pairRes.json();
 
       const sorted = files
@@ -270,10 +285,14 @@ async function buildMenu() {
       `);
     }
 
-    menu.innerHTML = groups.join("") || `<span class="pm-empty">No pair folders found yet.</span>`;
+    let html = groups.join("") || `<span class="pm-empty">No pair folders found yet.</span>`;
+    if (failedPairs.length) {
+      html += `<div class="pm-warning">⚠ Couldn't load: ${failedPairs.join(", ")} — likely GitHub API rate limit. Wait a bit and reload (check console for details).</div>`;
+    }
+    menu.innerHTML = html;
   } catch (e) {
     console.error(e);
-    menu.innerHTML = `<span class="pm-error">Menu failed to load.</span>`;
+    menu.innerHTML = `<span class="pm-error">Menu failed to load: ${e.message} (see console for details)</span>`;
   }
 }
 
