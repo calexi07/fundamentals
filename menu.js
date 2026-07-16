@@ -13,72 +13,89 @@
       border-radius: 10px;
       position: relative;
     }
+
+    /* Card */
     #pair-menu .pm-group {
       position: relative;
-      background: #161b22;
-      border: 1px solid #30363d;
-      border-radius: 8px;
-      padding: 8px 14px;
-      cursor: default;
     }
-    #pair-menu .pm-group:hover {
-      border-color: #58a6ff;
-    }
-    #pair-menu .pm-pair {
+    #pair-menu .pm-card {
       display: flex;
       align-items: center;
       gap: 8px;
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      padding: 9px 14px;
+      cursor: pointer;
+      user-select: none;
+      transition: border-color 0.15s ease, background 0.15s ease;
+    }
+    #pair-menu .pm-group:hover .pm-card,
+    #pair-menu .pm-card.pm-active {
+      border-color: #58a6ff;
+      background: #1c2333;
+    }
+    #pair-menu .pm-pair {
       font-size: 12px;
       font-weight: 800;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.05em;
       color: #79c0ff;
       text-transform: uppercase;
       white-space: nowrap;
     }
-    #pair-menu .pm-pair .pm-latest-badge {
-      font-size: 11px;
+    #pair-menu .pm-count {
+      font-size: 10.5px;
       font-weight: 700;
-      color: #3fb950;
-      background: #0f3d1f;
-      border: 1px solid #3fb950;
+      color: #6e7681;
+      background: #0d1117;
+      border: 1px solid #30363d;
       border-radius: 20px;
-      padding: 2px 9px;
-      text-decoration: none;
-      text-transform: none;
-      letter-spacing: normal;
+      padding: 1px 7px;
+      min-width: 16px;
+      text-align: center;
     }
-    #pair-menu .pm-pair .pm-latest-badge:hover {
-      background: #3fb950;
-      color: #0d1117;
+    #pair-menu .pm-chevron {
+      color: #6e7681;
+      font-size: 9px;
+      transition: transform 0.15s ease, color 0.15s ease;
+      margin-left: -2px;
     }
-    #pair-menu .pm-pair .pm-count {
-      color: #8b949e;
-      font-weight: 500;
-      font-size: 11px;
+    #pair-menu .pm-group:hover .pm-chevron {
+      color: #58a6ff;
+      transform: rotate(180deg);
     }
 
     /* Dropdown */
     #pair-menu .pm-dropdown {
       position: absolute;
-      top: calc(100% + 6px);
+      top: calc(100% + 8px);
       left: 0;
-      min-width: 160px;
+      min-width: 190px;
       background: #161b22;
       border: 1px solid #30363d;
-      border-radius: 8px;
-      padding: 8px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.45);
+      border-radius: 10px;
+      padding: 10px;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.5);
       opacity: 0;
-      transform: translateY(-4px);
+      transform: translateY(-6px) scale(0.98);
       pointer-events: none;
-      transition: opacity 0.12s ease, transform 0.12s ease;
+      transition: opacity 0.14s ease, transform 0.14s ease;
       z-index: 20;
     }
-    #pair-menu .pm-group:hover .pm-dropdown,
-    #pair-menu .pm-dropdown.pm-pinned {
+    #pair-menu .pm-group:hover .pm-dropdown {
       opacity: 1;
-      transform: translateY(0);
+      transform: translateY(0) scale(1);
       pointer-events: auto;
+    }
+    #pair-menu .pm-dropdown-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #6e7681;
+      padding: 2px 6px 8px 6px;
+      border-bottom: 1px solid #21262d;
+      margin-bottom: 6px;
     }
     #pair-menu .pm-dropdown ul {
       list-style: none;
@@ -86,46 +103,74 @@
       padding: 0;
       display: flex;
       flex-direction: column;
-      gap: 4px;
+      gap: 3px;
+      max-height: 260px;
+      overflow-y: auto;
     }
     #pair-menu .pm-dropdown li a {
-      display: block;
-      padding: 5px 10px;
-      font-size: 12.5px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 7px 10px;
+      font-size: 13px;
       font-weight: 600;
       color: #c9d1d9;
-      background: #21262d;
-      border: 1px solid #30363d;
+      background: transparent;
       border-radius: 6px;
       text-decoration: none;
       white-space: nowrap;
-      transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+      transition: background 0.12s ease, color 0.12s ease, padding-left 0.12s ease;
+      border-left: 2px solid transparent;
     }
     #pair-menu .pm-dropdown li a:hover {
-      background: #2f81f7;
-      border-color: #2f81f7;
+      background: #21262d;
       color: #fff;
+      padding-left: 13px;
+    }
+    #pair-menu .pm-dropdown li.pm-latest a {
+      border-left-color: #3fb950;
+      color: #3fb950;
+    }
+    #pair-menu .pm-dropdown li.pm-latest a:hover {
+      background: #0f3d1f;
+      color: #56d364;
+    }
+    #pair-menu .pm-dropdown li.pm-latest a .pm-tag {
+      font-size: 9.5px;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      color: #3fb950;
+      background: #0f3d1f;
+      border: 1px solid #1f6feb33;
+      border-radius: 10px;
+      padding: 1px 6px;
     }
     #pair-menu .pm-dropdown li.pm-hidden {
       display: none;
     }
+
     #pair-menu .pm-see-more {
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
       width: 100%;
-      margin-top: 6px;
-      padding: 5px 10px;
-      font-size: 12px;
-      font-weight: 600;
-      color: #79c0ff;
-      background: transparent;
-      border: 1px dashed #30363d;
+      margin-top: 8px;
+      padding: 7px 10px;
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      color: #58a6ff;
+      background: #0d1117;
+      border: 1px solid #21262d;
       border-radius: 6px;
       cursor: pointer;
-      text-align: center;
+      transition: background 0.12s ease, border-color 0.12s ease;
     }
     #pair-menu .pm-see-more:hover {
       border-color: #58a6ff;
-      color: #58a6ff;
+      background: #11182a;
     }
 
     #pair-menu .pm-empty, #pair-menu .pm-error {
@@ -150,8 +195,11 @@ function pmRevealNext(btn) {
       toReveal--;
     }
   });
-  if (dropdown.querySelectorAll("li.pm-hidden").length === 0) {
+  const remaining = dropdown.querySelectorAll("li.pm-hidden").length;
+  if (remaining === 0) {
     btn.remove();
+  } else {
+    btn.innerHTML = `See more (${remaining})`;
   }
 }
 
@@ -191,14 +239,13 @@ async function buildMenu() {
 
       if (!sorted.length) continue;
 
-      const latest = sorted[0];
-      const latestLabel = latest.name.replace(".html", "");
-
       const listItems = sorted
         .map((f, idx) => {
           const label = f.name.replace(".html", "");
           const hiddenClass = idx >= PM_PAGE_SIZE ? "pm-hidden" : "";
-          return `<li class="${hiddenClass}"><a href="${folder.name}/${f.name}">${label}</a></li>`;
+          const isLatest = idx === 0;
+          const tag = isLatest ? `<span class="pm-tag">Latest</span>` : "";
+          return `<li class="${isLatest ? "pm-latest" : ""} ${hiddenClass}"><a href="${folder.name}/${f.name}"><span>${label}</span>${tag}</a></li>`;
         })
         .join("");
 
@@ -209,12 +256,13 @@ async function buildMenu() {
 
       groups.push(`
         <div class="pm-group">
-          <div class="pm-pair">
-            ${folder.name}
-            <a class="pm-latest-badge" href="${folder.name}/${latest.name}">${latestLabel}</a>
+          <div class="pm-card">
+            <span class="pm-pair">${folder.name}</span>
             <span class="pm-count">${sorted.length}</span>
+            <span class="pm-chevron">&#9660;</span>
           </div>
           <div class="pm-dropdown">
+            <div class="pm-dropdown-label">Reports</div>
             <ul>${listItems}</ul>
             ${seeMoreBtn}
           </div>
