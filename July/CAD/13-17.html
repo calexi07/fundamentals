@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CAD Deep-Dive Fundamental Report — 2026-07-16</title>
+<style>
+  body { font-family: -apple-system, Segoe UI, Arial, sans-serif; background:#0d1117; color:#e6edf3; margin:0; padding:24px; line-height:1.55; max-width:1150px; margin:0 auto; }
+  h1 { font-size:24px; border-bottom:2px solid #e3342f; padding-bottom:10px; }
+  h2 { font-size:19px; color:#ff6b60; margin-top:36px; border-left:4px solid #e3342f; padding-left:10px; }
+  h3 { font-size:16px; color:#ff938a; margin-top:22px; }
+  h4 { font-size:14px; color:#ffb4ad; margin-top:16px; }
+  .badge { display:inline-block; padding:2px 9px; border-radius:12px; font-size:12px; font-weight:700; }
+  .bearish { background:#3d1418; color:#ff7b72; }
+  .bullish { background:#0f3d1f; color:#3fb950; }
+  .neutral { background:#3d3410; color:#e3b341; }
+  table { width:100%; border-collapse:collapse; margin:12px 0 20px 0; font-size:13px; }
+  th, td { border:1px solid #30363d; padding:7px 9px; text-align:left; vertical-align:top; }
+  th { background:#161b22; color:#8b949e; }
+  tr:nth-child(even) { background:#111620; }
+  .note { background:#161b22; border-left:3px solid #e3b341; padding:10px 14px; margin:10px 0; font-size:13px; color:#c9d1d9; }
+  .warn { background:#1a1512; border-left:3px solid #ff7b72; padding:10px 14px; margin:10px 0; font-size:13px; color:#f0c9c4; }
+  .good { background:#0f1a12; border-left:3px solid #3fb950; padding:10px 14px; margin:10px 0; font-size:13px; color:#c9f0d4; }
+  .exec { background:#1a1013; border:1px solid #e3342f; border-radius:8px; padding:16px 18px; margin:14px 0; }
+  .card { background:#151016; border:1px solid #30363d; border-radius:8px; padding:14px 16px; margin:12px 0; }
+  .score { font-size:20px; font-weight:800; }
+  .script { background:#1e1417; border:1px dashed #ff6b60; border-radius:8px; padding:12px 16px; margin:8px 0 20px 0; font-size:13.5px; color:#dcc9c8; }
+  .script b.tag { display:inline-block; background:#e3342f; color:#fff; font-size:11px; padding:2px 8px; border-radius:10px; margin-bottom:8px; }
+  .discord { background:#2b2d31; border:1px solid #1e1f22; border-radius:8px; padding:16px; font-family: 'Segoe UI', Consolas, monospace; font-size:13.5px; color:#dbdee1; white-space:pre-wrap; }
+  .scenario { border-radius:8px; padding:14px 16px; margin:10px 0; border:1px solid #30363d; }
+  .scen-bull { border-left:4px solid #3fb950; background:#0f1a12; }
+  .scen-base { border-left:4px solid #e3b341; background:#1a1710; }
+  .scen-bear { border-left:4px solid #ff7b72; background:#1a1512; }
+  .prob { font-weight:800; font-size:15px; }
+  .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  @media (max-width:700px){ .grid2{grid-template-columns:1fr;} }
+  .taglist span { display:inline-block; background:#161b22; border:1px solid #30363d; color:#8b949e; font-size:11px; padding:2px 8px; border-radius:10px; margin:2px 4px 2px 0; }
+  .refresh { background:#101a1e; border:1px solid #2f81f7; border-radius:8px; padding:16px 18px; margin:24px 0 8px 0; }
+  .refresh h2 { margin-top:0; color:#58a6ff; border-left-color:#2f81f7; }
+  .refresh-date { display:inline-block; background:#0f3d1f; color:#3fb950; font-weight:800; font-size:15px; padding:4px 12px; border-radius:6px; margin:6px 0; }
+  .trigger-table td:first-child { white-space:nowrap; font-weight:700; }
+</style>
+</head>
+<body>
+
+<h1>CAD Deep-Dive Fundamental Report</h1>
+<p><b>As of:</b> 2026-07-16 &nbsp;|&nbsp; <b>Scope:</b> Single-currency deep dive on CAD — monetary policy, inflation, growth, trade/fiscal risk, positioning, cross-by-cross bias, catalysts &amp; scenario tree &nbsp;|&nbsp; <b>Companion piece to:</b> Daily Global Macro Strategy Report</p>
+
+<div class="exec">
+<p><b>One-line view:</b> CAD is a genuine two-way commodity-and-trade currency right now — a stabilizing labour market and a central bank that just turned tactically hawkish (Macklem explicitly floated future hikes) are pulling one way, while a stalled CUSMA renewal, a structurally tariff-damaged manufacturing sector, and a currency that is only loosely riding this month's oil rally are pulling the other. The Bank of Canada held rates at 2.25% on 15 July for a sixth straight decision, but the tone shifted meaningfully hawkish relative to prior holds — this is the single most important development of the week for CAD.</p>
+</div>
+
+<h2>1. What's Actually Driving CAD Right Now — The Core Tension</h2>
+<div class="card">
+<p>CAD is being pulled by <b>three forces simultaneously</b>, which is unusual — most currencies are fighting a two-way battle, but the loonie right now has a monetary-policy leg, a trade-policy leg, and a commodity leg all moving at once, and they are not all pointing the same direction:</p>
+<ul>
+<li><b>The hawkish-turn force:</b> The Bank of Canada held its policy rate at 2.25% on 15 July 2026 — the sixth consecutive hold — but Governor Macklem's press conference language was the most hawkish-leaning of the cycle. He acknowledged war-driven oil prices are pushing up gasoline costs and said that if oil stays elevated for long enough, the Bank <span class="badge neutral">may well need to raise rates</span>, explicitly calling this "not our base case, but... a serious risk." The Bank also noted growth has resumed more strongly than expected, with Q2 GDP tracking near 2.5% annualized after a choppy first quarter — a much stronger growth signal than markets had priced in going into the decision.</li>
+<li><b>The trade-policy drag force:</b> The 1 July 2026 CUSMA joint review passed without the US agreeing to the 16-year extension. The deal doesn't expire until 2036 and existing tariff exemptions remain in place for now, but the review has shifted into an annual, open-ended renegotiation process with no fixed resolution date — a state of prolonged ambiguity rather than either a clean win or a clean loss. Manufacturing employment has fallen by roughly 61,000 jobs since tariff uncertainty began in January 2025, and the Bank of Canada's own projections see 2026 GDP finishing around 1.5% below its pre-tariff trajectory.</li>
+<li><b>The oil/commodity force:</b> Canada is a major net oil exporter, and WTI has rallied to roughly $79-80 (Brent near $83) on the back of renewed US-Iran conflict escalation, US strikes near the Strait of Hormuz, and a reinstated naval blockade threatening shipping — normally a tailwind for CAD via the terms-of-trade channel. But this rally is happening at the same time as broad USD strength and a widening short-term Canada-US yield disadvantage, which is why CAD has only partially captured the "petrocurrency" benefit this cycle.</li>
+</ul>
+<p>Net result: USD/CAD sits near <b>1.40</b>, off its worst levels (a 15-month CAD low near 1.4235 hit in late June) but still historically weak, up roughly 2.3% against the dollar over the past 12 months even after the recent bounce. The bounce itself is mostly a <b>domestic-data and BoC-tone story</b> — stronger June jobs data and the hawkish hold — rather than CAD benefiting cleanly from the oil rally, which is the key nuance to track from here.</p>
+</div>
+<div class="script"><b class="tag">🎙 SCRIPT</b><br>
+Let's break down what's actually happening with the Canadian dollar, because there's a lot more going on under the hood than the headline exchange rate suggests. The Bank of Canada just held rates steady for the sixth meeting in a row, which on its own sounds boring — but the tone of that decision was genuinely different. Governor Macklem came out and said flat-out that if oil prices stay elevated because of the war, the bank may well need to raise rates. That's the central bank openly floating a hike, which is new. At the same time, growth actually picked up more than expected heading into the summer. So that's the bullish leg. But there's a real drag sitting right alongside it: the big trade deal with the US, Mexico and Canada just went through its scheduled six-year review on July 1st, and the US declined to lock in an extension. Nothing changes immediately — tariff exemptions are still in place — but it kicks the whole thing into an open-ended, year-by-year uncertainty process, and Canadian manufacturing has already lost about 61,000 jobs since this tariff saga started. And then there's oil — Canada is a major oil exporter, so when crude prices spike on Middle East escalation, that's normally great for the loonie. But because the US dollar has also been broadly strong and short-term rate spreads still favor the US, Canada hasn't captured the full benefit of that oil rally. So you've got three forces at once: a newly hawkish central bank, an unresolved trade cloud, and an oil tailwind that isn't fully translating — that's why the currency looks calm on the surface but is actually being pulled in three directions underneath.
+</div>
+
+<h2>2. CAD Multi-Factor Scorecard</h2>
+<table>
+<tr><th>Factor</th><th>Score /100</th><th>Direction</th><th>Weight in current regime</th><th>Comment</th></tr>
+<tr><td><b>Monetary policy (BoC stance)</b></td><td class="score">58</td><td><span class="badge neutral">Tactically hawkish hold</span></td><td><span class="badge bullish">High</span></td><td>Sixth straight hold at 2.25%, but Macklem's language on a possible future hike if oil stays elevated is a genuine tone shift versus prior meetings</td></tr>
+<tr><td><b>Inflation trend</b></td><td class="score">45</td><td><span class="badge neutral">Elevated, war-driven, watch 20 July</span></td><td><span class="badge bullish">High</span></td><td>Headline rose to 3.2% in May from 2.8% in April on gasoline; core (trimmed-mean/median) holding closer to 2.0-2.1%, a genuinely favorable underlying signal the BoC has leaned on to justify holding</td></tr>
+<tr><td><b>Growth momentum</b></td><td class="score">55</td><td><span class="badge bullish">Improving, but choppy base</span></td><td><span class="badge bullish">High</span></td><td>Q2 growth tracking near 2.5% annualized per BoC, a clear rebound after a stalled Q1/choppy start to 2026 that included net job losses in the first four months of the year</td></tr>
+<tr><td><b>Labour market</b></td><td class="score">50</td><td><span class="badge neutral">Stabilizing, low-quality mix</span></td><td><span class="badge neutral">Medium</span></td><td>Unemployment eased to 6.5% in June from 6.6%; but June's +18k jobs were concentrated in part-time/World Cup-adjacent sectors (food, retail), and manufacturing continues shedding jobs</td></tr>
+<tr><td><b>Trade/fiscal risk (CUSMA)</b></td><td class="score">38</td><td><span class="badge bearish">Unresolved, open-ended</span></td><td><span class="badge bullish">High</span></td><td>1 July review passed without a 16-year extension; deal now subject to annual reviews with no fixed resolution date — a structural overhang distinct from any single tariff headline</td></tr>
+<tr><td><b>Terms of trade / energy exposure</b></td><td class="score">60</td><td><span class="badge bullish">Tailwind, only partly captured</span></td><td><span class="badge bullish">High</span></td><td>Canada is a large net oil exporter; WTI near $79-80 on Iran-war escalation is a genuine positive terms-of-trade shock, though CAD has lagged the move due to broad USD strength</td></tr>
+<tr><td><b>Relative rate differential vs USD</b></td><td class="score">40</td><td><span class="badge bearish">Structurally unfavorable</span></td><td><span class="badge bullish">High</span></td><td>Fed funds sits well above the BoC's 2.25% overnight rate; the 2-year Canada-US yield spread remains a headwind noted explicitly by bank FX desks, and a possible Fed hike would widen it further</td></tr>
+<tr><td><b>Composite CAD score</b></td><td class="score" style="color:#e3b341;">49/100</td><td colspan="2"><span class="badge neutral">Net neutral, tactically firmer post-BoC</span></td><td>Consistent with the daily macro report's cross-asset scoring</td></tr>
+</table>
+<div class="note">
+<p>Read this scorecard the same way as the EUR one: a tension map, not a verdict. CAD's real edge right now is that two separate positive forces — a hawkish-leaning BoC and a genuine oil tailwind — have shown up in the same window, while the negative forces (CUSMA uncertainty, the rate-differential gap, a lower-quality jobs mix) are more structural and slower-moving. That combination argues for a currency that can grind firmer on good headlines without a durable trend forming until the CUSMA and rate-differential questions get real answers.</p>
+</div>
+
+<h2>3. Bank of Canada Policy Deep Dive</h2>
+<div class="grid2">
+<div class="card">
+<h3>Where rates stand</h3>
+<p>Overnight rate target: <b>2.25%</b>, unchanged since the last cut. Bank Rate 2.50%, deposit rate 2.20%. This was the Bank's fifth scheduled decision of 2026 and the sixth consecutive hold, meaning the BoC has now been on pause for roughly a full easing-cycle pause window while it assesses the war-driven inflation shock and the tariff drag simultaneously.</p>
+<h3>Next decision date</h3>
+<p>The next scheduled Governing Council rate announcement is <b>Wednesday, 2 September 2026</b>. The Bank meets eight times a year on pre-set dates, with the Monetary Policy Report published alongside the January, April, July and October decisions — meaning the July MPR just released is the most current full projection set available.</p>
+<h3>What the 15 July statement actually said</h3>
+<p>The Bank's language was notably two-sided: it said Canada's economy is showing signs of improvement, with growth picking up and inflation projected to ease gradually from its recent spike, while also flagging that global economic prospects have been dented by higher oil prices stemming from the Middle East conflict. Governing Council judged the current policy rate remains appropriate for now, while stating it is prepared to adjust monetary policy as needed and remains committed to preventing higher energy costs from becoming persistent, broad-based inflation.</p>
+</div>
+<div class="card">
+<h3>The Macklem hike-risk comment — the real signal</h3>
+<p>In the press conference, Macklem was unusually direct about the hike scenario: he said that if oil prices go higher and stay higher, the likelihood of pass-through into broader prices increases, and that this progression from "broadening" to "persistence" is exactly the trigger that would force a rate hike. He explicitly called a hike "not our base case, but... a serious risk" — language markets read as more hawkish than any BoC communication since the cutting cycle began in 2024.</p>
+<h3>The growth upgrade nobody expected</h3>
+<p>The Bank now projects global GDP growth slowing to 2.75% in 2026, mostly due to the Middle East conflict, before recovering toward 3.25% in 2027-28 — but domestically, it flagged that growth has clearly resumed in Q2 2026, with an estimated 2.5% pace, a sharp improvement after Canada's GDP data over the past year was described as "choppy" amid tariff adjustment, high uncertainty, and slower population growth. AI infrastructure build-out was cited as a supporting factor for global activity broadly.</p>
+<h3>Labour slack still the dovish anchor</h3>
+<p>The unemployment rate was 6.5% in June and has hovered in a 6.5%-7.0% range since late 2024 — a level the Bank still characterizes as reflecting ongoing economic slack, which is the main reason a hike remains a tail scenario rather than the base case despite Macklem's comments.</p>
+</div>
+</div>
+
+<h2>4. Inflation — Above-Target, But With a Reassuring Core</h2>
+<table>
+<tr><th>Month</th><th>Headline CPI y/y</th><th>Trimmed-mean core</th><th>Median core</th><th>Gasoline y/y</th></tr>
+<tr><td>Feb 2026</td><td>1.8%</td><td>—</td><td>—</td><td>-9.3% (deflation)</td></tr>
+<tr><td>Mar 2026</td><td>2.4%</td><td>—</td><td>—</td><td>21.2% (m/m surge)</td></tr>
+<tr><td>Apr 2026</td><td>2.8%</td><td>2.1%</td><td>—</td><td>Sharp rise, war-driven</td></tr>
+<tr><td><b>May 2026</b></td><td><b>3.2%</b></td><td><b>2.0%</b></td><td><b>2.1%</b></td><td><b>33.2%</b></td></tr>
+<tr><td>Jun 2026 (due 20 Jul)</td><td>Pending</td><td>Pending</td><td>Pending</td><td>Pending</td></tr>
+</table>
+<div class="note">
+<p>May's headline print rose to 3.2% from 2.8% in April, ahead of consensus and the fastest pace since December 2023, driven overwhelmingly by a 33.2% year-over-year jump in gasoline prices and a broader 9% rise in energy costs as the Middle East war disrupted energy exports. Food inflation also firmed to 3.8% on higher fresh produce and fertilizer-linked costs. Crucially, the Bank's preferred underlying measures barely moved: trimmed-mean core held at 2.0% and median core at 2.1%, both essentially at target — the single strongest argument the BoC has for treating this as an energy-specific shock rather than broad-based inflation.</p>
+</div>
+<div class="warn">
+<p><b>Caveat on durability:</b> May's print reflected an oil shock that has since intensified, not eased. With WTI up further into the high-$70s/low-$80s on the latest wave of US-Iran escalation and Strait of Hormuz tensions, June and July CPI prints are at real risk of pushing headline inflation still further above 3%, even if core stays anchored. The Bank's own base case sees CPI staying above 3% through June before gradually easing — meaning a June print materially above that base case would be the clearest single trigger for the hike scenario Macklem flagged.</p>
+</div>
+<h4>20 July 2026 (four days from this report): June CPI data</h4>
+<p>Statistics Canada's June inflation release lands <b>20 July 2026</b>. This is now the single most important near-term data point for CAD — it lands right after a BoC decision that leaned hawkish, and a hot print would rapidly pull forward hike pricing for September.</p>
+
+<h2>5. Growth &amp; Labour Market — A Genuine Improvement, With Caveats</h2>
+<div class="card">
+<table>
+<tr><th>Indicator</th><th>Latest reading</th><th>Trend</th></tr>
+<tr><td>Canada Q1 2026 GDP</td><td>Stalled/choppy; net ~112,000 jobs lost Jan-Apr 2026</td><td>Weak start to the year</td></tr>
+<tr><td>Canada Q2 2026 GDP (BoC estimate)</td><td>~2.5% annualized</td><td>Clear rebound</td></tr>
+<tr><td>April monthly GDP</td><td>+0.5% m/m, growth in 14 of 20 sectors</td><td>Broad-based improvement</td></tr>
+<tr><td>Unemployment rate (Jun)</td><td>6.5% (from 6.6% in May, 6.9% in April)</td><td>Easing off the 2026 high</td></tr>
+<tr><td>Employment change (Jun)</td><td>+18,000 (vs. +88,000/+87,800 in May)</td><td>Slower but positive; mostly part-time</td></tr>
+<tr><td>Average hourly wages (Jun)</td><td>+3.3% y/y (permanent employees +3.7%)</td><td>Accelerating — a metric the BoC watches closely</td></tr>
+<tr><td>Manufacturing employment</td><td>-17,000 in June alone; -61,000 since Jan 2025</td><td>Persistent tariff-linked bleed</td></tr>
+</table>
+<p>June's headline jobs beat masks a composition problem worth flagging clearly: gains were concentrated in part-time work, accommodation and food services, and wholesale/retail trade — sectors economists explicitly linked to a temporary boost from Canada hosting FIFA World Cup matches in June. BMO's chief economist cautioned this "shouldn't be mistaken as a show of strength," and CIBC flagged the risk that job growth stalls once the tournament effect fades. Manufacturing, by contrast, has now lost jobs in a straight line since tariff uncertainty began, which is the clearest single labour-market signature of the trade dispute.</p>
+</div>
+<div class="good">
+<p><b>What's actually working:</b> April's monthly GDP rose 0.5%, with goods production up 1.2% led by energy, construction, manufacturing and utilities, and services also advancing — a genuinely broad-based improvement, not a single-sector fluke. Combined with the BoC's ~2.5% Q2 growth estimate, this is the strongest run of Canadian growth data in over a year, and it's the main reason the BoC felt comfortable striking a more confident tone on 15 July.</p>
+</div>
+
+<h2>6. Trade &amp; Fiscal Risk — The CUSMA Overhang</h2>
+<div class="card">
+<h3>The July 1 review — what actually happened</h3>
+<p>Under Article 34.7 of the agreement, Canada, the US and Mexico were required to hold a joint six-year review on 1 July 2026 and choose between a clean 16-year extension (to 2042) or moving into annual reviews with no fixed extension date. Canada and Mexico had both formally signalled intent to renew; the United States declined to commit to the 16-year extension. CUSMA does not expire until 2036 and current tariff treatment is unchanged for now — roughly 90% of Canadian exports to the US still enter duty-free under existing CUSMA compliance — but the deal has effectively shifted into an open-ended, year-by-year negotiation with no clear end point, which multiple trade analysts expect to run well beyond the US midterms and possibly into 2027.</p>
+<h3>What's actually at stake if it unravels further</h3>
+<p>RBC Economics estimates that without CUSMA protections, Canada's average effective US tariff rate could roughly double, from about 3.2% to 6.6% — still low by the standards of major US trading partners, but a real shock to CUSMA-exempt sectors like autos, machinery, plastics, aluminum and wood products, several of which are already exposed to separate Section 232 sectoral tariffs on steel, aluminum and autos. The Bank of Canada's own base-case projection assumes CUSMA effectively gets extended in substance even under the annual-review structure; a genuinely adversarial renegotiation is treated as a downside risk scenario, not the central forecast.</p>
+<h3>The offsetting positive: energy infrastructure and diversification</h3>
+<p>On 2 July, the federal government approved a new pipeline capable of shipping up to one million barrels per day of Alberta bitumen to British Columbia for export to Asian markets — part of a broader push, alongside new defence-sector reindustrialization spending, to diversify Canada's trade exposure away from near-total US dependence. The US share of Canadian exports has already fallen to roughly 71.7%, its lowest since the early 1980s, as exporters have found other markets even as goods exports to the US itself declined. This is a genuine medium-term positive for FDI inflows and CAD that sits alongside the CUSMA overhang rather than cancelling it out.</p>
+</div>
+
+<h2>7. CAD Crosses — Detailed Bias &amp; Rationale</h2>
+<table>
+<tr><th>Pair</th><th>Bias</th><th>Confidence</th><th>Core logic</th></tr>
+<tr><td><b>USDCAD</b></td><td><span class="badge bearish">Tactically softer (CAD firmer), structurally supported above 1.35</span></td><td>50%</td><td>Hawkish-leaning BoC hold plus a stronger Q2 growth read argue for near-term CAD support, but the Canada-US rate differential and unresolved CUSMA path cap how far the pair can fall; bank forecasts split widely, from ~1.34 (five-bank average, Q2 2027) to 1.43 (UBS, Q3 2026)</td></tr>
+<tr><td><b>EURCAD</b></td><td><span class="badge neutral">Flat-to-mildly bearish for CAD</span></td><td>35%</td><td>Both currencies share a similar "hawkish-hike-into-a-war-shock" central bank story right now, muting the cross's independent signal; EUR's broader USD-weakness tailwind is the marginal edge</td></tr>
+<tr><td><b>GBPCAD</b></td><td><span class="badge neutral">Low conviction</span></td><td>30%</td><td>Little independent catalyst on either side currently; both are secondary beneficiaries of broad USD softness rather than idiosyncratic movers</td></tr>
+<tr><td><b>CADJPY</b></td><td><span class="badge bullish">Mildly bullish for CAD</span></td><td>45%</td><td>CAD's oil-linked terms-of-trade tailwind plus JPY's continued broad weakness (no BoJ/MoF intervention despite multi-decade lows) gives this cross clearer directional logic than most</td></tr>
+<tr><td><b>CADCHF</b></td><td><span class="badge bearish">Mildly bearish for CAD</span></td><td>35%</td><td>CHF's structural safe-haven bid during active war escalation tends to dominate CAD's commodity tailwind on the sharpest risk-off days</td></tr>
+<tr><td><b>AUDCAD</b></td><td><span class="badge bullish">Mildly bullish for AUD</span></td><td>40%</td><td>AUD's higher policy rate retains an edge over CAD's 2.25%; 11 August RBA decision is the key swing catalyst for this cross</td></tr>
+<tr><td><b>CADMXN</b></td><td><span class="badge neutral">Watch as a CUSMA-proxy pair</span></td><td>30%</td><td>Both currencies carry direct exposure to how the trilateral trade review evolves; a genuinely adversarial US stance toward either partner would likely move both in the same direction, limiting the cross's usefulness as a hedge</td></tr>
+</table>
+
+<h2>8. Positioning &amp; Market Structure Notes</h2>
+<div class="card">
+<ul>
+<li><b>CAD is lagging its own commodity beta.</b> The textbook relationship — oil up, CAD up — has weakened this cycle because broad USD strength and a widening short-term Canada-US yield gap are offsetting the terms-of-trade tailwind. Watch for this relationship to reassert itself if oil escalation continues while US data softens; that combination would be the cleanest bullish-CAD setup available.</li>
+<li><b>The World Cup effect is a genuine positioning trap.</b> June's stronger-than-expected jobs number was flagged by multiple bank economists as partly a tournament-hosting effect concentrated in food service, retail and part-time work. A soft July or August jobs report as that effect fades would not necessarily represent fresh deterioration, but headline algos and less careful positioning may treat it that way — a real source of potential CAD volatility around the next two labour-force releases.</li>
+<li><b>CUSMA headline risk is now a standing, not episodic, risk.</b> Because the review has moved into an open-ended annual process rather than resolving on a single date, CAD is now exposed to trade headlines on an ongoing basis rather than around one clean binary event — this argues for somewhat elevated baseline CAD volatility through the rest of 2026 relative to a normal year.</li>
+<li><b>Rate-differential-driven flows remain the dominant medium-term anchor.</b> Bank desks (e.g., National Bank's FX strategy team) continue to flag Canada's unfavourable two-year yield spread versus the US as a structural CAD headwind independent of the day-to-day news flow; a Fed hike later in 2026, if it materializes, would widen this further and is arguably a bigger swing factor for USD/CAD than most Canada-specific data surprises.</li>
+</ul>
+</div>
+
+<h2>9. Multi-Level Scenario Tree — Next 4-6 Weeks</h2>
+
+<div class="scenario scen-bull">
+<p><span class="prob">🟢 Bull case for CAD — ~30% probability</span></p>
+<p><b>Path:</b> June/July CPI prints run hot enough (above the BoC's own 3%+ base case) that the Bank credibly moves toward a September hike → oil stays elevated or escalates further on continued Iran-war tension, reinforcing the terms-of-trade tailwind → Q2 GDP data confirms the ~2.5% growth pace and the World Cup-linked jobs gains prove durable rather than temporary → CUSMA talks show incremental, non-adversarial progress → USD/CAD grinds down toward 1.34-1.36 as the rate-differential and commodity stories align for the first time this cycle.</p>
+<p><b>Watch for:</b> a June CPI print above 3.3%; WTI sustaining above $85; a strong Q2 GDP flash; conciliatory CUSMA headlines from Washington or Ottawa.</p>
+</div>
+
+<div class="scenario scen-base">
+<p><span class="prob">🟡 Base case — ~45% probability</span></p>
+<p><b>Path:</b> BoC holds through September as flagged, inflation stays elevated-but-not-alarming (headline near 3%, core near target), Q2/Q3 growth data confirms a moderate rebound without re-accelerating, CUSMA remains in prolonged limbo with periodic unsettling headlines but no acute crisis, and oil trades a broad $75-90 range on episodic Middle East escalation/de-escalation. USD/CAD continues to trade a broad 1.37-1.42 range, more reactive to US data surprises and oil headlines than to Canada-specific news.</p>
+<p><b>Watch for:</b> in-line CPI and jobs prints; oil oscillating without a clean breakout; no major CUSMA escalation or breakthrough.</p>
+</div>
+
+<div class="scenario scen-bear">
+<p><span class="prob">🔴 Bear case for CAD — ~25% probability</span></p>
+<p><b>Path:</b> The post-World Cup labour market reveals itself as genuinely weak (July/August payback in part-time and services jobs), manufacturing losses accelerate as CUSMA uncertainty drags into a full renegotiation cycle, the Fed delivers a hike that Canada does not match, and oil prices retreat sharply on a durable Iran ceasefire — removing the one clear offsetting tailwind CAD has had this quarter. In this scenario the BoC's growth-and-inflation balance tips back toward cut discussion rather than hike discussion, re-opening downside. USD/CAD pushes back toward 1.42-1.45, revisiting or breaking the 2026 CAD-weak extremes.</p>
+<p><b>Watch for:</b> a soft July jobs report; a formal CUSMA breakdown or new punitive tariff announcement; WTI dropping back below $70; a hawkish Fed surprise without a matching BoC move.</p>
+</div>
+
+<h2>10. Catalysts &amp; Calendar — What to Watch, In Order</h2>
+<table>
+<tr><th>Date</th><th>Event</th><th>Why it matters for CAD</th></tr>
+<tr><td><b>20 Jul 2026</b></td><td>Statistics Canada June CPI</td><td>The single largest near-term catalyst — a hot print materially raises the odds the BoC follows through on Macklem's hike-risk comments; a soft print pushes the "sixth hold" narrative back toward business-as-usual</td></tr>
+<tr><td>Ongoing</td><td>Iran/Hormuz war headlines and oil price action</td><td>Directly drives Canada's terms-of-trade story and, via gasoline prices, a large share of the current inflation overshoot — the cleanest dual-channel catalyst for CAD right now</td></tr>
+<tr><td>Ongoing / unscheduled</td><td>CUSMA/USMCA negotiation headlines</td><td>No fixed next date now that the July 1 review has moved to an open-ended annual process; any punitive tariff escalation or conciliatory breakthrough could move CAD sharply on short notice</td></tr>
+<tr><td>Late Jul / early Aug</td><td>Canada Q2 2026 flash GDP</td><td>Tests whether the BoC's ~2.5% annualized estimate holds up in the official data, and whether April's broad-based sectoral improvement continued into May/June</td></tr>
+<tr><td>~8 Aug 2026</td><td>July Labour Force Survey</td><td>The first real test of whether June's jobs strength was a genuine trend or a temporary World Cup-hosting effect, per BMO/CIBC's explicit caution</td></tr>
+<tr><td>28-29 Jul 2026</td><td>Federal Reserve meeting</td><td>Given the Canada-US rate differential is a structural CAD headwind, any Fed hike (or hawkish hold) that isn't matched by the BoC widens the spread further and pressures CAD independent of domestic data</td></tr>
+<tr><td><b>2 Sep 2026</b></td><td>Next scheduled BoC rate decision</td><td>The next point at which the Bank could act on the hike risk Macklem flagged, if the intervening CPI and oil data warrant it</td></tr>
+<tr><td>Ongoing</td><td>US trade policy / Section 232 sectoral tariff actions</td><td>Steel, aluminum, auto and lumber tariffs sit outside CUSMA and can move independently of the broader trade-deal negotiation, adding a second, less predictable trade-risk channel</td></tr>
+</table>
+
+<h2>11. Key Risks That Could Invalidate This Analysis</h2>
+<div class="warn">
+<ul>
+<li><b>A June CPI surprise in either direction</b> — a hot print pulls forward hike pricing fast given Macklem's comments; a soft print (especially if core also softens) would undercut the entire hawkish-repricing thesis just four days after this report.</li>
+<li><b>A durable Iran ceasefire</b> would remove CAD's main current tailwind (the oil rally) while simultaneously easing the inflation pressure that's keeping the BoC's hike option alive — a genuinely ambiguous net effect that needs watching closely rather than assumed to be bearish or bullish.</li>
+<li><b>Further war escalation / a full Hormuz shipping disruption</b> could push oil sharply higher, which is bullish for Canada's terms of trade but could also hit global growth and risk appetite hard enough to trigger a broader flight from commodity currencies — the classic case where the "petrocurrency" trade breaks down under acute stress.</li>
+<li><b>A hard CUSMA breakdown or fresh punitive tariff wave</b> — since the trade relationship is now in an open-ended negotiation with no scheduled resolution, this risk has no natural expiry date and could resurface at any point without the usual calendar warning.</li>
+<li><b>The World Cup labour-market payback</b> — if July/August jobs data reveals June's strength was concentrated, temporary, and now reversing, that would materially change the growth narrative the BoC leaned on for its 15 July hawkish tone.</li>
+<li><b>A Fed hike Canada doesn't match</b> — would widen the already-unfavorable Canada-US rate differential and could dominate CAD price action over Canada-specific news, especially in a base-case, range-bound scenario.</li>
+<li><b>Manufacturing deterioration accelerating</b> — the -61,000 job trend since January 2025 is the clearest real-economy signature of the tariff dispute; a sharp acceleration would undercut the "growth is improving" narrative even if headline GDP stays positive.</li>
+</ul>
+</div>
+
+<h2>Overall Presumption</h2>
+<div class="exec">
+<p>CAD today is a currency in an unusually rare setup: a central bank that just, for the first time this cycle, openly floated the possibility of a hike, sitting on top of genuinely improving growth data, with a real (if only partially captured) oil tailwind — but all of it sitting alongside a trade relationship that just entered a more uncertain, open-ended phase rather than getting resolved. None of the three forces (policy, growth, trade) has fully resolved in either direction, which is why conviction should stay moderate. The next real test arrives fast: June CPI on 20 July will either validate or undercut the BoC's new hawkish tone within days of this report, followed by Q2 GDP, the July jobs report, and the ongoing, undated flow of CUSMA headlines. Until the CPI print lands, CAD is a headline-and-differential currency, not a clean trend.</p>
+</div>
+
+<h2>📋 Discord Summary — Copy/Paste Ready</h2>
+<div class="discord">
+**🇨🇦 CAD DEEP-DIVE — July 16, 2026**
+
+The loonie is sitting in a genuinely rare setup right now: three separate forces pulling at once, and none of them has fully won yet. The Bank of Canada held rates at 2.25% on July 15 (6th straight hold) but Governor Macklem's tone was the most hawkish of the cycle — he explicitly said a rate hike is "not our base case, but... a serious risk" if oil prices stay elevated. At the same time, growth actually picked up more than expected (Q2 tracking near 2.5% annualized per the BoC) after a choppy start to the year.
+
+**📊 Inflation:** May CPI jumped to 3.2% from 2.8% on a 33% surge in gasoline prices tied to the Middle East war, but the BoC's preferred core measures barely moved (trimmed-mean 2.0%, median 2.1%) — reassuring on the surface, but June's data (due July 20, just days away) is the real test given oil has kept climbing since.
+
+**🛢️ Oil tailwind, only partly captured:** WTI is near $79-80 on renewed US-Iran escalation and Hormuz tensions — normally bullish for CAD as a major oil exporter — but broad USD strength and an unfavorable Canada-US rate differential mean CAD hasn't fully captured that move. USD/CAD sits near 1.40, off a 15-month CAD low of ~1.4235 hit in late June.
+
+**🏛️ Trade risk isn't gone, it's just open-ended now:** The mandatory July 1 CUSMA six-year review passed without the US committing to a 16-year extension. Nothing changes immediately — the deal runs to 2036 and current exemptions hold — but it's now a rolling annual negotiation with no fixed resolution date. Manufacturing has lost ~61,000 jobs since tariff uncertainty began in Jan 2025.
+
+**👷 Jobs — read with caution:** June unemployment eased to 6.5%, but bank economists flagged the +18k gain as concentrated in part-time/food-service/retail jobs tied to Canada hosting World Cup matches — worth watching for payback in the July/August reports.
+
+**🎯 Next catalysts:** June CPI on July 20 (the big one), Q2 flash GDP in late July/early August, the July jobs report around Aug 8, the Fed's July 28-29 meeting, and the next BoC decision on Sept 2 — plus CUSMA headlines that can now land on any given day.
+
+*Fundamental view only, not advice — pair it with your own technical read before doing anything.*
+</div>
+
+<div class="refresh">
+<h2 style="margin-top:0;">🔄 Refresh Schedule for This Report</h2>
+<p><b>Baseline cadence:</b> weekly, every <b>Saturday or Sunday</b>, as prep for the coming week.</p>
+<p><b>Next scheduled refresh:</b> <span class="refresh-date">Saturday, 18 July 2026</span> — this falls right before the June CPI release (Mon 20 Jul), so this weekend's refresh should flag CPI as the week's key risk event rather than fully re-score the report around it.</p>
+<p><b>Following scheduled refresh:</b> <span class="refresh-date">Sunday, 26 July 2026</span> — prep window ahead of the Fed's 28-29 Jul meeting and the approaching Q2 GDP flash.</p>
+
+<h3>Event-triggered refreshes (override the weekly cadence — refresh immediately, don't wait for the weekend)</h3>
+<table class="trigger-table">
+<tr><th>Trigger</th><th>Why it forces an early refresh</th></tr>
+<tr><td>20 Jul — June CPI print</td><td>Directly tests the BoC's new hawkish tone; a surprise in either direction changes the Section 2 scorecard and Section 9 scenario weights same-day</td></tr>
+<tr><td>28-29 Jul — Fed decision</td><td>A Fed hike/hawkish hold not matched by the BoC widens the rate differential flagged as a structural CAD headwind — refresh Sections 7-8</td></tr>
+<tr><td>Any CUSMA headline (unscheduled)</td><td>No calendar date exists for this risk; a punitive tariff announcement or negotiation breakthrough should trigger an immediate refresh of Sections 6, 9 and 11 regardless of day of week</td></tr>
+<tr><td>Oil move &gt;3-4% in a single session</td><td>Given CAD's terms-of-trade sensitivity, a sharp WTI move (escalation or ceasefire headline) can flip the Section 1 core-tension read before the next scheduled refresh</td></tr>
+<tr><td>~8 Aug — July jobs report</td><td>The key test of whether June's employment strength was a genuine trend or a temporary World Cup effect — material for Sections 5 and 8</td></tr>
+<tr><td>2 Sep — Next BoC decision</td><td>Full re-score required regardless of cadence; this is the point where Macklem's hike risk either gets acted on or pushed further out</td></tr>
+</table>
+<p style="font-size:12.5px; color:#8b949e; margin-top:10px;">Rule of thumb: if a headline would move Section 2's composite score by more than ~5 points on its own, refresh immediately rather than waiting for the weekend pass.</p>
+</div>
+
+</body>
+</html>
