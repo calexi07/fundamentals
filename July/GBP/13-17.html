@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>GBP Deep-Dive Fundamental Report — 2026-07-16</title>
+<style>
+  body { font-family: -apple-system, Segoe UI, Arial, sans-serif; background:#0d1117; color:#e6edf3; margin:0; padding:24px; line-height:1.55; max-width:1150px; margin:0 auto; }
+  h1 { font-size:24px; border-bottom:2px solid #2f81f7; padding-bottom:10px; }
+  h2 { font-size:19px; color:#58a6ff; margin-top:36px; border-left:4px solid #2f81f7; padding-left:10px; }
+  h3 { font-size:16px; color:#79c0ff; margin-top:22px; }
+  h4 { font-size:14px; color:#9ecbff; margin-top:16px; }
+  .badge { display:inline-block; padding:2px 9px; border-radius:12px; font-size:12px; font-weight:700; }
+  .bearish { background:#3d1418; color:#ff7b72; }
+  .bullish { background:#0f3d1f; color:#3fb950; }
+  .neutral { background:#3d3410; color:#e3b341; }
+  table { width:100%; border-collapse:collapse; margin:12px 0 20px 0; font-size:13px; }
+  th, td { border:1px solid #30363d; padding:7px 9px; text-align:left; vertical-align:top; }
+  th { background:#161b22; color:#8b949e; }
+  tr:nth-child(even) { background:#111620; }
+  .note { background:#161b22; border-left:3px solid #e3b341; padding:10px 14px; margin:10px 0; font-size:13px; color:#c9d1d9; }
+  .warn { background:#1a1512; border-left:3px solid #ff7b72; padding:10px 14px; margin:10px 0; font-size:13px; color:#f0c9c4; }
+  .good { background:#0f1a12; border-left:3px solid #3fb950; padding:10px 14px; margin:10px 0; font-size:13px; color:#c9f0d4; }
+  .exec { background:#0f1520; border:1px solid #2f81f7; border-radius:8px; padding:16px 18px; margin:14px 0; }
+  .card { background:#0f1520; border:1px solid #30363d; border-radius:8px; padding:14px 16px; margin:12px 0; }
+  .score { font-size:20px; font-weight:800; }
+  .script { background:#151d2e; border:1px dashed #58a6ff; border-radius:8px; padding:12px 16px; margin:8px 0 20px 0; font-size:13.5px; color:#c9d6e8; }
+  .script b.tag { display:inline-block; background:#2f81f7; color:#fff; font-size:11px; padding:2px 8px; border-radius:10px; margin-bottom:8px; }
+  .discord { background:#2b2d31; border:1px solid #1e1f22; border-radius:8px; padding:16px; font-family: 'Segoe UI', Consolas, monospace; font-size:13.5px; color:#dbdee1; white-space:pre-wrap; }
+  .scenario { border-radius:8px; padding:14px 16px; margin:10px 0; border:1px solid #30363d; }
+  .scen-bull { border-left:4px solid #3fb950; background:#0f1a12; }
+  .scen-base { border-left:4px solid #e3b341; background:#1a1710; }
+  .scen-bear { border-left:4px solid #ff7b72; background:#1a1512; }
+  .prob { font-weight:800; font-size:15px; }
+  .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  @media (max-width:700px){ .grid2{grid-template-columns:1fr;} }
+  .taglist span { display:inline-block; background:#161b22; border:1px solid #30363d; color:#8b949e; font-size:11px; padding:2px 8px; border-radius:10px; margin:2px 4px 2px 0; }
+</style>
+</head>
+<body>
+
+<h1>GBP Deep-Dive Fundamental Report</h1>
+<p><b>As of:</b> 2026-07-16 &nbsp;|&nbsp; <b>Scope:</b> Single-currency deep dive on GBP — monetary policy, inflation, growth, fiscal/political risk (including the live Downing Street transition), positioning, cross-by-cross bias, catalysts &amp; scenario tree &nbsp;|&nbsp; <b>Companion piece to:</b> Daily Global Macro Strategy Report</p>
+
+<div class="exec">
+<p><b>One-line view:</b> GBP is sitting on top of the most acute political-risk event in the G10 right now — a live change of Prime Minister and, within days, a new Chancellor — layered onto a Bank of England that is quietly drifting hawkish (MPC hawkish dissent has doubled in two meetings) in response to the same war-driven energy shock hitting the rest of Europe. Sterling's carry appeal (Bank Rate 3.75%, the highest nominal policy rate among the majors bar the Fed) is real, but it is being contested in real time by a fiscal position that is deteriorating faster than forecast and a market that is currently pricing the credibility of a government that doesn't fully exist yet. This is a genuinely two-sided, headline-driven setup, not a clean trend.</p>
+</div>
+
+<h2>1. What's Actually Driving GBP Right Now — The Core Tension</h2>
+<div class="card">
+<p>GBP is being pulled by <b>three forces simultaneously</b>, which is one more than most G10 currencies are dealing with at once:</p>
+<ul>
+<li><b>The hawkish-drift force:</b> The Bank of England held Bank Rate at 3.75% on 18 June 2026 in a 7-2 vote — but that 2-vote hawkish dissent (Huw Pill and Megan Greene, both pushing for a hike to 4.00%) is up from a single dissenter in April, and MPC member Catherine Mann has separately signalled she would back a hike if inflation expectations don't improve. Markets now price the odds of further tightening as rising, not falling, with money markets increasingly leaning toward a hike landing by September or November and a second by March 2027. This is a central bank that spent 2024-25 in a cutting cycle and has now stopped dead because of an external shock it didn't create.</li>
+<li><b>The fiscal/political-transition force — the dominant story right now:</b> Keir Starmer resigned as Labour leader on 22 June 2026 after a disastrous set of May local elections, and formally leaves office on Monday 20 July 2026, with Andy Burnham — the only candidate in the leadership contest — set to be confirmed as the new Labour leader on Friday 17 July and become the UK's seventh Prime Minister in ten years. The single biggest open question for GBP is who Burnham appoints as Chancellor: reports point to Ed Miliband, seen by gilt investors as fiscally expansive, as the current favourite, which markets have read as unsettling, against more market-friendly alternatives like Yvette Cooper or Wes Streeting. This is a genuine, live, days-away event risk that most other G10 currencies simply don't have on their calendar.</li>
+<li><b>The growth/labour-market drag:</b> Q1 2026 GDP printed a surprisingly strong +0.6% q/q, but that is already backward-looking — flash June PMIs showed the composite back in outright contraction (49.4, with services at a fresh multi-year-low pace of decline) and unemployment has edged up to 4.9%, with services firms cutting payrolls at the fastest pace since February. The strong Q1 print is being read by economists as "old news" that predates the worst of the war-driven energy shock and the political uncertainty since.</li>
+</ul>
+<p>Net effect: GBP has genuine carry support and a modestly hawkish central bank, but it is trading through the most concentrated single week of political-transition risk of any G10 currency this year. That is the dominant lens for everything else in this report.</p>
+</div>
+<div class="script"><b class="tag">🎙 SCRIPT</b><br>
+Let's talk about the pound, because this is genuinely one of the more interesting fundamental setups in G10 right now — not because of one thing, but because three big things are colliding at once. First, the Bank of England is quietly turning more hawkish: the last vote was seven-to-two to hold rates, but that's twice as many hawks as the meeting before, and inflation is expected to go higher, not lower, in the second half of the year because of the energy shock from the war. Normally that alone would be pound-supportive. But at the exact same time, Britain is in the middle of an actual change of prime minister — Keir Starmer is out, Andy Burnham is in as of Monday, and the market genuinely doesn't know yet who his finance minister will be, which matters enormously because UK government bond yields have already spiked once this year on fears of a more free-spending government. And on top of both of those, the hard growth data that just came out was strong, but it's stale — it's from before the worst of the political and energy shock, and the more current business surveys are already flashing contraction again. So you've got a hawkish central bank, a fiscal wildcard days from being resolved, and a softening real economy, all at the same time. That's why sterling has been choppy rather than trending, and why the next ten days matter more for the pound than almost anything else in the calendar.
+</div>
+
+<h2>2. GBP Multi-Factor Scorecard</h2>
+<table>
+<tr><th>Factor</th><th>Score /100</th><th>Direction</th><th>Weight in current regime</th><th>Comment</th></tr>
+<tr><td><b>Monetary policy (BoE stance)</b></td><td class="score">60</td><td><span class="badge bullish">Hawkish-drifting</span></td><td><span class="badge bullish">High</span></td><td>Held at 3.75% but hawkish dissent doubled to 2 members in June; markets increasingly pricing a hike by September/November</td></tr>
+<tr><td><b>Inflation trend</b></td><td class="score">44</td><td><span class="badge neutral">Near-term calm, expected to reaccelerate</span></td><td><span class="badge bullish">High</span></td><td>Headline CPI 2.8% (May), but core 2.6% and services 3.7% (up from 3.2%) — the BoE's own projections see CPI rising through H2 2026 as the energy shock's knock-on effects land</td></tr>
+<tr><td><b>Growth momentum</b></td><td class="score">38</td><td><span class="badge bearish">Backward-looking strength, forward-looking weakness</span></td><td><span class="badge neutral">Medium</span></td><td>Q1 GDP +0.6% q/q (strong but "old news"); June flash composite PMI back in contraction at 49.4, services at steepest downturn pace since Jan 2023</td></tr>
+<tr><td><b>Fiscal/political risk</b></td><td class="score">24</td><td><span class="badge bearish">Acute, live event risk</span></td><td><span class="badge bearish">Very High</span></td><td>PM transition completes 20 July; new Chancellor pick (Miliband vs. Cooper/Streeting) is the single largest near-term swing factor for gilts and GBP; May borrowing overshot forecasts by £5.6bn</td></tr>
+<tr><td><b>Rate differential / carry</b></td><td class="score">58</td><td><span class="badge bullish">Still the highest nominal rate in G10 ex-Fed</span></td><td><span class="badge bullish">High</span></td><td>3.75% Bank Rate versus 2.25% ECB deposit rate gives GBP a real carry edge over EUR; still below the Fed funds range, capping GBP/USD</td></tr>
+<tr><td><b>Terms of trade / energy exposure</b></td><td class="score">38</td><td><span class="badge bearish">Structural headwind</span></td><td><span class="badge neutral">Medium-High</span></td><td>UK is a net energy importer; Ofgem price cap rose 13% from 1 July 2026 on Middle East-driven wholesale gas costs</td></tr>
+<tr><td><b>Labour market</b></td><td class="score">40</td><td><span class="badge bearish">Loosening</span></td><td><span class="badge neutral">Medium</span></td><td>Unemployment up to 4.9%; services PMI shows the fastest job-shedding since February</td></tr>
+<tr><td><b>Composite GBP score</b></td><td class="score" style="color:#e3b341;">44/100</td><td colspan="2"><span class="badge neutral">Net neutral, event-risk-dominated</span></td><td>A hawkish-leaning central bank and real carry are being offset almost entirely by the concentrated political/fiscal risk landing this week</td></tr>
+</table>
+<div class="note">
+<p>Read this scorecard as "genuine hawkish support, sitting directly on top of the single largest political-risk event in G10 this quarter." Under normal circumstances a central bank quietly turning more hawkish with rising dissent would be a clean bullish signal. It isn't clean here, because the fiscal/political score is doing the most work in the composite — and that score is about to be resolved, for better or worse, within days of this report being written.</p>
+</div>
+
+<h2>3. Bank of England Policy Deep Dive</h2>
+<div class="grid2">
+<div class="card">
+<h3>Where rates stand</h3>
+<p>Bank Rate: <b>3.75%</b>, held since the cut from 4.00% on 18 December 2025, and held again at all three 2026 meetings so far (February, April, June). The 18 June decision was a <b>7-2 vote</b>, with chief economist Huw Pill and external MPC member Megan Greene voting for an immediate hike to 4.00%.</p>
+<h3>Next decision date</h3>
+<p>The next scheduled MPC announcement is <b>Thursday 30 July 2026</b> at 12:00 BST — coming with a full quarterly Monetary Policy Report and a Governor's press conference around 12:30. This is one of the four "big" meetings of the year and lands just ten days after Burnham formally becomes PM, making it an unusually loaded event.</p>
+<h3>Market pricing</h3>
+<p>Pricing has moved materially hawkish since Sintra: money markets have shifted from expecting a hold through year-end toward fully pricing a hike by November 2026, with a second increase priced by March 2027, as renewed oil-price gains from the escalating Iran conflict have outweighed earlier hopes of de-escalation. A Reuters poll of 65 economists still shows a majority expecting Bank Rate to stay at 3.75% for the rest of the year, but nearly 40% of respondents expect at least one hike, and only a small minority expect a cut.</p>
+</div>
+<div class="card">
+<h3>The hawkish-dissent trend — a real signal</h3>
+<p>The direction of travel inside the MPC matters more than the headline hold: one hawkish dissenter in April became two in June, and Catherine Mann — historically one of the more hawkish voices on the committee — has separately signalled she is prepared to back a hike if inflation expectations don't improve. Pill told a podcast on 9 July that he believes rates will need to rise this year, framing the current above-target inflation stretch (53 of the last 56 months above the 2% target) as reflecting both bad luck and previous over-optimism about trend growth.</p>
+<h3>The dovish counterweight</h3>
+<p>Not every signal points one way: Oxford Economics still expects the BoE to hold through the rest of 2026 and "well into 2027," and Pantheon Macroeconomics dropped its rate-hike call after the earlier US-Iran ceasefire pulled oil prices down. The committee's own language remains explicitly data-dependent — every energy and inflation print between now and 30 July carries outsized weight for repricing the path.</p>
+<h3>What the Bank itself is watching</h3>
+<p>The BoE has been explicit that inflation "will probably rise this year" because of the energy shock, and that the size and duration of the effect depends on how long elevated energy prices persist. Its April Monetary Policy Report projected CPI at 3.1% in Q2, 3.3% in Q3, and rising further into Q4 2026 on energy-market pricing assumptions from mid-April — before the most recent escalation, meaning the actual path could run hotter than that baseline if the war continues.</p>
+</div>
+</div>
+
+<h2>4. Inflation — Calm Headline, Sticky Core, Rising Risk</h2>
+<table>
+<tr><th>Month</th><th>Headline CPI y/y</th><th>Core CPI y/y</th><th>Services CPI y/y</th><th>CPIH y/y</th></tr>
+<tr><td>Mar 2026</td><td>3.3%</td><td>3.1%</td><td>4.5%</td><td>~3.4%</td></tr>
+<tr><td>Apr 2026</td><td>2.8%</td><td>2.5%</td><td>3.2%</td><td>3.0%</td></tr>
+<tr><td><b>May 2026</b></td><td><b>2.8%</b></td><td><b>2.6%</b></td><td><b>3.7%</b></td><td><b>3.0%</b></td></tr>
+<tr><td>Jun 2026 (final release due)</td><td colspan="3" style="color:#8b949e;">Not yet published — ONS release scheduled 22 July 2026</td></tr>
+</table>
+<div class="note">
+<p>Headline CPI held at 2.8% in May 2026, unchanged from April, largely because of a lower Ofgem household energy price cap that took effect in April, worth close to 0.5 percentage points off headline inflation on its own. But the composition underneath is less reassuring: core CPI ticked up to 2.6% from 2.5%, and — the figure the BoE watches most closely as the least globally-exposed, most domestically-driven price gauge — services inflation jumped to 3.7% in May from 3.2% in April, having been as high as 4.5% in March. The Bank of England pays close attention to services prices when setting policy specifically because they are seen as more persistent and less exposed to global shocks than goods or energy prices.</p>
+</div>
+<div class="warn">
+<p><b>Caveat on durability — the opposite problem to the eurozone's:</b> where June's eurozone inflation print benefited from a peace-window that has since reversed, the UK's calm April/May headline numbers were flattered by a household energy price cut that has already been reversed: Ofgem confirmed a 13% rise in the household price cap from 1 July 2026, driven by higher wholesale gas prices linked to Middle East tensions. That means the July and August CPI prints are likely to show a mechanical re-acceleration in headline inflation almost regardless of what happens with the war from here — a very different, and arguably more clearly hawkish, setup than the eurozone's fragile one-month cooling.</p>
+</div>
+<h4>22 July 2026: June CPI data</h4>
+<p>The ONS releases full June inflation data on <b>22 July 2026</b> — landing just before the 30 July BoE decision and giving the Committee its last full inflation read before that meeting. Given the Ofgem price cap rise took effect 1 July, this print itself should still largely reflect the old, lower cap; the real test comes with the July print (released in August).</p>
+
+<h2>5. Growth &amp; Activity — Strong Headline, Weakening Underneath</h2>
+<div class="card">
+<table>
+<tr><th>Indicator</th><th>Latest reading</th><th>Trend</th></tr>
+<tr><td>UK Q1 2026 GDP q/q</td><td>+0.6% (confirmed, unchanged from initial estimate)</td><td>Strong, but pre-dates the worst of the war/political shock</td></tr>
+<tr><td>UK Q4 2025 GDP q/q (revised)</td><td>+0.1% (revised down from +0.2%)</td><td>Weak base quarter</td></tr>
+<tr><td>UK Composite PMI (Jun, flash/final)</td><td>49.4 flash / ~49.2-49.4 final</td><td>Back in contraction after a brief April rebound</td></tr>
+<tr><td>UK Services PMI (Jun, final)</td><td>48.8</td><td>Steepest downturn pace since January 2023; job-shedding fastest since February</td></tr>
+<tr><td>UK Manufacturing PMI (Jun, final)</td><td>52.5</td><td>Still expanding, but decelerating from May's four-year high of 53.9</td></tr>
+<tr><td>Unemployment rate</td><td>4.9%</td><td>Edging up, signalling a loosening labour market</td></tr>
+</table>
+<p>The strength of the confirmed Q1 print (+0.6% q/q, the fastest quarterly growth in over a year) genuinely surprised to the upside, driven by services (+0.8%), with production and construction both also positive. But independent economists were quick to caution that this is "old news": growth held up through March, before the worst effects of the Iran war and the domestic political crisis had fully fed through. The flash June PMI confirmed that caution — composite output back in outright contraction at 49.4, with the services PMI showing its steepest rate of decline since January 2023 and survey respondents explicitly citing both the Middle East conflict and "heightened domestic political uncertainty" as demand headwinds.</p>
+</div>
+<div class="good">
+<p><b>What's actually working for growth:</b> manufacturing remains in expansion territory (52.5 in June) even as it decelerates, supported by robust export gains to the US, EU and China, and business investment rebounded 0.7% in Q1 after a near-3% fall the prior quarter — a genuine, if fragile, positive signal on capex intentions heading into a highly uncertain second half.</p>
+</div>
+
+<h2>6. Fiscal &amp; Political Risk — The Dominant Story</h2>
+<div class="card">
+<h3>The transition, in order</h3>
+<p>Starmer announced his resignation as Labour leader on 22 June 2026 after Labour lost roughly 60% of the council seats it was defending in May's local elections (its BBC-projected national vote share fell to just 17%, level with the Conservatives and well behind Reform UK). Andy Burnham — who returned to Parliament via a specially-engineered Makerfield by-election on 18 June, defeating a Reform UK candidate — is the only candidate in the leadership race; nominations closed on 16 July, and he is expected to be confirmed as Labour leader on Friday 17 July. Starmer formally resigns to King Charles III on Monday 20 July, at which point Burnham is asked to form a government and becomes the UK's seventh Prime Minister in ten years — an unusually rapid rate of turnover by historical UK standards.</p>
+<h3>The Chancellor question — the single largest near-term swing factor</h3>
+<p>Markets widely expect Rachel Reeves to be replaced. Ed Miliband has emerged as the reported favourite and is seen by gilt investors as fiscally expansive — a signal some analysts read as gilt- and GBP-negative given his association with large-scale green-investment spending plans. Yvette Cooper (former Treasury experience) is seen as the market's preferred, more fiscally cautious choice, while Wes Streeting — who backed Burnham's leadership bid early and is seen as further to the party's right — is also mentioned as a contender. The appointment, expected around 20 July, is likely to be the single most important GBP catalyst of the next two weeks.</p>
+<h3>Early signals from Burnham himself</h3>
+<p>In his first major policy speech, Burnham explicitly tied his agenda to "the discipline of our current fiscal rules" — the framework Reeves established — and paired an ambition for a large council-house building programme and deeper devolution with a pledge to reduce the UK's welfare bill. Gilt yields dipped and sterling rose modestly on the day, in what one analyst characterised as "big spending vibes, small spending commitments" — a strategy that has so far reassured markets more than the "Manchesterism" rhetoric that first rattled gilts (pushing 30-year yields to 5.81% in early May, their highest since 1998) suggested it might.</p>
+<h3>The underlying fiscal arithmetic is deteriorating regardless of who is in charge</h3>
+<p>UK public borrowing in May 2026 came in at £23.9bn, a 30% jump year-on-year and £5.6bn above forecasts, with debt-interest spending alone at £11.7bn for the month — a reminder that whoever becomes Chancellor inherits an economy with very little fiscal headroom, a debt-interest bill that is highly sensitive to short-term gilt yields, and an Autumn Budget roughly three to four months away that will be the first hard test of whether "growth-focused rhetoric, fiscal-rule-compliant reality" is actually deliverable.</p>
+</div>
+
+<h2>7. GBP Crosses — Detailed Bias &amp; Rationale</h2>
+<table>
+<tr><th>Pair</th><th>Bias</th><th>Confidence</th><th>Core logic</th></tr>
+<tr><td><b>GBPUSD</b></td><td><span class="badge neutral">Range-bound, event-risk-heavy</span></td><td>40%</td><td>Trading around 1.322-1.325; carry and hawkish BoE drift offer support, but capped below the Fed's still-higher nominal rate and vulnerable to a negative Chancellor-appointment surprise</td></tr>
+<tr><td><b>EURGBP</b></td><td><span class="badge bearish">Mildly GBP-bullish</span></td><td>40%</td><td>GBP's higher nominal policy rate (3.75% vs 2.25% ECB) and its own hawkish dissent trend give it a modest edge over EUR, though both currencies share the same war/energy-shock exposure</td></tr>
+<tr><td><b>GBPJPY</b></td><td><span class="badge bullish">Bullish, carry-driven</span></td><td>50%</td><td>GBP's carry advantage over JPY is one of the cleanest in G10 right now given JPY's persistent broad weakness near multi-decade lows and no BoJ/MoF intervention so far</td></tr>
+<tr><td><b>GBPCHF</b></td><td><span class="badge neutral">Low conviction</span></td><td>30%</td><td>CHF's haven bid against war headlines offsets GBP's carry edge; largely a function of risk sentiment day to day</td></tr>
+<tr><td><b>GBPAUD</b></td><td><span class="badge neutral">Near coin-flip</span></td><td>35%</td><td>Both currencies carry real yield support; the 11 August RBA decision and the 30 July BoE decision are the swing catalysts on either side</td></tr>
+<tr><td><b>GBPNZD</b></td><td><span class="badge neutral">Flat</span></td><td>30%</td><td>Low conviction; dominated by each central bank's own near-term meeting outcomes</td></tr>
+<tr><td><b>GBPCAD</b></td><td><span class="badge neutral">Flat-to-mildly bullish</span></td><td>35%</td><td>GBP's policy-rate edge over CAD is a modest offset to CAD's own oil-price tailwind from the same war driving GBP's inflation risk</td></tr>
+</table>
+
+<h2>8. Positioning &amp; Market Structure Notes</h2>
+<div class="card">
+<ul>
+<li><b>Gilts are the single cleanest real-time read on UK political risk.</b> The 10-year gilt yield is back near 5.0% — close to a two-month high — and the 30-year hit 5.81% (a 1998 high) in early May on Burnham-related fiscal anxiety before partially retracing. Watch the 10-year and 30-year gilt yield reaction on 20 July (Chancellor announcement) and 30 July (BoE decision) as the two cleanest near-term signals for GBP positioning.</li>
+<li><b>GBP has recently been "the resilient one" against the dollar</b> even as the euro traded closer to technical support levels during Iran-war risk-off episodes, partly reflecting GBP's own carry appeal and partly reflecting that soft US CPI/PPI prints have been broadly dollar-negative across the board rather than GBP-specific strength — a similar dynamic to the "USD story, not local-currency story" pattern also visible in EUR.</li>
+<li><b>This is a genuinely two-sided setup, not a clean trend.</b> A hawkish BoE and high nominal carry are constructive; an unresolved Chancellor appointment, a fragile new government with no personal electoral mandate (Burnham was never on the general-election ballot as party leader), and a deteriorating underlying fiscal position are not. Confidence on directional GBP calls should stay moderate until the Chancellor pick and the 30 July BoE decision are both known.</li>
+</ul>
+</div>
+
+<h2>9. Multi-Level Scenario Tree — Next 4-6 Weeks</h2>
+
+<div class="scenario scen-bull">
+<p><span class="prob">🟢 Bull case for GBP — ~25% probability</span></p>
+<p><b>Path:</b> Burnham appoints a market-credible Chancellor (Cooper or Streeting) → gilt yields ease from current two-month highs as fiscal-credibility fears unwind → 30 July BoE delivers a hawkish hold with clear signalling toward a September/November hike → June/July CPI prints show services inflation stabilising rather than re-accelerating sharply → GBP/USD extends toward 1.34-1.36 and EURGBP grinds toward 0.85-0.86 as both the rate story and the political story turn constructive together.</p>
+<p><b>Watch for:</b> a fiscally cautious Chancellor pick; gilt yields (10y) falling back below 4.7%; a hawkish-leaning BoE statement on 30 July; no fresh Labour infighting post-handover.</p>
+</div>
+
+<div class="scenario scen-base">
+<p><span class="prob">🟡 Base case — ~45% probability</span></p>
+<p><b>Path:</b> Burnham becomes PM smoothly on 20 July; Chancellor pick is a mixed market reaction (neither a clean relief rally nor a Truss-style shock); BoE holds on 30 July with a hawkish-leaning Monetary Policy Report, keeping September/November hike odds alive but not confirmed; gilt yields stay elevated but rangebound (10y roughly 4.8-5.2%); GBP/USD continues to trade a broad 1.30-1.35 range, driven as much by US-side and war-headline news as by anything UK-specific.</p>
+<p><b>Watch for:</b> incremental war/oil headlines without full-scale escalation; in-line June CPI and July flash PMI prints; a Chancellor appointment that reassures markets on rules but not on specifics.</p>
+</div>
+
+<div class="scenario scen-bear">
+<p><span class="prob">🔴 Bear case for GBP — ~30% probability</span></p>
+<p><b>Path:</b> Burnham appoints a fiscally expansive Chancellor (e.g. Miliband) whose remit is read as loosening the fiscal rules ahead of the autumn Budget → gilt yields resume their spring sell-off, with the 30-year retesting or breaking above the 5.81% (1998) high → rising debt-service costs and a widening "fiscal doom loop" narrative dominate headlines, echoing (without fully repeating) the 2022 Truss-era dynamic → simultaneously, the war escalates further and oil spikes, pushing the July/August CPI prints sharply higher on the reversed Ofgem price cap → the BoE is forced into an uncomfortable "hike into a weakening economy" position at the 30 July or September meeting → GBP/USD slides toward 1.26-1.28 and EURGBP rises toward 0.90+ as political/fiscal risk dominates even a nominally hawkish central bank.</p>
+<p><b>Watch for:</b> a fiscally expansive Chancellor appointment; 30-year gilt yields breaking above 5.81%; a sharp negative reaction in sterling on the Chancellor announcement itself; a composite PMI drop back below 48.</p>
+</div>
+
+<h2>10. Catalysts &amp; Calendar — What to Watch, In Order</h2>
+<table>
+<tr><th>Date</th><th>Event</th><th>Why it matters for GBP</th></tr>
+<tr><td><b>17 Jul 2026</b></td><td>Andy Burnham confirmed as new Labour leader</td><td>Formalises the succession; markets will parse his acceptance remarks for any early signal on fiscal stance or Chancellor timing</td></tr>
+<tr><td><b>20 Jul 2026</b></td><td>Starmer resigns to the King; Burnham becomes PM; new Chancellor announced</td><td>The single largest near-term GBP catalyst — the Chancellor identity will drive an immediate gilt and sterling reaction, positive or negative</td></tr>
+<tr><td><b>22 Jul 2026</b></td><td>ONS final June CPI release</td><td>Last full inflation read before the BoE's 30 July decision; test of whether the reversed Ofgem price cap is already showing up</td></tr>
+<tr><td>~23-24 Jul 2026</td><td>Flash July composite/manufacturing/services PMIs (UK)</td><td>First read on whether June's contraction deepened following the new PM's installation and the ongoing war</td></tr>
+<tr><td><b>30 Jul 2026</b></td><td>Bank of England MPC decision + Monetary Policy Report + Bailey press conference (12:00 / ~12:30 BST)</td><td>A live meeting in both directions; language on further hikes and on the new government's fiscal stance will move GBP rate-path pricing sharply</td></tr>
+<tr><td>Ongoing</td><td>Iran/Hormuz war headlines and oil price</td><td>Directly drives the UK's own inflation and growth story in the same push-pull way as for the eurozone, given the UK's status as a net energy importer</td></tr>
+<tr><td>Ongoing</td><td>Gilt yield moves (10y and 30y)</td><td>The cleanest real-time gauge of how markets are pricing the new government's fiscal credibility, independent of the rates story</td></tr>
+<tr><td><b>17 Sep 2026</b></td><td>Next scheduled BoE MPC decision</td><td>The meeting most commonly cited by market pricing as the more probable point for an actual hike, if not delivered in July</td></tr>
+<tr><td>Autumn 2026 (date TBC, ~Nov)</td><td>First Budget under Burnham government</td><td>The real test of whether "fiscal-rule-compliant rhetoric" survives contact with actual tax and spending decisions</td></tr>
+<tr><td>Ongoing</td><td>US data (CPI/PPI/NFP/Fed communications)</td><td>Given GBP/USD has recently been driven partly by broad USD softness, US data surprises can move the pair independent of anything UK-specific</td></tr>
+</table>
+
+<h2>11. Key Risks That Could Invalidate This Analysis</h2>
+<div class="warn">
+<ul>
+<li><b>A market-unfriendly Chancellor appointment</b> (most commonly flagged: Ed Miliband) could trigger an immediate, sharp gilt sell-off and GBP weakness, independent of anything the BoE does — this is the single largest identifiable near-term risk in this report.</li>
+<li><b>A durable Iran ceasefire</b> would unwind the reversed-price-cap inflation risk quickly and could pull forward BoE rate-cut expectations again, which would be GBP-negative even as it eased the acute stagflation risk.</li>
+<li><b>Further war escalation / a full Hormuz shipping disruption</b> could push oil and UK energy bills sharply higher, reaccelerating inflation but also hitting growth and confidence harder — a stagflationary shock that is bad for the currency on net even with a "hawkish" central bank.</li>
+<li><b>A hawkish or dovish surprise at the 30 July BoE meeting</b> — given the closeness of the recent vote split and the live nature of the September/November pricing, this is a genuine two-way risk event.</li>
+<li><b>Autumn Budget slippage</b> — if the new government's first Budget signals looser fiscal rules or larger-than-expected borrowing, expect a 2022-style (though likely less extreme) negative gilt/GBP reaction given how sensitised the market already is after the May gilt spike.</li>
+<li><b>Political instability beyond the handover itself</b> — Burnham was never on a general-election ballot as party leader, and Reform UK currently leads national polling; any signal of a further leadership challenge or an early general election call would reopen the political-risk premium in gilts.</li>
+<li><b>US-side surprises dominating the pair</b> — because recent GBP/USD resilience partly reflects broad dollar softness, a reversal in US data (e.g. a hot US CPI print) could hit GBP/USD independent of anything happening domestically.</li>
+</ul>
+</div>
+
+<h2>Overall Presumption</h2>
+<div class="exec">
+<p>GBP today is best understood as a currency with real carry appeal and a central bank quietly turning more hawkish, trading directly through the most concentrated political-transition risk window in the G10 this year. The strong Q1 GDP print is genuinely backward-looking, and the calm headline inflation numbers are flattered by an energy price cap that has already reversed — meaning both the growth and inflation pictures are likely to look less comfortable over the next two prints than they have over the last two. The next ten days are about as event-dense as it gets for a single currency: Burnham confirmed as leader on 17 July, the actual transfer of power and Chancellor announcement on 20 July, final June CPI on 22 July, and the BoE's own live decision on 30 July. Until the Chancellor identity and the BoE's language are both known, GBP is a headline-and-gilt-yield currency, not a currency you can trade on the rates story alone.</p>
+</div>
+
+<h2>📋 Discord Summary — Copy/Paste Ready</h2>
+<div class="discord">
+**🇬🇧 GBP DEEP-DIVE — July 16, 2026**
+
+The pound is trading through the biggest political-risk week of any G10 currency right now. Keir Starmer resigned as Labour leader on 22 June after a disastrous set of local elections, and formally hands over to Andy Burnham as PM on Monday 20 July — Britain's 7th PM in 10 years. The single biggest swing factor for sterling over the next two weeks isn't the Bank of England, it's who Burnham picks as Chancellor: Ed Miliband is the reported favourite and is seen by gilt investors as fiscally expansive (negative), versus more market-friendly names like Yvette Cooper or Wes Streeting.
+
+**🏛️ BoE:** Held Bank Rate at 3.75% on 18 June in a 7-2 vote — but that's double the hawkish dissent from April, and markets are increasingly pricing a hike by September/November. Next decision (with a full Monetary Policy Report) is 30 July — just 10 days after the new PM takes office.
+
+**📊 Inflation:** Headline CPI calm at 2.8% (May), but that's flattered by an April energy price cut that has already reversed — Ofgem raised the household price cap 13% from 1 July. Services inflation, the BoE's key domestic-pressure gauge, jumped to 3.7% from 3.2%. Expect July/August prints to look less comfortable.
+
+**📈 Growth:** Q1 GDP surprised strongly at +0.6% q/q, but that's already stale — June flash PMIs are back in contraction (composite 49.4), and unemployment has edged up to 4.9%.
+
+**🎯 Next catalysts:** Burnham confirmed as Labour leader (17 July), handover of power + Chancellor announcement (20 July), final June CPI (22 July), and the BoE decision (30 July) — an unusually dense run of events for a single currency.
+
+*Fundamental view only, not advice — pair it with your own technical read before doing anything.*
+</div>
+
+<h2>🔄 Refresh Schedule</h2>
+<div class="card">
+<p><b>Baseline cadence:</b> refresh every <b>Saturday/Sunday</b> as weekend prep for the new week — catches ordinary drift in positioning, incremental war headlines, and small data revisions.</p>
+<p><b>Event-triggered refresh (overrides the weekly cadence, refresh immediately regardless of day):</b></p>
+<ul>
+<li>A <b>BoE rate decision</b> — always, but especially one with a Monetary Policy Report (Feb / Apr / Jul / Nov)</li>
+<li>A <b>CPI print</b> lands — refresh on the release itself, not just when the calendar date passes</li>
+<li><b>Flash or final PMI</b> — refresh if composite moves ~1pt+ or flips across the 50 line</li>
+<li>Any <b>confirmed political/fiscal event</b> with market impact — e.g. a new Chancellor being named, a Budget, a confidence vote outcome</li>
+<li><b>Gilt yields moving ~15bp+ intraday</b>, or <b>Brent moving 5%+ intraday</b> on war headlines — these signal a regime change, not noise</li>
+</ul>
+<table>
+<tr><th>Date</th><th>Trigger</th><th>Refresh priority</th></tr>
+<tr><td><b>17 Jul 2026</b></td><td>Burnham confirmed as Labour leader</td><td><span class="badge neutral">Light touch</span> — update Section 6 tone only unless he signals fiscal stance</td></tr>
+<tr><td><b>20 Jul 2026</b></td><td>PM transition completes + Chancellor announced</td><td><span class="badge bearish">Full refresh</span> — this single event can flip the fiscal/political score and the whole scenario tree</td></tr>
+<tr><td><b>22 Jul 2026</b></td><td>ONS final June CPI</td><td><span class="badge bullish">Full refresh</span> — first hard read on whether the reversed energy price cap is showing up</td></tr>
+<tr><td>~23-24 Jul 2026</td><td>Flash July PMIs</td><td><span class="badge neutral">Moderate refresh</span> — Section 5 + scorecard update</td></tr>
+<tr><td><b>30 Jul 2026</b></td><td>BoE decision + Monetary Policy Report</td><td><span class="badge bearish">Full refresh</span> — new rate-path pricing, new BoE projections</td></tr>
+<tr><td>Weekend of 25-26 Jul 2026</td><td>Routine weekly refresh</td><td><span class="badge neutral">Standard</span> — first "quiet" weekend after the transition dust settles</td></tr>
+</table>
+<div class="note">
+<p><b>Next refresh due: Monday 20 July 2026</b> (event-triggered — PM handover + Chancellor announcement), superseding the normal weekend cadence. The following scheduled refresh after that is the <b>30 July 2026</b> BoE decision, with a routine weekly check on the weekend in between (25-26 July) if nothing material breaks before then.</p>
+</div>
+</div>
+
+</body>
+</html>
