@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CHF Deep-Dive Fundamental Report — 2026-07-16</title>
+<style>
+  body { font-family: -apple-system, Segoe UI, Arial, sans-serif; background:#0d1117; color:#e6edf3; margin:0; padding:24px; line-height:1.55; max-width:1150px; margin:0 auto; }
+  h1 { font-size:24px; border-bottom:2px solid #2f81f7; padding-bottom:10px; }
+  h2 { font-size:19px; color:#58a6ff; margin-top:36px; border-left:4px solid #2f81f7; padding-left:10px; }
+  h3 { font-size:16px; color:#79c0ff; margin-top:22px; }
+  h4 { font-size:14px; color:#9ecbff; margin-top:16px; }
+  .badge { display:inline-block; padding:2px 9px; border-radius:12px; font-size:12px; font-weight:700; }
+  .bearish { background:#3d1418; color:#ff7b72; }
+  .bullish { background:#0f3d1f; color:#3fb950; }
+  .neutral { background:#3d3410; color:#e3b341; }
+  table { width:100%; border-collapse:collapse; margin:12px 0 20px 0; font-size:13px; }
+  th, td { border:1px solid #30363d; padding:7px 9px; text-align:left; vertical-align:top; }
+  th { background:#161b22; color:#8b949e; }
+  tr:nth-child(even) { background:#111620; }
+  .note { background:#161b22; border-left:3px solid #e3b341; padding:10px 14px; margin:10px 0; font-size:13px; color:#c9d1d9; }
+  .warn { background:#1a1512; border-left:3px solid #ff7b72; padding:10px 14px; margin:10px 0; font-size:13px; color:#f0c9c4; }
+  .good { background:#0f1a12; border-left:3px solid #3fb950; padding:10px 14px; margin:10px 0; font-size:13px; color:#c9f0d4; }
+  .exec { background:#0f1520; border:1px solid #2f81f7; border-radius:8px; padding:16px 18px; margin:14px 0; }
+  .card { background:#0f1520; border:1px solid #30363d; border-radius:8px; padding:14px 16px; margin:12px 0; }
+  .score { font-size:20px; font-weight:800; }
+  .script { background:#151d2e; border:1px dashed #58a6ff; border-radius:8px; padding:12px 16px; margin:8px 0 20px 0; font-size:13.5px; color:#c9d6e8; }
+  .script b.tag { display:inline-block; background:#2f81f7; color:#fff; font-size:11px; padding:2px 8px; border-radius:10px; margin-bottom:8px; }
+  .discord { background:#2b2d31; border:1px solid #1e1f22; border-radius:8px; padding:16px; font-family: 'Segoe UI', Consolas, monospace; font-size:13.5px; color:#dbdee1; white-space:pre-wrap; }
+  .scenario { border-radius:8px; padding:14px 16px; margin:10px 0; border:1px solid #30363d; }
+  .scen-bull { border-left:4px solid #3fb950; background:#0f1a12; }
+  .scen-base { border-left:4px solid #e3b341; background:#1a1710; }
+  .scen-bear { border-left:4px solid #ff7b72; background:#1a1512; }
+  .prob { font-weight:800; font-size:15px; }
+  .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  @media (max-width:700px){ .grid2{grid-template-columns:1fr;} }
+  .taglist span { display:inline-block; background:#161b22; border:1px solid #30363d; color:#8b949e; font-size:11px; padding:2px 8px; border-radius:10px; margin:2px 4px 2px 0; }
+</style>
+</head>
+<body>
+
+<h1>CHF Deep-Dive Fundamental Report</h1>
+<p><b>As of:</b> 2026-07-16 &nbsp;|&nbsp; <b>Scope:</b> Single-currency deep dive on CHF — SNB policy at the zero bound, inflation, growth, the US tariff overhang, safe-haven mechanics, positioning, cross-by-cross bias, catalysts &amp; scenario tree &nbsp;|&nbsp; <b>Companion piece to:</b> Daily Global Macro Strategy Report / EUR Deep-Dive</p>
+
+<div class="exec">
+<p><b>One-line view:</b> CHF is the market's cleanest structural haven trade layered on top of a central bank that has almost no conventional ammunition left — the SNB is pinned at a 0% policy rate, inflation is barely positive, and its main active tool right now is FX intervention rhetoric rather than the interest-rate lever. That combination makes CHF's near-term path less about Swiss data surprises and much more about (1) how the Iran war headlines move global risk appetite and (2) whether the SNB's patience with a strong franc runs out. A second, franc-specific thread — the still-unresolved US tariff situation — is a real and somewhat underappreciated swing factor that doesn't exist for EUR in the same form.</p>
+</div>
+
+<h2>1. What's Actually Driving CHF Right Now — The Core Tension</h2>
+<div class="card">
+<p>CHF today is being shaped by <b>three forces that don't all point the same way</b>, which is unusual for a currency normally thought of as a "simple" haven trade:</p>
+<ul>
+<li><b>The haven force (bullish):</b> With the Iran war headlines dominating the tape and now into a fifth consecutive night of escalation post-ceasefire-collapse, CHF is one of the two or three currencies markets reach for defensively — alongside USD and, in theory, JPY. Every SNB statement since December 2025 has flagged the same risk explicitly: geopolitical tension is generating <b>appreciation pressure</b> on the franc that the SNB has to actively manage.</li>
+<li><b>The zero-rate, low-ammunition force (structurally capping upside, two-sided):</b> Unlike the ECB, which just hiked into the same war, the SNB has held its policy rate at 0% through both the March and June 2026 assessments and is not signalling any near-term move off zero. A central bank with literally no policy rate to defend is a very different animal from one that's actively tightening — the franc's strength right now is coming almost entirely from safe-haven flows and FX-intervention restraint, not from a yield story. That's a fragile kind of strength: it can reverse quickly if risk sentiment improves, and the SNB has openly signalled it is willing to intervene to slow it down.</li>
+<li><b>The trade-policy force (idiosyncratic, two-sided):</b> CHF is also carrying a franc-specific overhang that EUR doesn't have in the same way — the unresolved status of the US tariff regime on Swiss goods. Switzerland went from a 39% "reciprocal" tariff in August 2025, to a 15% negotiated framework rate in November 2025, to a flat 10% Section 122 rate since February 2026 that is <b>due to expire around 24 July 2026</b> — just over a week from this report — with a permanent, legally binding deal still being negotiated. That's a real, dated catalyst that is genuinely unresolved as of today.</li>
+</ul>
+<p>The net effect: CHF strength is currently well-supported but for reasons that are largely <b>exogenous</b> to Switzerland itself (war headlines, global risk appetite, US trade politics) rather than <b>endogenous</b> (SNB tightening, a hot economy). That distinction matters enormously for durability — it's the CHF-equivalent of the EUR report's observation that EUR's gains are mostly a dollar story rather than a euro story.</p>
+</div>
+<div class="script"><b class="tag">🎙 SCRIPT</b><br>
+Let's talk about the franc, because it's a genuinely different animal from most of the currencies we cover. Switzerland's central bank is sitting at zero percent interest rates — it hasn't moved since June of last year, and it's not really planning to. So when the franc strengthens, it's not because Swiss bonds suddenly pay more, it's because the world is nervous, and money reflexively runs to Switzerland the same way it runs to the dollar or gold. That's the safe-haven mechanic, and with the Iran war still escalating, that mechanic is very much switched on right now. But here's the twist: the Swiss National Bank doesn't love a franc that's too strong — a stronger franc makes Swiss exports more expensive and imports cheaper, which drags down inflation that's already barely above zero. So the SNB has explicitly said it's ready to step into the currency market and lean against a franc that rises too fast. On top of all that, there's a very Swiss-specific wildcard: a temporary US tariff on Swiss goods is set to expire in just over a week, and nobody quite knows yet what replaces it. So you've got safe-haven demand pulling the franc up, a central bank that might lean against that strength, and a trade-policy cliff-edge, all happening at once.
+</div>
+
+<h2>2. CHF Multi-Factor Scorecard</h2>
+<table>
+<tr><th>Factor</th><th>Score /100</th><th>Direction</th><th>Weight in current regime</th><th>Comment</th></tr>
+<tr><td><b>Monetary policy (SNB stance)</b></td><td class="score">45</td><td><span class="badge neutral">Pinned at zero, no active lever</span></td><td><span class="badge bullish">High</span></td><td>Held at 0% in March and June 2026; no hike signalled; the SNB's main active tool right now is FX-intervention rhetoric, not rates — a structurally different posture from a hiking ECB</td></tr>
+<tr><td><b>Safe-haven / geopolitical flows</b></td><td class="score">68</td><td><span class="badge bullish">Actively supportive</span></td><td><span class="badge bullish">Very high</span></td><td>Classic haven currency; every SNB statement since Dec 2025 has explicitly flagged Middle-East-driven appreciation pressure on the franc</td></tr>
+<tr><td><b>Inflation trend</b></td><td class="score">50</td><td><span class="badge neutral">Very low, well-anchored</span></td><td><span class="badge neutral">Medium</span></td><td>June 2026 CPI at 0.5% y/y, core 0.3% y/y — among the lowest inflation of any developed economy; leaves the SNB no urgency to move either direction</td></tr>
+<tr><td><b>Growth momentum</b></td><td class="score">56</td><td><span class="badge bullish">Modest but improving</span></td><td><span class="badge neutral">Medium</span></td><td>Q1 GDP +0.4% q/q (sports-event adjusted); KOF Barometer jumped to 101.2 in June from 98.6, moving above its long-run average; manufacturing PMI still comfortably in expansion despite cooling from a 4-year high</td></tr>
+<tr><td><b>US trade/tariff exposure</b></td><td class="score">38</td><td><span class="badge bearish">Unresolved, dated cliff-edge</span></td><td><span class="badge bullish">High</span></td><td>Current 10% Section 122 tariff is scheduled to expire ~24 July 2026; a permanent bilateral deal targeting 15% (parity with the EU) is still being negotiated, with Section 301 pharma risk unresolved</td></tr>
+<tr><td><b>Terms of trade / energy exposure</b></td><td class="score">62</td><td><span class="badge bullish">Structural advantage vs EUR</span></td><td><span class="badge neutral">Medium</span></td><td>Switzerland's domestic electricity mix is dominated by hydro and nuclear, giving it materially less direct exposure to the oil/gas terms-of-trade shock than the eurozone, even though it still imports refined fuel for transport</td></tr>
+<tr><td><b>Rate differential vs USD/EUR</b></td><td class="score">30</td><td><span class="badge bearish">Structural carry drag</span></td><td><span class="badge neutral">Medium</span></td><td>0% is the lowest policy rate among major currencies — a persistent negative-carry headwind for CHF outside of risk-off episodes, when the haven bid simply overrides the carry math</td></tr>
+<tr><td><b>Political / regulatory risk</b></td><td class="score">58</td><td><span class="badge neutral">Calm but with one live domestic fight</span></td><td><span class="badge neutral">Low-medium</span></td><td>No fiscal/coalition drama like France's; the one live domestic issue is the "too-big-to-fail" capital-requirement debate around UBS working through parliament — a banking-sector, not currency-crisis, risk</td></tr>
+<tr><td><b>Composite CHF score</b></td><td class="score" style="color:#e3b341;">53/100</td><td colspan="2"><span class="badge neutral">Net firm, but fragile-strength not conviction-strength</span></td><td>Tilted bullish mainly by the haven bid; capped by zero rates, the tariff cliff-edge, and latent SNB intervention risk</td></tr>
+</table>
+<div class="note">
+<p>Read this scorecard the same way as the EUR one: it's a tension map, not a verdict. CHF's headline strength right now is real, but it is disproportionately explained by one factor — safe-haven flows tied to a war that could de-escalate on any given day — sitting on top of a central bank that has explicitly reserved the right to lean against further appreciation. That's a very different risk profile from a currency whose strength comes from its own central bank actively tightening.</p>
+</div>
+
+<h2>3. SNB Policy Deep Dive</h2>
+<div class="grid2">
+<div class="card">
+<h3>Where rates stand</h3>
+<p>SNB policy rate: <b>0.00%</b>, unchanged since the SNB's move to a zero-rate policy in June 2025. The Governing Board held again at both the 19 March 2026 and 18 June 2026 quarterly assessments. Sight deposits are remunerated at the policy rate up to a threshold, with a 0.25 percentage-point discount applied above it.</p>
+<h3>Next scheduled decision</h3>
+<p>The SNB holds four in-depth assessments a year — March, June, September, December — each on a Thursday at 9:30 CET with a press conference at 10:00 CET. Following that quarterly cadence, the next assessment is expected <b>around late September 2026</b> (the exact date is confirmed closer to the meeting on the SNB's website); markets and Swiss Life's house view currently see the policy rate remaining at 0% through at least the end of 2026, with any move higher pushed into 2027.</p>
+<h3>The conditional inflation forecast</h3>
+<p>At the June 2026 assessment the SNB put average annual inflation at <b>0.6% for 2026, 0.6% for 2027, and 0.7% for 2028</b> — all conditional on the policy rate staying at 0% throughout. The near-term path was revised slightly higher than March (higher commodity prices, higher inflation abroad), but the medium-term picture is virtually unchanged. This is the single clearest guide to the likely rate path: as long as this forecast holds within the SNB's price-stability range, there is no urgency to move.</p>
+</div>
+<div class="card">
+<h3>The FX-intervention nuance — the real policy lever right now</h3>
+<p>Because the policy rate has almost no room to move, the SNB's <i>de facto</i> active tool is its currency-intervention stance. Through 2025 and into March 2026, statements referred to an "increased willingness" to intervene, framed around the risk of "rapid and excessive appreciation" of the franc. At the June 2026 meeting, SNB Chairman Martin Schlegel notably softened that language to a conditional "if necessary" — a shift he linked to looser monetary conditions following the franc's depreciation since March. That's a genuinely important tell: it means the SNB's tolerance threshold for franc strength moves around with the exchange rate itself, and a renewed leg of war-driven appreciation could quickly flip the language back to more assertive.</p>
+<h3>The negative-rate tail risk</h3>
+<p>Because Swiss inflation is already close to zero and could tip toward deflation if the franc appreciates too aggressively (cheaper imports, weaker export competitiveness), a return to <b>negative rates</b> — which prevailed from January 2015 to June 2025 — remains a live, if not base-case, tool in the SNB's kit if franc strength becomes disorderly. This is the clearest asymmetry in the whole CHF picture: the SNB has essentially one credible lever to fight excess strength (intervention, and ultimately negative rates again), and almost no credible lever to fight weakness beyond simply staying on hold.</p>
+<h3>Forward guidance style</h3>
+<p>The SNB does not pre-commit and reassesses quarterly; unlike the ECB's more verbose forward guidance, SNB communication is comparatively terse, meaning market moves around each release are often driven as much by the 10:00 CET press conference tone as by the decision itself.</p>
+</div>
+</div>
+
+<h2>4. Inflation — Low, Anchored, and Not Currently a Policy Trigger</h2>
+<table>
+<tr><th>Month</th><th>CPI y/y</th><th>Core CPI y/y</th><th>CPI m/m</th><th>Comment</th></tr>
+<tr><td>Feb 2026</td><td>0.1%</td><td>—</td><td>—</td><td>Cycle low</td></tr>
+<tr><td>Mar 2026</td><td>0.3%</td><td>—</td><td>+0.2%</td><td>Turning higher on energy</td></tr>
+<tr><td>Apr 2026</td><td>0.6%</td><td>—</td><td>+0.3%</td><td>Highest since Dec 2024; housing/energy +1.5%, transport +1.2%</td></tr>
+<tr><td>May 2026</td><td>0.6%</td><td>0.3%</td><td>+0.2%</td><td>Same pace as April; core softest since July 2021</td></tr>
+<tr><td><b>Jun 2026</b></td><td><b>0.5%</b></td><td><b>0.3%</b></td><td><b>0.0%</b></td><td>Cooled from May; core unchanged; ex-rent CPI down to 0.2% y/y from 0.4%</td></tr>
+</table>
+<div class="note">
+<p>June's Swiss CPI came in at <b>0.5% year-on-year</b>, down from 0.6% in May and slightly below/in-line with consensus depending on the source. Core inflation (ex food and energy) held at <b>0.3%</b>, unchanged from May and still among the softest readings since mid-2021. On a month-on-month basis the index was flat. Housing/energy inflation eased to roughly 1.2% y/y from 1.5%, transport eased to around 1.8% from 2.0%, and restaurants/hotels softened to about 0.7% from 1.0% — a broad-based cooling rather than one-off noise. This is a genuinely mild inflation print set against a eurozone reading nearly six times higher (2.8%) in the same month — a reminder of just how differently exposed the Swiss and eurozone economies are to the same global energy shock.</p>
+</div>
+<div class="warn">
+<p><b>Why this cooling is also fragile, in the other direction from EUR:</b> the SNB's own June forecast has quarterly inflation <i>rising</i> from 0.6% in Q2 2026 to 0.7% in Q3 and 0.8% in Q4 2026 before easing again in H1 2027 — the mirror image of the ECB's near-term profile. If Middle East oil disruption intensifies further, Swiss inflation could push toward the top of its comfort range faster than currently forecast; conversely, a sustained further franc appreciation (haven demand) would import disinflation and could tip the SNB back toward discussing negative rates. Both directions are plausible from here, which is exactly why SNB language has stayed deliberately non-committal.</p>
+</div>
+<h4>Rents remain the quiet structural driver</h4>
+<p>Housing rents in the Swiss CPI are only refreshed quarterly (Feb/May/Aug/Nov survey months) and are closely linked to the policy rate; the current 1.4% y/y rental inflation reading is a lagged echo of last year's rate-cutting cycle and will next update in the August survey — a mechanical, non-discretionary data point worth flagging as a near-term catalyst in its own right (Section 10).</p>
+
+<h2>5. Growth &amp; Activity — Resilient So Far, With a War Discount Applied</h2>
+<div class="card">
+<table>
+<tr><th>Indicator</th><th>Latest reading</th><th>Trend</th></tr>
+<tr><td>Switzerland Q1 2026 GDP q/q (sports-adjusted)</td><td>+0.4% (SECO) / +0.7% headline</td><td>Strongest sports-adjusted quarter since Q1 2025</td></tr>
+<tr><td>KOF Economic Barometer (Jun)</td><td>101.2, up from 98.6</td><td>Moved above its medium-term average — a genuine improvement in the forward-looking outlook</td></tr>
+<tr><td>Manufacturing PMI (procure.ch/UBS, Jun)</td><td>54.3, down from 57.3 (near 4-yr high in May)</td><td>Fifth-plus month of expansion, but momentum cooling from a very hot May</td></tr>
+<tr><td>Unemployment (ILO definition, Q1 2026)</td><td>5.2%, up from 4.7% y/y</td><td>~266,000 unemployed, +26,000 y/y — a gradual softening in the labour market</td></tr>
+</table>
+<p>SECO's initial Q1 2026 estimate showed the Swiss economy outperforming expectations, growing 0.5% (later revised to a comparable 0.4% sports-adjusted figure) despite what SECO itself described as "the oil price shock and tariff turmoil" — a notable resilience given Switzerland absorbed both the direct 39%-then-15%-then-10% US tariff whiplash and the broader Middle East energy shock in the same quarter. The industrial sector, led by pharmaceuticals, was the key driver; services growth was more subdued and domestic final demand was described by SECO as outright weak, with private consumption flat and fixed investment slightly negative.</p>
+</div>
+<div class="good">
+<p><b>What's actually working:</b> the KOF Barometer's June jump was broad-based — foreign demand indicators, private-consumption indicators, and especially manufacturing production indicators all improved. Manufacturing PMI order books, while decelerating from May's spike, remain solidly above 50. And crucially, the growth story is no longer being told against a backdrop of maximum tariff uncertainty: the move from a 39% to a 10-15% effective US tariff rate over the past year has materially de-risked the export outlook versus where things stood in August 2025.</p>
+</div>
+<div class="warn">
+<p><b>The two competing 2026 growth forecasts worth knowing about:</b> KOF's own June forecast round actually <i>cut</i> its 2026 GDP growth projection to 0.8% (from 1.0%) and 2027 to 1.5% (from 1.7%), explicitly citing the US-Israel war on Iran and higher oil prices as bigger drags than previously assumed — even as the same institute's economists separately flagged that Switzerland's growth outlook would exceed 1% <i>if</i> the tariff relief holds. Meanwhile, private-bank house views (e.g. Lombard Odier) went the other way, upgrading 2026 GDP to 1.2% on the back of the November tariff-reduction framework. The SNB's own June baseline sits in between, at "around 1%" for 2026 and "around 1.5%" for 2027. The honest takeaway: growth forecasts for Switzerland are currently being pulled in opposite directions by the same two shocks (war vs. tariff relief) that are also driving the currency — there is no clean consensus right now.</p>
+</div>
+
+<h2>6. The US Tariff Overhang — CHF's Idiosyncratic Risk Factor</h2>
+<div class="card">
+<h3>How we got here</h3>
+<p>Switzerland was hit with a 39% "reciprocal" US tariff from 7 August 2025 — the highest rate applied to any developed economy, hitting roughly two-thirds of Swiss goods exports. A framework agreement announced 14 November 2025 cut this to 15% (parity with the EU) in exchange for a Swiss pledge to invest at least $200bn in the US through 2028 ($67bn in 2026 alone), tariff-rate quotas on US poultry/beef/bison, and various non-tariff-barrier concessions. Following the US Supreme Court's February 2026 ruling that struck down the IEEPA legal basis for the original tariffs, the applicable rate on Swiss goods dropped further to a flat <b>10%</b> under Section 122 of the US Trade Act, in place since 24 February 2026.</p>
+<h3>The near-term cliff-edge</h3>
+<p>That Section 122 tariff is <b>time-limited to 150 days and is due to expire around 24 July 2026</b> — just over a week after this report, and the same day as the ECB's next decision. A Court of International Trade ruling in May 2026 found even the Section 122 tariff unlawful, though a Federal Circuit stay is keeping it in force pending appeal. In parallel, Section 232 sectoral tariffs remain in force on steel (50%), aluminium (50%), and — since April 2026 — pharmaceuticals (up to 15%, with company-specific exemptions already secured by Roche and Novartis).</p>
+<h3>Where the permanent deal stands</h3>
+<p>As of 8 July 2026, Switzerland's top trade official (SECO director Helene Budliger Artieda) described a "good chance" of locking in a lasting 15% rate — parity with the EU — but stressed talks remain live and unresolved, particularly around an ongoing US Section 301 investigation that Washington has so far refused to delink from the broader negotiation. Notably, a domestic Swiss opinion poll found 63% of respondents viewed the original framework deal as unfavourable to Switzerland — a reminder that even a "resolved" outcome carries some domestic political friction.</p>
+</div>
+<div class="warn">
+<p><b>Why this matters for CHF specifically:</b> this is a genuine, dated, franc-specific event risk that has no real EUR equivalent (the EU's 15% rate is already locked in). A clean rollover or finalization of the 15% permanent rate around 24 July would remove a real growth-downside tail for Swiss exporters; a lapse back toward higher, uncertain tariffs — even temporarily, while courts and negotiators sort things out — would be a fresh negative growth shock layered directly on top of the war-driven one, and is exactly the kind of headline that could tip KOF/manufacturing PMI back down.</p>
+</div>
+
+<h2>7. CHF Crosses — Detailed Bias &amp; Rationale</h2>
+<table>
+<tr><th>Pair</th><th>Bias (for CHF)</th><th>Confidence</th><th>Core logic</th></tr>
+<tr><td><b>USDCHF</b></td><td><span class="badge bullish">CHF firm / USDCHF pressured lower</span></td><td>50%</td><td>Trading near 0.808; combination of broad USD softness (soft US CPI/PPI) and haven-driven CHF demand; the tariff-deadline outcome around 24 July is a swing risk in either direction</td></tr>
+<tr><td><b>EURCHF</b></td><td><span class="badge neutral">Low conviction, policy-divergence-driven</span></td><td>40%</td><td>Trading near 0.923-0.927; a hiking ECB vs. a zero-rate SNB is a structural EURCHF-supportive divergence, but is currently being offset by CHF's own haven bid — a genuine tug-of-war pair right now</td></tr>
+<tr><td><b>GBPCHF</b></td><td><span class="badge neutral">Modestly CHF-firm</span></td><td>35%</td><td>BoE policy path is the dominant driver from the GBP side; CHF's haven premium provides a mild independent tailwind</td></tr>
+<tr><td><b>CHFJPY</b></td><td><span class="badge bullish">CHF firm vs. an unusually weak JPY</span></td><td>45%</td><td>Both are "haven" currencies in theory, but JPY's broad, unchecked weakness (~40-year BoJ/MoF-tolerance lows, no intervention despite the level) gives CHF a clearer relative-strength edge than the classic haven-pair logic would suggest</td></tr>
+<tr><td><b>AUDCHF</b></td><td><span class="badge bearish">CHF modestly pressured</span></td><td>35%</td><td>AUD's higher policy rate is a structural carry edge against zero-rate CHF outside of risk-off spikes; 11 August RBA decision is the key swing catalyst</td></tr>
+<tr><td><b>CADCHF</b></td><td><span class="badge neutral">Flat to modestly CHF-firm</span></td><td>30%</td><td>CAD's oil-price tailwind is a partial offset to CHF's haven bid; low conviction either way</td></tr>
+</table>
+
+<h2>8. Positioning &amp; Market Structure Notes</h2>
+<div class="card">
+<ul>
+<li><b>CHF is one of the two or three "primary" war-haven currencies</b> — unlike EUR, which sits closer to a risk-and-rates proxy exposed to the energy shock as a cost. This gives CHF a cleaner, more directly positive reaction function to further Middle East escalation than most G10 currencies, which is the core reason its scorecard skews firmer than the eurozone's despite an objectively less exciting central bank.</li>
+<li><b>The SNB is a genuine two-way actor in FX, unusual among G10 central banks.</b> Most central banks talk about the exchange rate as a side-effect of policy; the SNB explicitly manages it as a policy target in its own right, and has a multi-decade history of large-scale, sometimes unannounced, FX intervention (most famously the 2011-2015 EUR/CHF floor). Any sharp, disorderly CHF appreciation carries real intervention-headline risk that doesn't exist to the same degree for EUR, GBP, or AUD.</li>
+<li><b>The zero-rate structural carry drag means CHF longs typically need a risk-off or franc-specific catalyst to work</b> — in calm, risk-on markets, CHF tends to bleed lower against higher-yielding currencies as carry trades re-engage; this is the persistent tension underneath the near-term haven bid.</li>
+<li><b>The tariff deadline (~24 July) is a genuinely under-discussed, dated catalyst</b> relative to how much attention it's getting versus the ECB/Iran-war headlines — worth flagging precisely because it's easy to overlook next to the bigger macro stories.</li>
+</ul>
+</div>
+
+<h2>9. Multi-Level Scenario Tree — Next 4-6 Weeks</h2>
+
+<div class="scenario scen-bull">
+<p><span class="prob">🟢 Bull case for CHF — ~30% probability</span></p>
+<p><b>Path:</b> War escalates further or stays acutely elevated (sustained Hormuz disruption, oil sustaining above $90) → global risk-off intensifies → haven flows into CHF accelerate faster than the SNB is willing to lean against → simultaneously, the US tariff deadline resolves cleanly into a locked-in 15% permanent rate around 24 July, removing the trade-policy tail risk → USD/CHF pushes toward 0.76-0.78 and EUR/CHF grinds toward 0.90-0.91 as CHF strength becomes the dominant G10 theme.</p>
+<p><b>Watch for:</b> Brent sustaining above $90; a sharp equity/credit risk-off episode; a clean US-Swiss trade announcement; no aggressive SNB intervention rhetoric despite the move.</p>
+</div>
+
+<div class="scenario scen-base">
+<p><span class="prob">🟡 Base case — ~45% probability</span></p>
+<p><b>Path:</b> War grinds on without dramatic further escalation; the SNB stays on hold through September with a data-dependent, non-committal tone; the tariff deadline produces an interim extension or a rollover of the current 10% rate rather than a dramatic resolution either way; Swiss growth and inflation prints stay broadly in line with the SNB's June forecast. USD/CHF trades a broad 0.79-0.83 range and EUR/CHF a 0.91-0.94 range, both driven more by the other leg of the pair (USD, EUR) than by independent CHF conviction.</p>
+<p><b>Watch for:</b> incremental war headlines without a major step-change; in-line Swiss CPI and KOF prints; a "muddle-through" tariff outcome (extension without full resolution).</p>
+</div>
+
+<div class="scenario scen-bear">
+<p><span class="prob">🔴 Bear case for CHF — ~25% probability</span></p>
+<p><b>Path:</b> A durable Iran ceasefire re-emerges, unwinding the haven bid quickly → global risk appetite recovers and carry trades re-engage against zero-yielding CHF → simultaneously, the US tariff deadline lapses badly (a snap-back toward higher, more punitive rates or a stalled negotiation) → weaker growth data (KOF Barometer reversing, manufacturing PMI back below 50) → the SNB, worried about imported disinflation from a still-elevated real exchange rate colliding with a growth slowdown, opens the door to returning to negative rates → USD/CHF rises toward 0.85-0.88 and EUR/CHF toward 0.96-0.98 as CHF gives back its recent haven premium.</p>
+<p><b>Watch for:</b> credible, durable ceasefire headlines; a bad-news tariff outcome around 24 July; SNB language shifting toward discussing rate cuts rather than intervention; KOF Barometer reversing back below its long-run average.</p>
+</div>
+
+<h2>10. Catalysts &amp; Calendar — What to Watch, In Order</h2>
+<table>
+<tr><th>Date</th><th>Event</th><th>Why it matters for CHF</th></tr>
+<tr><td>Ongoing</td><td>Iran/Hormuz war headlines</td><td>The single largest swing factor for CHF right now — directly drives the haven bid that is currently doing most of the work in the currency's strength</td></tr>
+<tr><td><b>~24 Jul 2026</b></td><td>Section 122 US tariff on Swiss goods scheduled to expire</td><td>A genuinely franc-specific, dated cliff-edge; resolution (extension, permanent 15% deal, or lapse) is a real growth-outlook catalyst with no direct EUR equivalent</td></tr>
+<tr><td>~24 Jul 2026</td><td>ECB Governing Council decision (same day)</td><td>Indirect but real EUR/CHF catalyst; a more hawkish-than-expected ECB tone would pressure EUR/CHF higher even with CHF's own haven bid intact</td></tr>
+<tr><td>Late Jul 2026</td><td>KOF Economic Barometer (July release)</td><td>Tests whether June's jump to 101.2 was a genuine inflection or a one-off; the barometer has been volatile through the war period</td></tr>
+<tr><td>~Early Aug 2026</td><td>Swiss July CPI (Federal Statistical Office)</td><td>Tests whether June's cooling to 0.5% y/y holds or whether the SNB's own forecast of rising Q3/Q4 inflation starts to show up</td></tr>
+<tr><td>Aug 2026 (survey month)</td><td>Quarterly Swiss rental-inflation update</td><td>Mechanical but real CPI-composition catalyst; rents are ~1.4% y/y and only refresh four times a year</td></tr>
+<tr><td>~Early Sep 2026</td><td>Swiss Q2 2026 GDP flash</td><td>Tests whether Q1's resilience (+0.4% sports-adjusted) extended through the worst of the war-driven uncertainty or gave way to the KOF-flagged growth downgrade</td></tr>
+<tr><td><b>~Late Sep 2026</b></td><td>Next SNB monetary policy assessment (exact date TBC on SNB website)</td><td>Updated conditional inflation forecast is the clearest live signal of whether zero-rate policy holds into 2027 or whether negative rates re-enter the conversation</td></tr>
+<tr><td>Ongoing</td><td>Any formal US-Swiss permanent trade agreement announcement</td><td>Would remove (or crystallize) the tariff overhang described in Section 6</td></tr>
+<tr><td>Ongoing</td><td>UBS "too-big-to-fail" capital-requirement legislation in parliament</td><td>Domestic banking-regulation risk; not currently a currency-crisis-level issue, but a source of headline risk for Swiss financial-sector sentiment</td></tr>
+<tr><td>Ongoing</td><td>US data (CPI/PPI/NFP/Fed communications)</td><td>Given a large share of recent USD/CHF moves are USD-side, not CHF-side, US surprises may move the pair more than Swiss-specific news</td></tr>
+</table>
+
+<h2>11. Key Risks That Could Invalidate This Analysis</h2>
+<div class="warn">
+<ul>
+<li><b>A durable Iran ceasefire</b> would unwind the haven bid quickly — this is the single biggest swing factor for CHF, larger in relative terms than the equivalent risk for EUR, precisely because so much of CHF's recent strength is haven-flow-dependent rather than fundamentals-dependent.</li>
+<li><b>A disorderly further franc appreciation</b> could trigger actual SNB FX intervention (selling CHF, buying foreign currency) rather than just rhetoric — a real, event-risk catalyst that could cap or reverse CHF gains abruptly and without much warning, given the SNB's history of surprise action.</li>
+<li><b>A bad outcome on the ~24 July tariff deadline</b> — either a lapse back to a higher/more punitive rate, or a prolonged stalemate — would be a fresh, franc-specific growth shock layered on top of the war-driven uncertainty already in the data.</li>
+<li><b>A shift in SNB language toward discussing negative rates</b> — currently not the base case, but the SNB has done this before (2015-2025) and would do so again if disinflation risk from franc strength combined with a genuine growth slowdown; watch the September conditional inflation forecast closely for early signs.</li>
+<li><b>Further Section 232/301 sectoral tariff escalation on pharmaceuticals</b> — Switzerland's single largest export sector; renewed threats here (beyond Roche/Novartis's existing three-year shields) would hit the growth outlook disproportionately given pharma's outsized role in Q1's GDP resilience.</li>
+<li><b>A sharp global risk-on episode independent of the war</b> (e.g. an unexpected resolution to US-China trade tensions, a strong run of US data) could pull carry flows out of zero-yielding CHF even with the war unresolved — CHF's rate disadvantage doesn't disappear just because the haven bid is currently overriding it.</li>
+<li><b>US-side surprises dominating USD/CHF</b> — as with EUR/USD, a reversal in recent US-data softness (e.g. a hot US CPI print) could move USD/CHF independent of anything happening in Switzerland.</li>
+</ul>
+</div>
+
+<h2>Overall Presumption</h2>
+<div class="exec">
+<p>CHF today is best understood as a currency whose recent strength is real but disproportionately borrowed from outside its own borders — a war it isn't party to, and a US administration's tariff decisions it doesn't fully control. Underneath that borrowed strength sits a central bank with almost no conventional policy room left, which makes CHF's risk profile genuinely two-sided in a way that's easy to overlook when the haven narrative dominates the headlines: a ceasefire could unwind the bid as quickly as it built, and the SNB has both the tools and the stated willingness to lean against further appreciation if it goes too far, too fast. The next real tests arrive on a tight timeline: the US tariff deadline around 24 July, Swiss CPI and KOF data through late July/August, and the SNB's own updated forecast in September. Until those land, CHF should be treated as a haven-and-headline currency whose direction depends more on decisions made in Washington and Tehran than on anything the SNB itself is likely to do.</p>
+</div>
+
+<h2>📋 Discord Summary — Copy/Paste Ready</h2>
+<div class="discord">
+**🇨🇭 CHF DEEP-DIVE — July 16, 2026**
+
+The franc's recent strength is a haven story, not a central-bank story — the SNB has been stuck at 0% since June 2025 and isn't going anywhere near-term. Every SNB statement since December has flagged the same thing: Middle East war tension is pushing appreciation pressure onto the franc, and the SNB is watching, ready to intervene "if necessary" if it goes too far too fast.
+
+**📊 Inflation & growth:** June CPI cooled to 0.5% y/y (core 0.3%) — among the lowest in the developed world. Growth has actually surprised resilient: Q1 GDP grew 0.4% (sports-adjusted) despite "oil price shock and tariff turmoil" per SECO, and the KOF Barometer jumped to 101.2 in June from 98.6. But KOF's own forecast round separately cut 2026 GDP growth to 0.8% (from 1.0%) citing the Iran war — two competing growth narratives are live right now.
+
+**🇺🇸 The Swiss-specific wildcard:** a 10% US tariff on Swiss goods (Section 122) is scheduled to expire around **24 July** — just over a week out. A permanent deal targeting 15% (parity with the EU) is being negotiated with "good chance" per Swiss officials, but nothing is locked in yet. This has no real EUR equivalent and is worth watching closely.
+
+**⚠️ The asymmetry to remember:** CHF's haven bid could unwind fast if the war de-escalates, and the SNB has both the tools (intervention, ultimately negative rates again) and the stated willingness to cap franc strength if it overshoots. This is a two-way market dressed up as a one-way trade.
+
+**🎯 Next catalysts:** US tariff deadline ~24 July, July KOF Barometer and Swiss CPI in late July/early August, Q2 GDP flash in early September, and the next SNB assessment expected late September.
+
+*Fundamental view only, not advice — pair it with your own technical read before doing anything.*
+</div>
+
+<h2>🔄 Refresh Schedule — When To Re-Run This Analysis</h2>
+<div class="card">
+<h3>Standing cadence</h3>
+<p>Refresh <b>every Sunday evening</b> as weekend prep for the new trading week. CHF doesn't move enough on a purely day-to-day basis to need more than weekly under calm conditions, but a currency this dependent on war headlines and a quarterly-cycle central bank needs at least weekly eyes to stay current.</p>
+<h3>Event-triggered refresh (overrides the weekly schedule — refresh immediately, don't wait for Sunday)</h3>
+<table>
+<tr><th>Trigger</th><th>Why it forces an early refresh</th></tr>
+<tr><td>Any Iran/Middle East ceasefire, major escalation, or Hormuz-related headline</td><td>The single largest swing factor for CHF right now — directly resets the haven-bid assumption underpinning most of this report</td></tr>
+<tr><td>SNB monetary policy assessment (quarterly)</td><td>Resets the conditional inflation forecast and rate-path guidance — the core input to Section 3</td></tr>
+<tr><td>Any SNB intervention action or language shift (e.g. "if necessary" reverting to "increased willingness")</td><td>Directly signals the SNB's tolerance threshold for franc strength — a live, market-moving tell</td></tr>
+<tr><td>US-Swiss tariff deadline outcome (~24 Jul) or any subsequent trade-deal headline</td><td>A dated, binary, franc-specific catalyst with no direct EUR equivalent — resolution changes the growth-risk section materially</td></tr>
+<tr><td>Swiss CPI release (~first week of each month)</td><td>Tests whether the SNB's near-term inflation path (rising through Q3/Q4 2026) is on track</td></tr>
+<tr><td>KOF Economic Barometer release (~end of each month)</td><td>The most forward-looking Swiss growth indicator; a reversal below its long-run average would flip Section 5's tone</td></tr>
+<tr><td>Swiss GDP release (quarterly)</td><td>Confirms or breaks the growth resilience narrative</td></tr>
+</table>
+<h3>Next scheduled refresh</h3>
+<p><b>Standing:</b> Sunday, 19 July 2026 (this weekend).<br>
+<b>Next hard trigger regardless of schedule:</b> around <b>24 July 2026</b> — the US-Swiss tariff deadline and the ECB decision land the same day, and either could move CHF materially before the following Sunday.<br>
+<b>Following standing refreshes:</b> Sun 26 Jul → Sun 2 Aug → Sun 9 Aug (post early-Aug Swiss CPI) → Sun 6 Sep (near Q2 GDP flash) → refresh again around the SNB's late-September assessment once that date is confirmed.</p>
+</div>
+
+</body>
+</html>
