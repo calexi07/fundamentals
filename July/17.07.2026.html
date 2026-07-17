@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Global Macro Strategy Report — 2026-07-17 (Full Deep-Dive Edition)</title>
+<style>
+  body { font-family: -apple-system, Segoe UI, Arial, sans-serif; background:#0d1117; color:#e6edf3; margin:0; padding:24px; line-height:1.55; max-width:1150px; margin:0 auto; }
+  h1 { font-size:24px; border-bottom:2px solid #2f81f7; padding-bottom:10px; }
+  h2 { font-size:19px; color:#58a6ff; margin-top:36px; border-left:4px solid #2f81f7; padding-left:10px; }
+  h3 { font-size:16px; color:#79c0ff; margin-top:22px; }
+  .badge { display:inline-block; padding:2px 9px; border-radius:12px; font-size:12px; font-weight:700; }
+  .bearish { background:#3d1418; color:#ff7b72; }
+  .bullish { background:#0f3d1f; color:#3fb950; }
+  .neutral { background:#3d3410; color:#e3b341; }
+  table { width:100%; border-collapse:collapse; margin:12px 0 20px 0; font-size:13px; }
+  th, td { border:1px solid #30363d; padding:7px 9px; text-align:left; vertical-align:top; }
+  th { background:#161b22; color:#8b949e; }
+  tr:nth-child(even) { background:#111620; }
+  .note { background:#161b22; border-left:3px solid #e3b341; padding:10px 14px; margin:10px 0; font-size:13px; color:#c9d1d9; }
+  .warn { background:#1a1512; border-left:3px solid #ff7b72; padding:10px 14px; margin:10px 0; font-size:13px; color:#f0c9c4; }
+  .exec { background:#0f1520; border:1px solid #2f81f7; border-radius:8px; padding:16px 18px; margin:14px 0; }
+  .card { background:#0f1520; border:1px solid #30363d; border-radius:8px; padding:14px 16px; margin:12px 0; }
+  .score { font-size:20px; font-weight:800; }
+  .script { background:#151d2e; border:1px dashed #58a6ff; border-radius:8px; padding:12px 16px; margin:8px 0 20px 0; font-size:13.5px; color:#c9d6e8; }
+  .script b.tag { display:inline-block; background:#2f81f7; color:#fff; font-size:11px; padding:2px 8px; border-radius:10px; margin-bottom:8px; }
+  .discord { background:#2b2d31; border:1px solid #1e1f22; border-radius:8px; padding:16px; font-family: 'Segoe UI', Consolas, monospace; font-size:13.5px; color:#dbdee1; white-space:pre-wrap; }
+  .whatchanged { background:#141a26; border:2px solid #3fb950; border-radius:8px; padding:16px 18px; margin:14px 0; }
+  .src { background:#10171f; border:1px solid #2f81f7; border-radius:8px; padding:10px 14px; margin:8px 0; font-size:12px; color:#8b949e; }
+</style>
+</head>
+<body>
+<div id="pair-menu"></div>
+<script src="/fundamentals/menu.js"></script>
+
+<h1>Global Macro Strategy Report — Daily Update</h1>
+<p><b>As of:</b> 2026-07-17 &nbsp;|&nbsp; <b>Scope:</b> USD, EUR, GBP, JPY, CHF, AUD, NZD, CAD + Gold, US100, US30, DAX &nbsp;|&nbsp; <b>Sources:</b> all 8 currencies now built from Alessio's per-currency Deep-Dive Fundamental Reports (dated 2026-07-16), cross-checked and updated with fresh research for 2026-07-17.</p>
+
+<div class="src"><b>Update from earlier today:</b> The remaining five deep-dives (EUR, CAD, AUD, CHF, JPY) have now arrived, completing the full set. This edition replaces the "carried forward" placeholders from the earlier version of today's report with the full deep-dive content. Composite scores below are Alessio's granular multi-factor scores, not this report's older simplified scores.</div>
+
+<h2>📌 What Changed — Earlier Today's Report vs This Full Edition</h2>
+<div class="whatchanged">
+<p><b>UK politics unchanged:</b> Andy Burnham confirmed as Labour leader today, PM on 20 July, Chancellor pick still the key open question — as flagged earlier.</p>
+<p><b>NEW — CAD reassessed more hawkish:</b> Governor Macklem's 15 July press conference was "the most hawkish-leaning of the cycle" — he explicitly said that if oil stays elevated long enough, the BoC "may well need to raise rates," calling it "not our base case, but... a serious risk." Growth also resumed more strongly than expected (Q2 GDP tracking ~2.5% annualized). Separately, the CUSMA review (1 July) passed without a 16-year extension agreement, shifting into open-ended annual renegotiation — an unresolved drag that's cost ~61,000 manufacturing jobs since January 2025. Composite score: 49/100 (was carried at 51).</p>
+<p><b>NEW — AUD has a genuine idiosyncratic risk most reports miss:</b> Beyond the usual China-demand story, China's state-backed iron ore buyer has restricted purchases of certain lower-grade Fortescue products, and China has stood up a new state mining-investment vehicle explicitly aimed at reducing reliance on Australian iron ore over time — a structural, AUD-specific negative with no EUR or GBP equivalent. Also: Q1 GDP slowed to just 0.3% q/q, and Westpac flags a real chance of an outright Q2 contraction. Composite score: 47/100 (was carried at 55 — a meaningful downgrade).</p>
+<p><b>NEW — CHF has a dated, franc-specific catalyst most reports miss:</b> The US Section 122 tariff rate on Swiss goods (currently a flat 10%) is due to expire around <b>24 July 2026</b> — about a week away — with a permanent deal still being negotiated. This is a real, dated risk with no EUR equivalent. Composite score: 53/100 (was carried at 48 — an upgrade, reflecting how clean CHF's haven-trade positioning is right now).</p>
+<p><b>NEW — JPY's picture is more nuanced than "no intervention yet":</b> Japan already spent a record ¥11.73tn (~$73bn) defending the yen between late April and late May — more than double the July 2024 intervention — and it barely dented the trend, which is itself telling. Separately, PM Takaichi's "Sanaenomics" (consumption-tax suspension, large supplementary budget, defense build-up) has pushed JGB yields to multi-decade highs; a draft government blueprint referencing guiding monetary policy "appropriately" triggered a fresh JGB selloff on fears of political pressure on BoJ independence, which Takaichi was forced to publicly deny. Rising JGB yields would normally be yen-supportive, but when driven by fiscal-credibility concerns rather than clean tightening, they risk being yen-negative instead. Composite score: 44/100 (was carried at 40).</p>
+<p><b>EUR:</b> Composite confirmed at 46/100 — matches what this report was already carrying, with the added detail that the near-term EUR move has been "dominated by broad USD softness rather than EUR-specific strength," an important durability caveat.</p>
+</div>
+
+<h2>1. Global Risk Backdrop &amp; Geopolitics</h2>
+<div class="card">
+<p>The US-Israel war on Iran continues into its fifth-plus night of post-ceasefire-collapse escalation, with strikes now reaching Kuwait in addition to earlier UAE and Bahrain attacks. Oil is up over 11% on the week (WTI ~$79-80, Brent ~$84-86). Domestically in the UK, Andy Burnham is confirmed as Labour leader today, becoming PM on 20 July, with the Chancellor pick still unresolved. Separately, a dated catalyst most macro coverage misses: the US Section 122 tariff rate on Swiss goods expires ~24 July with no permanent deal yet reached — a live risk specifically for CHF.</p>
+</div>
+<div class="script"><b class="tag">🎙 SCRIPT</b><br>
+Same big picture as before — the war keeps spreading, now hitting Kuwait too, and the UK's getting a new Prime Minister today. But here's something worth adding: there's a quiet deadline coming up for Switzerland. The US has Swiss goods on a temporary 10% tariff rate that's set to expire around July 24th, just about a week from now, and there's still no permanent deal. Almost nobody's talking about this, but it's a real, dated risk specifically for the Swiss franc that doesn't exist for other currencies.
+</div>
+
+<h2>2. Currency Scores &amp; Bias — Full Deep-Dive Set</h2>
+<table>
+<tr><th>Currency</th><th>Score</th><th>Short-term</th><th>Mid-term</th><th>Long-term</th><th>Key driver</th></tr>
+<tr><td><b>USD</b></td><td class="score">55</td><td><span class="badge neutral">Two-sided</span></td><td><span class="badge neutral">Neutral</span></td><td><span class="badge neutral">Neutral</span></td><td>Hawkish Fed/rate-differential vs. cracking labor market + fiscal drag</td></tr>
+<tr><td><b>EUR</b></td><td class="score">46</td><td><span class="badge neutral">Neutral</span></td><td><span class="badge neutral">Neutral</span></td><td><span class="badge neutral">Neutral</span></td><td>Hawkish ECB vs. soft PMIs, French fiscal overhang; move is USD-driven not EUR-driven</td></tr>
+<tr><td><b>GBP</b></td><td class="score">44</td><td><span class="badge neutral">Event-risk-dominated</span></td><td><span class="badge neutral">Neutral</span></td><td><span class="badge neutral">Neutral</span></td><td>Hawkish-drifting BoE swamped by live PM/Chancellor transition</td></tr>
+<tr><td><b>JPY</b></td><td class="score">44</td><td><span class="badge neutral">Three-way collision</span></td><td><span class="badge neutral">Two-sided</span></td><td><span class="badge neutral">Neutral</span></td><td>Hiking BoJ + intervention threat vs. fiscal-credibility-driven JGB selloff</td></tr>
+<tr><td><b>CHF</b></td><td class="score">53</td><td><span class="badge bullish">Firm haven trade</span></td><td><span class="badge neutral">Neutral</span></td><td><span class="badge bearish">Fragile — zero-rate, no ammo</span></td><td>Clean haven flows vs. SNB's total lack of conventional tools; 24 Jul tariff deadline</td></tr>
+<tr><td><b>AUD</b></td><td class="score">47</td><td><span class="badge neutral">Two-sided, complex</span></td><td><span class="badge neutral">Neutral</span></td><td><span class="badge neutral">Neutral</span></td><td>Hawkish RBA pause vs. slowing growth + AUD-specific China/iron-ore friction</td></tr>
+<tr><td><b>NZD</b></td><td class="score">45</td><td><span class="badge neutral">Tactically firmer</span></td><td><span class="badge neutral">Neutral</span></td><td><span class="badge neutral">Neutral</span></td><td>Genuine hiking cycle vs. dairy/China exposure + rising election risk</td></tr>
+<tr><td><b>CAD</b></td><td class="score">49</td><td><span class="badge bullish">Hawkish-turning</span></td><td><span class="badge neutral">Neutral</span></td><td><span class="badge neutral">Neutral</span></td><td>Macklem's most-hawkish tone of the cycle vs. stalled CUSMA renegotiation</td></tr>
+</table>
+<div class="script"><b class="tag">🎙 SCRIPT</b><br>
+Now that we've got the full picture across all eight currencies, here's the honest summary: almost nothing right now is a clean, one-direction story. The dollar's hawkish but has cracks. The euro's move is really about dollar weakness, not euro strength. The pound is all about UK politics this week. The yen's caught in this weird three-way fight between a hiking central bank, a government threatening to intervene, and rising bond yields that should help the currency but might actually hurt it because of why they're rising. The franc looks like the cleanest safe-haven trade on paper, but it's got literally no interest rate to fall back on if the war calms down. The Aussie dollar just got a new wrinkle — China is actively trying to reduce how much iron ore it buys from Australia, which is a real, specific problem beyond just the usual China-demand story. And Canada's central bank just turned more hawkish than expected, but they're still stuck in a trade dispute with the US that has no end date. Bottom line: almost every currency in this report has at least two forces pulling in different directions right now.
+</div>
+
+<h2>3. Full Deep-Dive Highlights — All 8 Currencies</h2>
+
+<div class="card">
+<h3>🇺🇸 USD</h3>
+<p>Fed held 3.50-3.75% (17 June) with a hawkish dot plot (9/19 favoring a 2026 hike), but June payrolls badly missed (+57k vs. 115k) with participation at a 5-year low. Fed independence remains a live, credibility-positive-for-now subplot under Warsh. Fiscal drag: ~$39.2tn debt (~123% GDP). <b>Next:</b> FOMC 28-29 July, Q2 GDP 30 July, July jobs 7 August.</p>
+</div>
+<div class="card">
+<h3>🇪🇺 EUR</h3>
+<p>ECB's hawkish repricing (Sept hike priced, 2.70% year-end deposit rate) is real, but sits on top of soft PMIs, a Q1 growth near-stall, and an unresolved French fiscal/political overhang. Critically, the recent EUR/USD move has been "dominated by broad USD softness rather than EUR-specific strength" — a durability warning for anyone treating this as a EUR-strength story.</p>
+</div>
+<div class="card">
+<h3>🇬🇧 GBP</h3>
+<p>BoE hawkish-drifting (7-2 hold, dissent doubled), but completely overshadowed by the live PM transition — Burnham confirmed today, PM 20 July, Chancellor pick (Miliband vs. Cooper/Streeting) the dominant near-term swing factor. <b>Next:</b> BoE 30 July, an unusually loaded meeting ten days after the transition completes.</p>
+</div>
+<div class="card">
+<h3>🇯🇵 JPY</h3>
+<p>BoJ hiked to 1% (16 June, 7-1 vote) with explicit guidance toward more hikes — a genuine cycle, not one-off. USD/JPY hit its weakest since 1986 (162.84). Japan already spent a record ¥11.73tn defending the yen (late Apr-May) with little lasting effect. PM Takaichi's fiscal expansion ("Sanaenomics") is pushing JGB yields to multi-decade highs amid fresh fears about political pressure on BoJ independence — rising yields that would normally help JPY but may not, given the fiscal-credibility angle driving them.</p>
+</div>
+<div class="card">
+<h3>🇨🇭 CHF</h3>
+<p>SNB pinned at 0%, essentially out of conventional ammunition — CHF strength is almost entirely a function of war-driven haven flows and intervention restraint, not a yield story, making it fragile if risk sentiment improves. Franc-specific catalyst: the US Section 122 tariff rate (10% flat) expires ~24 July with no permanent deal yet.</p>
+</div>
+<div class="card">
+<h3>🇦🇺 AUD</h3>
+<p>RBA hiked 3x in 2026 to 4.35%, holding with an explicit tightening bias, but Q1 GDP slowed to 0.3% q/q (softest since mid-2024) with real risk of a Q2 contraction. Official unemployment 4.4% but private survey data shows sharper deterioration. New AUD-specific risk: China restricting purchases of lower-grade Fortescue iron ore and building a state mining-investment vehicle to reduce Australian reliance. <b>Next:</b> Q2 CPI 29 July, RBA 11 August.</p>
+</div>
+<div class="card">
+<h3>🇳🇿 NZD</h3>
+<p>RBNZ's first hike since 2023 (2.25%→2.50%, 8 July) framed softly as "toward neutral," not an aggressive cycle. Dairy prices (GDT index) down three straight auctions; China takes ~20-25% of exports as the swing buyer. 7 November election adds a slow-building risk. <b>Next:</b> CPI 21 July, RBNZ 2 September.</p>
+</div>
+<div class="card">
+<h3>🇨🇦 CAD</h3>
+<p>BoC held 2.25% (15 July, 6th hold) but Macklem's tone was the most hawkish of the cycle, explicitly flagging a possible hike if oil stays elevated. Growth resumed stronger than expected (Q2 GDP tracking ~2.5% annualized). CUSMA review (1 July) passed without the 16-year extension, shifting to open-ended annual renegotiation — ~61,000 manufacturing jobs lost since tariff uncertainty began. USD/CAD near 1.40, off its 15-month low near 1.4235 (late June).</p>
+</div>
+
+<h2>4. Gold &amp; Equity Indices</h2>
+<div class="card">
+<p><b>Gold:</b> Range-bound $4,000-4,070, unchanged view. <b>US100/Nasdaq:</b> Chipmakers slumped for a second straight session (16 July) — now a two-day trend. <b>US30/DAX:</b> Little changed.</p>
+</div>
+
+<h2>5. Best Setups to Watch — Fundamental View (All 28 Crosses, Ranked)</h2>
+<p style="color:#8b949e; font-size:12px;">Ranked by conviction, blending the Section 2 score differential with qualitative factors (event risk, intervention risk, whether the supporting forces reinforce or offset each other). Not a pure mechanical sort of the differential alone — e.g. CADJPY ranks above its raw differential because three separate tailwinds (oil, a hawkish BoC, JPY weakness) currently reinforce each other, while GBPUSD ranks lower than its differential alone would suggest because GBP's own political event risk cuts both ways.</p>
+
+<table>
+<tr><th>#</th><th>Pair</th><th>Diff</th><th>Direction</th><th>Confidence</th><th>One-line rationale</th></tr>
+<tr><td>1</td><td><b>USDJPY</b></td><td>+11</td><td><span class="badge bullish">Long USD</span></td><td>65%</td><td>Widest clean rate-gap trade; intervention already tried once and failed to hold</td></tr>
+<tr><td>2</td><td><b>CADJPY</b></td><td>+5</td><td><span class="badge bullish">Long CAD</span></td><td>60%</td><td>Three reinforcing tailwinds: oil, a newly hawkish BoC, and broad JPY weakness</td></tr>
+<tr><td>3</td><td><b>EURUSD</b></td><td>-9</td><td><span class="badge bearish">Short EUR</span></td><td>55%</td><td>Cleanest divergence on paper, but the move is really USD-softness-driven, not EUR-specific</td></tr>
+<tr><td>4</td><td><b>CHFJPY</b></td><td>+9</td><td><span class="badge bullish">Long CHF</span></td><td>50%</td><td>Clean haven-vs-funding-currency story, though CHF has its own 24 Jul tariff-deadline risk</td></tr>
+<tr><td>5</td><td><b>NZDUSD</b></td><td>-10</td><td><span class="badge bearish">Short NZD</span></td><td>50%</td><td>Highest-beta currency vs. broad risk-off, even after NZD's own fresh rate hike</td></tr>
+<tr><td>6</td><td><b>AUDUSD</b></td><td>-8</td><td><span class="badge bearish">Short AUD</span></td><td>50%</td><td>Risk-off plus a genuine new AUD-specific negative (China/Fortescue iron-ore dispute)</td></tr>
+<tr><td>7</td><td><b>USDCAD</b></td><td>+6</td><td><span class="badge neutral">Mild long USD</span></td><td>45%</td><td>USD still scores higher, but CAD's hawkish turn (Macklem) narrows the gap materially</td></tr>
+<tr><td>8</td><td><b>GBPCHF</b></td><td>-9</td><td><span class="badge bearish">Short GBP</span></td><td>40%</td><td>Political event risk vs. a fragile zero-rate haven — binary in both directions, size small</td></tr>
+<tr><td>9</td><td>NZDCHF</td><td>-8</td><td><span class="badge bearish">Short NZD</span></td><td>40%</td><td>Dairy/China softness vs. haven bid, though CHF's own ammo is thin</td></tr>
+<tr><td>10</td><td>EURCHF</td><td>-7</td><td><span class="badge bearish">Short EUR</span></td><td>40%</td><td>EUR's move is USD-driven, not a genuine EUR negative vs. CHF specifically</td></tr>
+<tr><td>11</td><td>AUDCHF</td><td>-6</td><td><span class="badge bearish">Short AUD</span></td><td>40%</td><td>China/iron-ore risk vs. CHF haven bid</td></tr>
+<tr><td>12</td><td>GBPUSD</td><td>-11</td><td><span class="badge bearish">Short GBP</span></td><td>35%</td><td>Largest raw differential in the table, but GBP's binary political event risk cuts both ways — could reverse sharply on a market-friendly Chancellor pick</td></tr>
+<tr><td>13</td><td>GBPCAD</td><td>-5</td><td><span class="badge bearish">Short GBP</span></td><td>35%</td><td>UK political risk vs. Canada's hawkish turn</td></tr>
+<tr><td>14</td><td>NZDCAD</td><td>-4</td><td><span class="badge neutral">Mild short NZD</span></td><td>35%</td><td>Commodity-bloc cross, CAD's hawkish tone gives it the edge</td></tr>
+<tr><td>15</td><td>CADCHF</td><td>-4</td><td><span class="badge neutral">Mild short CAD</span></td><td>35%</td><td>Two currencies both tied to the same war, pulling in different directions</td></tr>
+<tr><td>16</td><td>EURCAD</td><td>-3</td><td><span class="badge neutral">Mild short EUR</span></td><td>30%</td><td>Low conviction, CAD's hawkish tilt only a modest edge</td></tr>
+<tr><td>17</td><td>GBPAUD</td><td>-3</td><td><span class="badge neutral">Mild short GBP</span></td><td>30%</td><td>Both currencies carrying their own idiosyncratic baggage</td></tr>
+<tr><td>18</td><td>AUDJPY</td><td>+3</td><td><span class="badge neutral">Mild long AUD</span></td><td>35%</td><td>Classic risk-carry pair, vulnerable to any risk-off spike</td></tr>
+<tr><td>19</td><td>USDCHF</td><td>+2</td><td><span class="badge neutral">Low-conviction long USD</span></td><td>35%</td><td>Two havens fighting each other, no reliable daily winner</td></tr>
+<tr><td>20</td><td>EURGBP</td><td>+2</td><td><span class="badge neutral">Low conviction</span></td><td>30%</td><td>Near coin-flip between USD-driven EUR firmness and UK political risk</td></tr>
+<tr><td>21</td><td>EURJPY</td><td>+2</td><td><span class="badge neutral">Low conviction</span></td><td>30%</td><td>Both currencies have offsetting hawkish/dovish crosscurrents</td></tr>
+<tr><td>22</td><td>AUDNZD</td><td>+2</td><td><span class="badge neutral">Low conviction</span></td><td>30%</td><td>Both share the same risk-off drag; only a small RBA yield edge differentiates them</td></tr>
+<tr><td>23</td><td>AUDCAD</td><td>-2</td><td><span class="badge neutral">Low conviction</span></td><td>30%</td><td>Two commodity currencies, closely matched</td></tr>
+<tr><td>24</td><td>EURAUD</td><td>-1</td><td><span class="badge neutral">Near flat</span></td><td>25%</td><td>Scores have converged; low differentiation right now</td></tr>
+<tr><td>25</td><td>GBPNZD</td><td>-1</td><td><span class="badge neutral">Near flat</span></td><td>25%</td><td>Low conviction either direction</td></tr>
+<tr><td>26</td><td>NZDJPY</td><td>+1</td><td><span class="badge neutral">Near flat</span></td><td>25%</td><td>Small risk-carry edge to NZD, low conviction</td></tr>
+<tr><td>27</td><td>EURNZD</td><td>+1</td><td><span class="badge neutral">Near flat</span></td><td>25%</td><td>Both currencies roughly balanced right now</td></tr>
+<tr><td>28</td><td>GBPJPY</td><td>0</td><td><span class="badge neutral">Flat / avoid</span></td><td>20%</td><td>Scores dead even; lowest-conviction cross in the table today</td></tr>
+</table>
+
+<h3>Full treatment — Top 8 ranked ideas</h3>
+
+<div class="card">
+<h3>1. USDJPY — Long <span class="badge bullish">Highest conviction</span></h3>
+<p><b>Started:</b> Mid-June structural theme, strengthened materially 15-17 July.</p>
+<p>Now even more nuanced with the fiscal-credibility angle: JGB yields are rising, which should help JPY, but the driver (Takaichi's fiscal expansion, BoJ-independence fears) undercuts that support — arguably reinforcing rather than weakening the long thesis.</p>
+<p><b>Invalidated if:</b> Fresh intervention (has failed to hold the trend once already); hawkish BoJ surprise; sharp risk-off carry unwind.</p>
+</div>
+
+<div class="card">
+<h3>2. CADJPY — Long <span class="badge bullish">Strengthening</span></h3>
+<p><b>Started:</b> Active since 15 July.</p>
+<p>Gets a further boost today: CAD's own central bank just turned more hawkish (Macklem), adding a rate-differential tailwind on top of the existing oil and JPY-weakness tailwinds — now three reinforcing factors instead of two.</p>
+<p><b>Invalidated if:</b> Ceasefire reverses oil; CUSMA resolution removes CAD's trade-policy drag unexpectedly fast; hawkish BoJ surprise.</p>
+</div>
+
+<div class="card">
+<h3>3. EURUSD — Short <span class="badge bearish">Valid, still needs care</span></h3>
+<p><b>Started:</b> Multi-week thesis.</p>
+<p>The recent move is explicitly a USD-softness story, not EUR strength — meaning this short is really a bet that USD's own cracks (labor market) don't deepen further, more than a bet on EUR weakness per se.</p>
+<p><b>Invalidated if:</b> Durable ceasefire; sustained close above ~1.1480; continued USD softening without an offsetting EUR-specific negative.</p>
+</div>
+
+<div class="card">
+<h3>4. CHFJPY — Long CHF <span class="badge bullish">Clean haven-vs-funding story</span></h3>
+<p><b>Started:</b> Tracks the broader war timeline; sharpened as JPY weakness accelerated mid-July.</p>
+<p>Both currencies are "structurally simple" in opposite directions right now — CHF as the cleanest haven, JPY as the cleanest funding currency — but CHF carries its own dated risk that JPY doesn't.</p>
+<p><b>Invalidated if:</b> The 24 July US-Switzerland tariff deadline resolves badly for CHF; a hawkish BoJ surprise; SNB intervention against franc strength.</p>
+</div>
+
+<div class="card">
+<h3>5. NZDUSD — Short <span class="badge bearish">Risk-off pressure dominates</span></h3>
+<p><b>Started:</b> Ongoing since the war's re-escalation in early July; NZD's 8 July hike only partially offset it.</p>
+<p>NZD remains the highest-beta currency in the set — even a genuine, unanimous rate hike hasn't been enough to overcome broad risk-aversion.</p>
+<p><b>Invalidated if:</b> A durable ceasefire triggers a broad risk-on move; RBNZ surprises hawkish at the 2 September review; dairy/China data turns positive.</p>
+</div>
+
+<div class="card">
+<h3>6. AUDUSD — Short <span class="badge bearish">Risk-off plus a new idiosyncratic negative</span></h3>
+<p><b>Started:</b> New emphasis today with the Fortescue/China iron-ore dispute added to the existing risk-off drag.</p>
+<p>This is no longer just "AUD vs. risk sentiment" — there's now a genuine, AUD-specific structural story (China actively reducing reliance on Australian iron ore) layered on top.</p>
+<p><b>Invalidated if:</b> The Fortescue/China dispute is resolved or contained; Q2 Australian GDP surprises firm rather than confirming a contraction; RBA delivers a hawkish surprise on 11 August.</p>
+</div>
+
+<div class="card">
+<h3>7. USDCAD — Mild long USD, lower conviction <span class="badge neutral">Narrowing</span></h3>
+<p><b>Started:</b> N/A — this is a narrowing, not a new trade; still nominally USD-favoring but much less clean than a week ago.</p>
+<p>CAD's newly hawkish central bank tone (Macklem) is actively working against the USD side of this pair, even as USD's own broader score stays higher for now.</p>
+<p><b>Invalidated if:</b> A concrete CUSMA resolution; a BoC rate hike delivered sooner than the market currently expects; continued US labor-market softening.</p>
+</div>
+
+<div class="card">
+<h3>8. GBPCHF — Short GBP, small size only <span class="badge bearish">Binary event risk</span></h3>
+<p><b>Started:</b> Not a clean trend — treat as a small, tactical position at most given the binary nature of the UK political event risk.</p>
+<p>Political risk (GBP) vs. a haven currency with almost no policy ammunition (CHF) — either side of this could snap in the other direction on a single headline.</p>
+<p><b>Invalidated if:</b> A market-friendly Chancellor pick calms gilts sharply; the 24 July CHF tariff deadline resolves badly for the franc.</p>
+</div>
+<div class="script"><b class="tag">🎙 SCRIPT</b><br>
+Updated watchlist: dollar-yen long and Canada-yen long are still the top two, and Canada-yen actually got stronger today because Canada's central bank just sounded more hawkish than expected. Euro-dollar short is still on the list, but remember — this is really a bet on the dollar's weak spots, not on the euro being strong. New one to flag: keep an eye on Switzerland around July 24th — there's a tariff deadline with the US that could either extend or end the Swiss franc's current strength depending on how it resolves. And the pound — still no trade, still just waiting for the new UK finance minister to be named.
+</div>
+
+<h2>6. Today's Economic Calendar — 2026-07-17</h2>
+<table>
+<tr><th>Time</th><th>Event</th><th>Impact</th><th>What's at stake</th></tr>
+<tr><td>UK, today</td><td>Burnham confirmed as Labour leader</td><td class="badge bearish">Extreme (GBP)</td><td>Watch for any Chancellor hints dropped today</td></tr>
+<tr><td>US session</td><td>University of Michigan Consumer Sentiment (prelim)</td><td class="badge neutral">Medium</td><td>Inflation-expectations component is the key sub-reading</td></tr>
+<tr><td>Ongoing</td><td>Iran/Hormuz war, now including Kuwait strikes</td><td class="badge bearish">Extreme</td><td>Broadening, not narrowing — the dominant swing factor</td></tr>
+<tr><td>~24 July (upcoming)</td><td>US-Switzerland Section 122 tariff rate expiry</td><td class="badge neutral">Medium-High</td><td>CHF-specific, dated catalyst — permanent deal still unresolved</td></tr>
+</table>
+
+<h2>7. Key Risks That Could Invalidate This Analysis</h2>
+<div class="warn">
+<ul>
+<li>Chancellor announcement surprise (UK).</li>
+<li>Further war escalation, especially direct hits on major Gulf oil infrastructure.</li>
+<li>A genuine ceasefire.</li>
+<li>Sudden BoJ/MoF intervention (arguably overdue, and has already failed once to hold the trend).</li>
+<li>SNB intervention against CHF strength, or a disorderly US-Switzerland tariff outcome around 24 July.</li>
+<li>RBA/AUD: a Q2 GDP contraction confirming a genuine Australian growth scare, or escalation of the China/Fortescue iron-ore dispute.</li>
+<li>CAD: any concrete CUSMA resolution (positive or negative) or a BoC hike delivered sooner than expected on oil-driven inflation.</li>
+</ul>
+</div>
+
+<h2>Overall Presumption</h2>
+<div class="exec">
+<p>With the full set of deep-dives now in hand, the honest read across all eight currencies is that almost none of them offer a clean, single-direction story right now — nearly every one is a tension between a real, identifiable tailwind and an equally real, currency-specific headwind. USDJPY long and CADJPY long remain the cleanest expressions of the current environment precisely because their supporting forces (JPY weakness, Canada's hawkish turn, oil) are currently reinforcing rather than fighting each other. EURUSD short is worth holding but should be understood as a bet on US-specific softness more than European strength. GBP is pure event risk until the Chancellor is named. And CHF and AUD both just picked up genuine, currency-specific catalysts (the 24 July tariff deadline; the Fortescue/China iron-ore dispute) that deserve their own dedicated tracking going forward, separate from the broader war narrative.</p>
+</div>
+
+<h2>📋 Discord Summary — Copy/Paste Ready</h2>
+<div class="discord">
+**🌍 MACRO FX UPDATE — July 17, 2026 (Full Edition)**
+
+With all eight currency deep-dives now in, the honest takeaway is that almost nothing out there is a clean trend right now — every major currency has a real tailwind fighting an equally real headwind. The UK's political transition remains today's headline event, with Burnham confirmed as Labour leader and the Chancellor pick still the market's real focus. Canada's central bank surprised on the hawkish side too, with Macklem explicitly flagging a possible hike if oil stays elevated, which adds fuel to the Canada-yen trade already on the board.
+
+**💪 Strength:** USD leads at 55, CHF close behind at 53 as the cleanest current haven trade, though it's running on a central bank with zero interest-rate ammunition left. CAD picked up to 49 on that hawkish BoC tone. **GBP and JPY sit lowest at 44 each** — GBP purely on political event risk, JPY caught in an unusual three-way fight between a hiking central bank, intervention threats, and rising bond yields that might not actually help the currency given why they're rising.
+
+**🎯 Top setups:** `USDJPY LONG` and `CADJPY LONG` remain cleanest, both picking up extra confirmation today. `EURUSD SHORT` stays valid but is really a bet on US softness more than euro strength. Two new watch items: Switzerland has a tariff deadline with the US around July 24 that could swing CHF either way, and Australia's dealing with a genuine China/iron-ore dispute worth tracking separately from the usual risk-sentiment story.
+
+**📅 Today:** Burnham confirmation, US consumer sentiment, ongoing war headlines.
+
+*Fundamental view only, not advice — pair it with your own technical read before doing anything.*
+</div>
+
+</body>
+</html>
